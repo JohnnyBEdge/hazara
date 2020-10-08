@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import Landing from './pages/Landing';
+import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom'
+import Navbar from './components/navbar'
 
 function App() {
   return (
-    <div className="App">
-      <Landing/>
-
-    </div>
+    <Router>
+      <Navbar/>
+      <div className="temp">
+        
+      </div>
+    </Router>
   );
 }
 
