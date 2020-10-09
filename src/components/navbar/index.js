@@ -21,10 +21,19 @@ const Navbar = () => {
                 <NavbarContainer>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">Item1</NavLinks>
-                            <NavLinks to="about2">Item2</NavLinks>
-                            <NavLinks to="about3">Item3</NavLinks>
-                            <NavLinks to="about4">Item4</NavLinks>
+                            <NavLinks to="#whoWeAre">Who We Are</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="#whatWeDo">What We Do</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="#howToHelp">How to Help</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="contact">Contact Us</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="events">Events</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>

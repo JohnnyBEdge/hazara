@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@200&family=Happy+Monkey&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Encode Sans Expanded', sans-serif;
+    font-family: 'Fahkwang', sans-serif;
     
 }
 
 .temp {
-    height: 100vh;
+    height: 2000px;
     background: #F8F05F;
 }

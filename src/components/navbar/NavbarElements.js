@@ -1,6 +1,7 @@
-import styled from 'styled-components'
-import {Link as LinkR} from 'react-router-dom'
-import {Link as LinkS} from 'react-scroll'
+import styled from 'styled-components';
+import {Link as LinkR} from 'react-router-dom';
+import {Link as LinkS} from 'react-scroll';
+
 
 export const Nav = styled.nav`
     background: #3D6BAC;
@@ -8,10 +9,9 @@ export const Nav = styled.nav`
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    
     top: 0;
-    z-index: 10;  
-    
+    z-index: 10; 
+
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
     }
@@ -20,15 +20,15 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
     display: flex;
     align-self: center;
-    margin-right: 50px;
-    margin-left: 50px;
     justify-content: space-between;
     height: 50px;
     z-index: 1;
     width: 100%;
-    
+    margin: 0 50px;
     max-width: 1100px;
-    background: #FFFAFA;
+
+    overflow: visible;
+
 `
 
 export const NavLogo = styled(LinkR)`
@@ -39,7 +39,7 @@ export const NavLogo = styled(LinkR)`
     display: flex;
     align-items: center;
     margin-left: 24px;
-    font-wight: bold;
+    font-weight: bold;
     text-decoration: none;
     background: #FFFAFA;
     width: 100px;
@@ -56,16 +56,29 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff
-        background: #3D6BAC;
+        color: black;
+        /* background: #3D6BAC; */
     }
 `
 
 export const NavMenu = styled.ul`
     display: flex;
+    width: 100%;
+    margin: 0 50px;
+    /* border: solid black 1px; */
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     text-align: center;
+    background: #FFFAFA;
+    border-radius: 5px;
+    margin-top:25px;
+    height: 50px;
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
+
+    position: sticky;
+    top: 0;
+
 
     @media screen and (max-width: 768px){
         display: none;
@@ -75,11 +88,12 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
     color: black;
     text-decoration: none;
-    height: 30px
-`
+    height: 30px;
+    font-family: 'Happy Monkey', cursive;
+`;
 
 export const NavLinks = styled(LinkS)`
-    color: #black;
+    color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -90,4 +104,4 @@ export const NavLinks = styled(LinkS)`
     &.active {
         border-bottom: 3px solid #01bf71
     }
-`
+`;
