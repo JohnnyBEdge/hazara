@@ -7,14 +7,14 @@ import {Nav,
     NavItem, 
     NavLinks} from './NavbarElements'
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <>
             <Nav>
                 <NavLogo to='/'>
                     logo
                 </NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={props.toggleMenu}>
                     <FaBars/>
                 </MobileIcon>
 

@@ -7,9 +7,9 @@ import {
     SidebarMenu,
     SidebarLink } from './SidebarElements'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
-        <SidebarContainer>
+        <SidebarContainer isOpen={props.isOpen} onClick={props.toggleMenu}>
             <Icon>
                <CloseIcon /> 
             </Icon>
