@@ -10,27 +10,27 @@ import {
 const Sidebar = (props) => {
     return (
         <SidebarContainer isOpen={props.isOpen} onClick={props.toggleMenu}>
-            <Icon>
+            <Icon isOpen={props.isOpen}>
                <CloseIcon /> 
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="#whoWeAre">
+                    <SidebarLink to="#whoWeAre" onClick={props.toggleMenu}>
                         Who We Are
                     </SidebarLink>
-                    <SidebarLink to="#whatWeDo">
+                    <SidebarLink to="#whatWeDo" onClick={props.toggleMenu}>
                         What We Do
                     </SidebarLink>
-                    <SidebarLink to="#howToHelp">
+                    <SidebarLink to="#howToHelp" onClick={props.toggleMenu}>
                         How To Help
                     </SidebarLink>
-                    <SidebarLink to="contact">
+                    <SidebarLink to="contact" onClick={props.toggleMenu}>
                         Contact Us
                     </SidebarLink>
-                    <SidebarLink to="events">
+                    <SidebarLink to="events" onClick={props.toggleMenu}>
                         Events
                     </SidebarLink>
-                    <SidebarLink to="donate">
+                    <SidebarLink to="donate" onClick={props.toggleMenu}>
                         Donate
                     </SidebarLink>
                 </SidebarMenu>

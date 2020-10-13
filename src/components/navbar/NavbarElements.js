@@ -26,6 +26,7 @@ export const NavbarContainer = styled.div`
     width: 100%;
     margin: 0 50px;
     max-width: 1100px;
+    /* position: fixed; */
 
 
 `
@@ -113,3 +114,12 @@ export const NavLinks = styled(LinkS)`
         border-bottom: 3px solid #01bf71
     }
 `;
+
+export const SiteLogo = styled.img`
+    /* width: 100%; */
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: absolute;
+`

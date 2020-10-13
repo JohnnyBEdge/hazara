@@ -1,18 +1,21 @@
 import React from 'react';
-import {FaBars} from 'react-icons/fa'
+import {FaBars} from 'react-icons/fa';
 import {Nav, 
     NavbarContainer, 
     NavLogo, MobileIcon, 
     NavMenu, 
     NavItem, 
-    NavLinks} from './NavbarElements'
+    NavLinks,
+    SiteLogo} from './NavbarElements';
+import logo from '../../assets/logo-1.jpg'
+
 
 const Navbar = (props) => {
     return (
         <>
             <Nav>
                 <NavLogo to='/'>
-                    logo
+                    <SiteLogo src={logo}/>
                 </NavLogo>
                 <MobileIcon onClick={props.toggleMenu}>
                     <FaBars/>
