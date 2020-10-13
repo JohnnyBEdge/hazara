@@ -22,9 +22,9 @@ export const InfoContainer = styled.div`
     padding: 20px;
 `
 
-export const Intro = styled.p`
+export const SectionHeader = styled.p`
     font-size: 20px;
-    font-family: 'Happy Monkey', cursive;
+    /* font-family: 'Happy Monkey', cursive; */
     padding: 20px;
 
 `
@@ -36,7 +36,7 @@ export const Title = styled.h1`
 
 export const Info = styled.p`
     font-size: 20px;
-    font-family: 'Happy Monkey', cursive;
+    /* font-family: 'Happy Monkey', cursive; */
     padding: 10px;
 
 `
@@ -46,6 +46,7 @@ export const ImageContainer = styled.div`
     flex-direction: column;
     width: 100%;
     padding-top: 20px;
+    margin-bottom: 50px;
 
 `
 

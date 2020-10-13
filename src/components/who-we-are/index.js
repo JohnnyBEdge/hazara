@@ -2,7 +2,7 @@ import React from 'react';
 import {
     WhoWeAreContainer,
     InfoContainer,
-    Intro,
+    SectionHeader,
     Title,
     Info,
     ImageContainer,
@@ -15,7 +15,7 @@ const WhoWeAre = () => {
         <>
             <WhoWeAreContainer>
                 <InfoContainer>
-                    <Intro id="whoWeAre">We are the...</Intro>
+                    <SectionHeader id="whoWeAre">We are the...</SectionHeader>
                     <Title>Utah Hazara Association</Title>
                     <Info>
                         Our non-profit organization ‘Utah Hazara Association (UHA)’ 
