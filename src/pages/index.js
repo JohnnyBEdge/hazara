@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';
 import WhatWeDo from '../components/what-we-do';
+import HowToHelp from '../components/how-to-help';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
             <Navbar toggleMenu={toggleMenu}/>
             <WhoWeAre/>
             <WhatWeDo/>
+            <HowToHelp/>
         </>
     )
 }
