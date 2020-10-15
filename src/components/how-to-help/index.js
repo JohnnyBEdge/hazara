@@ -1,6 +1,7 @@
 import React from 'react';
 import left from '../../assets/hand-left.png';
 import right from '../../assets/hand-right.png';
+import cardImg from '../../assets/card-placeholder.jpeg';
 import {
     EffectsContainer,
     Hand,
@@ -10,9 +11,15 @@ import {
     SectionImgContainer,
     DonateImg,
     DonateCard,
-    CardHeader,
-    CardText,
-    CardBtn
+    DCardHeader,
+    DCardText,
+    DCardBtn,
+    CardContainer,
+    Card,
+    CardDetails,
+    CardBtn,
+    CardImg,
+    CardTitle
 } from './HowToHelpElements';
 import help from '../../assets/help.jpeg'
 // import {Spring} from 'react-spring/renderprops'
@@ -41,30 +48,41 @@ const HowToHelp = () => {
                 <SectionImgContainer>
                     <DonateImg src={help} />
                     <DonateCard>
-                        <CardHeader>Help the Cause!</CardHeader>
-                        <CardText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquam amet voluptas doloribus quasi, commodi rerum error! Beatae, tenetur? Quasi reiciendis in quam repellendus rem, veniam nihil odit possimus earum?</CardText>
-                        <CardBtn>Donate Now</CardBtn>
+                        <DCardHeader>Help the Cause!</DCardHeader>
+                        <DCardText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio aliquam amet voluptas doloribus quasi, commodi rerum error! Beatae, tenetur? Quasi reiciendis in quam repellendus rem, veniam nihil odit possimus earum?</DCardText>
+                        <DCardBtn>Donate Now</DCardBtn>
                     </DonateCard>
                 </SectionImgContainer>
+            
 
-                {/* <CardContainer>
-                    <Card>
-                        <CardDetails>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
-                        </CardDetails>
-                    </Card>
-                    <Card>
-                        <CardDetails>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
-                        </CardDetails>
-                    </Card>
-                    <Card>
-                        <CardDetails>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
-                        </CardDetails>
-                    </Card>
-                </CardContainer> */}
-            </InfoContainer>
+            <CardContainer>
+                <Card>
+                    <CardImg src={cardImg}/>
+                    <CardTitle>Volunteer</CardTitle>
+                    <CardDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
+                    </CardDetails>
+                    {/* <CardBtn>Learn More</CardBtn> */}
+                </Card>
+                <Card>
+                <CardImg src={cardImg}/>
+                <CardTitle>Join Us</CardTitle>
+                    <CardDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
+                    </CardDetails>
+                    {/* <CardBtn>Learn More</CardBtn> */}
+                </Card>
+                <Card>
+                    <CardImg src={cardImg}/>
+                    <CardTitle>Donate</CardTitle>
+                    <CardDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quasi!
+                    </CardDetails>
+                    {/* <CardBtn>Learn More</CardBtn> */}
+                </Card>
+            </CardContainer>
+        </InfoContainer>
+            
         </>
     )
 }

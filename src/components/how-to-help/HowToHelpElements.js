@@ -65,27 +65,27 @@ export const DonateCard = styled.div`
 
     @media screen and (max-width: 768px){
         margin: 0 auto;
-        width: 70%;
+        width: 90%;
         margin-top: 175px;
         height: auto;
     }
     
 `
 
-export const CardHeader = styled.h4`
+export const DCardHeader = styled.h4`
     font-size: 3rem;
     padding: 5px;
     margin: 10px
 `
 
-export const CardText = styled.p`
+export const DCardText = styled.p`
     line-height: 1.5;
     padding: 5px;
     margin: 15px;
     font-size: 1.5rem;
 `
 
-export const CardBtn = styled.button`
+export const DCardBtn = styled.button`
     width: 300px;
     background-color: #3D6BAC;
     color: #FFFAFA;
@@ -105,3 +105,55 @@ export const CardBtn = styled.button`
         margin-bottom: 0;
     }
 `
+
+export const CardContainer = styled.div`
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 300px;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+`
+
+export const Card = styled.div`
+    height: auto;
+    width: 300px;
+    background-color: #FFFAFA;
+    border-radius: 20px;
+    margin: 10px;
+    
+    &:hover {
+        border: solid #3D6BAC 3px;
+    }
+`
+
+export const CardTitle = styled.h4`
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+`
+export const CardDetails = styled.p`
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+`
+
+export const CardImg = styled.img`
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+`
+

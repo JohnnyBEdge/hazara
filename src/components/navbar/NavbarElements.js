@@ -94,7 +94,7 @@ export const NavItem = styled.li`
     padding-bottom:2px;
     text-shadow: 0px 2px 3px grey;
     
-    & :hover {
+    &:hover {
         
         text-decoration: underline;
     }
