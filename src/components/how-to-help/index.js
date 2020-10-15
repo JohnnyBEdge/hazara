@@ -54,7 +54,6 @@ const HowToHelp = () => {
                     </DonateCard>
                 </SectionImgContainer>
             
-
             <CardContainer>
                 <Card>
                     <CardImg src={cardImg}/>

@@ -31,6 +31,7 @@ export const InfoContainer = styled.div`
     width: 100%;
     background-color: #F8F05F;
 `
+
 export const SectionHeader = styled.h2`
     font-size: 2rem;
     padding: 10px;;
@@ -47,6 +48,7 @@ export const SectionImgContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 100px;
 `
 export const DonateImg = styled.img`
     width: 100%;
@@ -112,11 +114,13 @@ export const CardContainer = styled.div`
     width: 100%;
     justify-content: space-evenly;
     margin-top: 300px;
+    margin-bottom: 50px;
 
     @media screen and (max-width: 768px){
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
+
     }
 
 `

@@ -7,9 +7,6 @@ function App() {
   return (
     <Router>
       <Home/>
-      <div className="temp">
-        
-      </div>
     </Router>
   );
 }

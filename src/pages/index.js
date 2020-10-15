@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';
 import WhatWeDo from '../components/what-we-do';
 import HowToHelp from '../components/how-to-help';
+import Footer from '../components/footer';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
             <WhoWeAre/>
             <WhatWeDo/>
             <HowToHelp/>
+            <Footer/>
         </>
     )
 }
