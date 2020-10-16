@@ -14,7 +14,7 @@ const WhatWeDo = () => {
     return (
         <>
             <WhatWeDoContainer>
-                <SectionHeader>
+                <SectionHeader id="whatWeDo">
                     What We Do
                 </SectionHeader>
                 <SectionPhoto src={sectionPhoto}/>

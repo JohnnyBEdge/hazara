@@ -40,7 +40,7 @@ const HowToHelp = () => {
             </EffectsContainer> */}
 
             <InfoContainer>
-                <SectionHeader>
+                <SectionHeader id="howToHelp">
                     How To Help
                 </SectionHeader>
                 <SubHeaderText>

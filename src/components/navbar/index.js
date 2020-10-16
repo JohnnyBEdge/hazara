@@ -6,6 +6,7 @@ import {Nav,
     NavMenu, 
     NavItem, 
     NavLinks,
+    NavLink2,
     SiteLogo} from './NavbarElements';
 import logo from '../../assets/logo-1.jpg'
 
@@ -24,19 +25,19 @@ const Navbar = (props) => {
                 <NavbarContainer>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="#whoWeAre">Who We Are</NavLinks>
+                            <NavLinks to="whoWeAre">Who We Are</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="#whatWeDo">What We Do</NavLinks>
+                            <NavLinks to="whatWeDo">What We Do</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="#howToHelp">How to Help</NavLinks>
+                            <NavLinks to="howToHelp">How to Help</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="contact">Contact Us</NavLinks>
+                            <NavLink2 to="/contact">Contact Us</NavLink2>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="events">Events</NavLinks>
+                            <NavLink2 to="/events">Events</NavLink2>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>
