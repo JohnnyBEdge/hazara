@@ -5,6 +5,11 @@ export const FooterWrapper = styled.div`
     background-color: #3E6BAC;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 768px){
+        text-align: center;
+    }
+
 `
 export const SectionTitle = styled.h2`
     color: #FFFAFA;
@@ -24,6 +29,13 @@ export const ListsContainer = styled.div`
     display: flex;
     width: 90%;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+
+    }
 `
 export const Logo = styled.img`
     width: 200px;
@@ -31,6 +43,11 @@ export const Logo = styled.img`
 `
 export const List = styled.ul`
     margin-right: 50px;
+
+    @media screen and (max-width: 768px){
+        margin: 20px;
+
+    }
 `
 export const ListContainer = styled.div`
     display: flex;
