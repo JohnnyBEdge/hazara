@@ -13,7 +13,9 @@ import {
     Form,
     InfoContainer,
     InputContainer,
-    Button
+    InputContainer2,
+    Button,
+    BtnContainer
 } from './ContactElements';
 import {
     FaPhone, 
@@ -59,25 +61,30 @@ const Contact = () => {
                     </Us>
                 <Form>
                     <InputContainer>
-                        <TextField label="fName" defaultValue="First Name" />
-                        <TextField label="lName" defaultValue="Last Name" />
+                        <TextField label="First Name" />
+                        <TextField label="Last Name" />
                     </InputContainer>
                 <br/>
                     <InputContainer>
-                        <TextField label="phone" defaultValue="Phone #" />
-                        <TextField label="email" defaultValue="Email" />
+                        <TextField label="Phone" />
+                        <TextField label="Email"/>
                     </InputContainer>
                 <br/>
-                <InputContainer>
-                    <TextareaAutosize 
+                <InputContainer2 >
+                    {/* <FormLabel>Message</FormLabel>
+                    <TextArea></TextArea> */}
+                    <TextField 
                         aria-label="empty textarea" 
+                        multiline
                         placeholder="Type message here." 
                         rowsMin={12}
+                        variant="outlined"
+                        fullWidth = "true"
                         />
-                </InputContainer>
-                
-                <Button>Send Message</Button>
-
+                </InputContainer2>
+                <BtnContainer>
+                    <Button>Send Message</Button>
+                </BtnContainer>
                 </Form>
             </InfoContainer>
             </FormContainer>
