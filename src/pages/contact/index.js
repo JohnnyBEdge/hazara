@@ -1,21 +1,22 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import {
+    PageContainer,
     FormContainer,
-    HeaderText,
-    SubHeaderText,
-    Us,
-    IconList,
-    Icon,
-    SocialM,
+    PageHeader,
+    PageSubHeader,
+    InfoSection,
+    FormSection,
+    InfoHeader,
+    InfoSubHeader,
+    ContactList,
     ListItem,
-    Form,
-    InfoContainer,
-    InputContainer,
-    InputContainer2,
-    Button,
-    BtnContainer
+    MobileIcon,
+    SocialList,
+    FormLabel,
+    FormInput,
+    TextAreaInput,
+    FormHolder,
+    SubmitBtn
 } from './ContactElements';
 import {
     FaPhone, 
@@ -24,71 +25,84 @@ import {
     FaFacebook, 
     FaTwitter, 
     FaInstagram} from 'react-icons/fa';
+import { Input } from '@material-ui/core';
 
 
 const Contact = () => {
     return (
-        <>
+        <PageContainer>
+            <PageHeader>Contact Us</PageHeader>
+            <PageSubHeader>Questions? Remarks? Want to know more? Send us a message!</PageSubHeader>
             <FormContainer>
-                <HeaderText>Contact Us</HeaderText>
-                <SubHeaderText>Questions or remarks? Send us a message!</SubHeaderText>
-
-                <InfoContainer>
-                    <Us>
-                        <IconList>
-                            <Icon>
+                <InfoSection>
+                    <InfoHeader>Contact Information</InfoHeader>
+                    <InfoSubHeader>Fill out the form and someone from our team will reach out to you as soon as possible.</InfoSubHeader>
+                    <ContactList>
+                        <ListItem>
+                            <MobileIcon>
                                 <FaPhone/> 123-456-7890
-                            </Icon>
-                            <Icon>
+                            </MobileIcon>
+                        </ListItem>
+                        <ListItem>
+                            <MobileIcon>
                                 <FaEnvelope/> email@email.com
-                            </Icon>
-                            <Icon>
-                                <FaMapPin/> 666 Elm St. Salt Lake City, Ut 84111
-                            </Icon>
-                        </IconList>
-
-                        <SocialM>
-                            <ListItem>
+                            </MobileIcon>
+                        </ListItem>
+                        <ListItem>
+                            <MobileIcon>
+                                <FaMapPin/> 666 Elm St. Salt Lake City, UT
+                            </MobileIcon>
+                        </ListItem>
+                    </ContactList>
+                    <SocialList>
+                        <ListItem>
+                            <MobileIcon>
                                 <FaFacebook/>
-                            </ListItem>
-                            <ListItem>
+                            </MobileIcon>
+                        </ListItem>
+                        <ListItem>
+                            <MobileIcon>
                                 <FaInstagram/>
-                            </ListItem>
-                            <ListItem>
+                            </MobileIcon>
+                        </ListItem>
+                        <ListItem>
+                            <MobileIcon>
                                 <FaTwitter/>
-                            </ListItem>
-                        </SocialM>
-                    </Us>
-                <Form>
-                    <InputContainer>
-                        <TextField label="First Name" />
-                        <TextField label="Last Name" />
-                    </InputContainer>
-                <br/>
-                    <InputContainer>
-                        <TextField label="Phone" />
-                        <TextField label="Email"/>
-                    </InputContainer>
-                <br/>
-                <InputContainer2 >
-                    {/* <FormLabel>Message</FormLabel>
-                    <TextArea></TextArea> */}
-                    <TextField 
-                        aria-label="empty textarea" 
-                        multiline
-                        placeholder="Type message here." 
-                        rowsMin={12}
-                        variant="outlined"
-                        fullWidth = "true"
-                        />
-                </InputContainer2>
-                <BtnContainer>
-                    <Button>Send Message</Button>
-                </BtnContainer>
-                </Form>
-            </InfoContainer>
+                            </MobileIcon>
+                        </ListItem>
+                    </SocialList>
+                </InfoSection>
+                <FormHolder>
+                    <FormSection>
+                        <FormLabel for="fname">First Name
+                            <FormInput type="text" name="fname"/>
+                        </FormLabel>
+                        <FormLabel for="lname">Last Name
+                            <FormInput type="text" name="lname"/>
+                        </FormLabel>
+                    </FormSection>
+                    <br/>
+                    <FormSection>
+                        <FormLabel for="phone">Phone Number
+                            <FormInput type="tel" name="phone"/>
+                        </FormLabel>
+                        <FormLabel for="email">Email
+                            <FormInput type="email" name="email"/>
+                        </FormLabel>
+                    </FormSection>
+                    <FormSection>
+                        <FormLabel for="message">Message
+                            <TextAreaInput type="text" name="message">Leave your message here!</TextAreaInput>
+                        </FormLabel>
+                    </FormSection>
+                    <FormSection>
+                        <SubmitBtn>Send!</SubmitBtn>
+                    </FormSection>
+                    
+                </FormHolder>
+
             </FormContainer>
-        </>
+        </PageContainer>
     )
 }
 
