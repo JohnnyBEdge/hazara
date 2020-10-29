@@ -4,7 +4,7 @@ import ContactImg from '../../assets/contact.jpeg'
 
 export const PageContainer = styled.div`
     background-color: #F8F05F;
-    height: 100vh;
+    height: 100%;
 `
 export const PageHeader = styled.h2`
     text-align: center;
@@ -18,14 +18,30 @@ export const FormContainer = styled.div`
     margin: 0 auto;
     border: solid black 1px;
     background-color: #FFFAFA;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
 `
 export const InfoSection = styled.div`
     border: solid black 1px;
     border-radius: 10px;
-    margin: 3px;
+    margin: 5px;
     width: 40%;
+    max-width: 450px;
     height: 500px;
     background-color: #3D6BAC;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px){
+        width: 95%;
+        height: auto;
+        align-items: center;
+    }
+
 `
 export const FormHolder = styled.form`
 width: 70%;
@@ -39,6 +55,7 @@ export const InfoHeader = styled.h4`
     margin-left: 20px;
     margin-top: 30px;
     font-size: 1.3rem;
+    text-align: center;
 `
 export const InfoSubHeader = styled.h5`
     margin-left: 20px;
@@ -47,9 +64,11 @@ export const InfoSubHeader = styled.h5`
     font-size: .9rem;
     margin-bottom: 40px;
     margin-top: 20px;
+    max-width: 400px;
+    text-align: center;
 `
 export const ContactList = styled.ul`
-    margin-left: 30px;
+    margin: 0 auto;
 `
 export const ListItem = styled.li`
     list-style: none;
@@ -63,7 +82,13 @@ export const SocialList = styled.ul`
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 40%;
+`
+export const Logo = styled.img`
+    max-width: 275px;
+    margin: 0 auto;
+    @media screen and (max-width: 768px){
+        width: 300px;
+    }
 `
 export const FormSection = styled.div`
     display: flex;
@@ -110,6 +135,10 @@ export const TextAreaInput = styled.textarea`
         background-color: lightgray;
         outline: none;
     }
+@media screen and (max-width: 768px){
+    width: 300px;
+    min-width: 200px;
+}
 `;
 export const SubmitBtn = styled.button`
     width: 100px;

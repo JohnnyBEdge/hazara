@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/logo-1.jpg'
 import {
     PageContainer,
     FormContainer,
@@ -16,7 +17,8 @@ import {
     FormInput,
     TextAreaInput,
     FormHolder,
-    SubmitBtn
+    SubmitBtn,
+    Logo
 } from './ContactElements';
 import {
     FaPhone, 
@@ -54,6 +56,7 @@ const Contact = () => {
                             </MobileIcon>
                         </ListItem>
                     </ContactList>
+                    <Logo src={logo}/>
                     <SocialList>
                         <ListItem>
                             <MobileIcon>
@@ -71,6 +74,7 @@ const Contact = () => {
                             </MobileIcon>
                         </ListItem>
                     </SocialList>
+                    
                 </InfoSection>
                 <FormHolder>
                     <FormSection>
