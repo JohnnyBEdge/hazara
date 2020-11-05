@@ -4,7 +4,10 @@ import ContactImg from '../../assets/contact.jpeg'
 
 export const PageContainer = styled.div`
     background-color: #F8F05F;
-    height: 100%;
+    height: 100vh;
+    @media screen and (max-width: 768px){
+        height: 100%;
+    }
 `
 export const PageHeader = styled.h2`
     text-align: center;

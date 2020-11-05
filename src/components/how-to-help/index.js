@@ -24,6 +24,7 @@ import {
 import help from '../../assets/help.jpeg'
 // import {Spring} from 'react-spring/renderprops'
 import Slide from 'react-reveal/Slide';
+import Calendar from '../calendar/Calendar';
 
 const HowToHelp = () => {
     return (
@@ -81,7 +82,6 @@ const HowToHelp = () => {
                 </Card>
             </CardContainer>
         </InfoContainer>
-            
         </>
     )
 }

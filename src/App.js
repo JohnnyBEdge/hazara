@@ -6,6 +6,7 @@ import Contact from './pages/contact';
 import Events from './pages/events';
 import Admin from './pages/admin';
 import Donate from './pages/donate';
+import Calendar from './pages/calendar';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/contact' component={Contact} exact />
         <Route path='/events' component={Events} exact />
         <Route path='/admin' component={Admin} exact />
+        <Route path='/calendar' component={Calendar} exact />
         {/* <Route path='/donate' component={Donate} exact /> */}
       </Switch>
       {/* <Home id="home"/> */}

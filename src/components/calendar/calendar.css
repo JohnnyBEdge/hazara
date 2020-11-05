@@ -1,0 +1,9 @@
+#cal_container{
+    width: 800px;
+    min-width:600px;
+    height: 655px;
+    background-color: #FFFAFA;
+    border: solid black 2px;
+    border-radius: 3px;
+
+}
