@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 import Edit from '@material-ui/icons/Edit';
 
-const EventsTable = (props) => {
+const EventsTable = ({events, setEvents}) => {
 
     const [columns, setColumns] = useState([
         { title: 'ID', field: '_id' },
@@ -12,12 +12,6 @@ const EventsTable = (props) => {
         { title: 'Date', field: 'date', type: 'date' }
       ]);
       
-      const [data, setData] = useState([props.events]);
-      // const [data, setData] = useState([
-      //   { id: 1, name: 'event one', desc: 'Description one', date: "11-02-2020" },
-      //   { id: 22, name: 'event two', desc: 'Description two', date: "10-21-2020" },
-      //   { id: 333, name: 'event three', desc: 'Description three', date: "11-20-2020" },
-      // ]);
 
       const tableIcons = {
         // Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -38,53 +32,51 @@ const EventsTable = (props) => {
         // ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
         // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
       };
-
-        useEffect(() => {
-          console.log("events from EventsTable", props.events)
-  }, []);
-
-    
-
-    return (
-
-        <MaterialTable
-        icons={tableIcons}
-          title="Admin"
-          columns={columns}
-          data={data}
-          editable={{
-            onRowAdd: newData =>
-              new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  setData([...data, newData]);
-                  
-                  resolve();
-                }, 1000)
-              }),
-            onRowUpdate: (newData, oldData) =>
-              new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  const dataUpdate = [...data];
-                  const index = oldData.tableData.id;
-                  dataUpdate[index] = newData;
-                  setData([...dataUpdate]);
+      console.log("events from EventsTable2", events)
+        
       
-                  resolve();
-                }, 1000)
-              }),
-            onRowDelete: oldData =>
-              new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  const dataDelete = [...data];
-                  const index = oldData.tableData.id;
-                  dataDelete.splice(index, 1);
-                  setData([...dataDelete]);
-                  
-                  resolve()
-                }, 1000)
-              }),
-          }}
-        />
+    
+    return (
+      <>
+        <MaterialTable
+            icons={tableIcons}
+              title="Admin"
+              columns={columns}
+              data={events}
+              editable={{
+                onRowAdd: newData =>
+                  new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                      setEvents([...events, newData]);
+                      
+                      resolve();
+                    }, 1000)
+                  }),
+                onRowUpdate: (newData, oldData) =>
+                  new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                      const dataUpdate = [...events];
+                      const index = oldData.tableData.id;
+                      dataUpdate[index] = newData;
+                      setEvents([...dataUpdate]);
+          
+                      resolve();
+                    }, 1000)
+                  }),
+                onRowDelete: oldData =>
+                  new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                      const dataDelete = [...events];
+                      const index = oldData.tableData.id;
+                      dataDelete.splice(index, 1);
+                      setEvents([...dataDelete]);
+                      
+                      resolve()
+                    }, 1000)
+                  }),
+              }}
+            />
+          </>
       )
 }
 

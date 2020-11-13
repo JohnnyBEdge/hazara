@@ -12,26 +12,12 @@ function App() {
 
   const [events, setEvents] = useState([]);
 
-//   useEffect(() => {
-//     fetch("http://localhost:5005/api/events")
-//     .then(res => res.json()
-//     .then(res => {
-//       console.log("RES",res)
-//       setEvents(res)
-//     }
-//       )
-//     )
-// })
-
   async function getEvents(){
-       await fetch(`http://localhost:5005/api/events`)
-          .then(res => res.json())
-          .then(res => {
-              setEvents(res);
-              console.log("events: ",res)
-          })
-          .then(console.log('finished'))
+      const res = await fetch(`http://localhost:5005/api/events`);
+      res.json()
+      .then(res => setEvents(res))
   };
+
 
   useEffect(() => {
       getEvents();
@@ -43,9 +29,8 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/contact' component={Contact} exact />
         <Route path='/events' component={Events} exact />
-        {/* <Route path='/admin' component={Admin} events={events} exact /> */}
         <Route path='/admin' render={(props) => (
-          <Admin {...props} events={events} exact />
+          <Admin {...props} events={events} setEvents={setEvents} exact />
         )}/>
         <Route path='/events' component={Events} exact />
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import EventsTable from '../../components/EventsTable';
 
-const Admin = (props) => {
+const Admin = ({events, setEvents}) => {
 
     return (
         <div>
             
-            <EventsTable events={props.events}/>
+            <EventsTable events={events} setEvents={setEvents}/>
             
         </div>
     )
