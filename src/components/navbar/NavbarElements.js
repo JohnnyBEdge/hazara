@@ -4,9 +4,9 @@ import {Link as LinkS} from 'react-scroll';
 
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? 'blue' : 'transparent')};
+    background: ${({scrollNav}) => (scrollNav ? 'whitesmoke' : 'transparent')};
     height: 80px;
-    /* margin-top: -80px; */
+    margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,7 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10; 
-
-    @media screen and (max-width: 960px){
-        transition: 0.8s all ease;
-    }
+    transition: 0.8s all ease;
 `
 
 export const NavbarContainer = styled.div`
@@ -29,7 +26,6 @@ export const NavbarContainer = styled.div`
     width: 100%;
     margin: 0 50px;
     max-width: 1100px;
-    /* position: fixed; */
 `
 export const NavLogo = styled.img`
     justify-self: flex-start;
@@ -48,7 +44,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #000;
+        color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
         /* background: #3D6BAC; */
     }
 `
@@ -58,7 +54,6 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    /* margin-right: -22px; */
 
     @media screen and (max-width: 768px){
         display: none;
@@ -72,7 +67,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink1 = styled(LinkS)`
-    color: blue;
+    color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -85,13 +80,13 @@ export const NavLink1 = styled(LinkS)`
         color: yellow;
     }
     &:hover{
-        color: yellow;
+        color: #F9C910;
         transition: 0.3s all ease;
         transform: scale(1.2)
     }
 `;
 export const NavLink2 = styled(LinkR)`
-    color: blue;
+    color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -99,7 +94,7 @@ export const NavLink2 = styled(LinkR)`
     height: 100%;
     cursor: pointer;
     &:hover{
-        color: yellow;
+        color: #F9C910;
         transition: 0.3s all ease;
         transform: scale(1.2)
     }
@@ -111,8 +106,8 @@ export const NavLink2 = styled(LinkR)`
 
 export const DonateBtn = styled.button`
     border-radius: 50px;
-    background-color: yellow;
-    color: blue;
+    background-color: #F9C910;
+    color: #00539F;
     //	Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered
     white-space: nowrap;
     padding: 10px 22px;
@@ -126,8 +121,9 @@ export const DonateBtn = styled.button`
 
     &:hover{
         transition: all 0.2s ease-in-out;
-        background: #fff;
+        font-weight: bold;
         color: #010606;
+        transform: scale(1.2);
     }
 
     @media screen and (max-width: 768px){

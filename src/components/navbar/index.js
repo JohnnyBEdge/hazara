@@ -14,6 +14,10 @@ const Navbar = (props) => {
     const changeNavbar = () => window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
     const scrollHome = () => scroll.scrollToTop();
 
+    useEffect(() => {
+        window.addEventListener('scroll', changeNavbar)
+    }, [])
+
     return (
         <>
             <Nav scrollNav={scrollNav}>
@@ -22,7 +26,7 @@ const Navbar = (props) => {
 
                     <NavLogo src={logo} onClick={scrollHome}/>
 
-                    <MobileIcon onClick={props.toggleMenu}>
+                    <MobileIcon onClick={props.toggleMenu} scrollNav={scrollNav}>
                         <FaBars/>
                     </MobileIcon>
 
@@ -35,6 +39,7 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}
+                                scrollNav={scrollNav}
                             >Who We Are</NavLink1>
                         </NavItem>
                         <NavItem>
@@ -45,6 +50,7 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}
+                                scrollNav={scrollNav}
                             >What We Do</NavLink1>
                         </NavItem>
                         <NavItem>
@@ -55,16 +61,19 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}    
+                                scrollNav={scrollNav}
                             >How To Help</NavLink1>
                         </NavItem>
                         <NavItem>
                             <NavLink2 
                                 to="/contact"
+                                scrollNav={scrollNav}
                             >Contact Us</NavLink2>
                         </NavItem>
                         <NavItem>
                             <NavLink2 
                                 to="/events"  
+                                scrollNav={scrollNav}
                             >Events</NavLink2>
                         </NavItem>
                     </NavMenu>
