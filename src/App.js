@@ -29,7 +29,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/contact' component={Contact} exact />
         <Route path='/events' component={Events} exact />
-        <Route path='/admin' render={(props) => (
+        <Route path='/admin/events' render={(props) => (
           <Admin {...props} events={events} setEvents={setEvents} exact />
         )}/>
         <Route path='/events' component={Events} exact />

@@ -21,10 +21,10 @@ const Home = () => {
         <>
             <Sidebar isOpen={isOpen} toggleMenu={toggleMenu}/>
             <Navbar toggleMenu={toggleMenu}/>
-            <WhoWeAre />
+            {/* <WhoWeAre />
             <WhatWeDo/>
             <HowToHelp/>
-            <Footer/>
+            <Footer/> */}
         </>
     )
 }

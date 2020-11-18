@@ -4,11 +4,14 @@ import {Link as LinkS} from 'react-scroll';
 
 
 export const Nav = styled.nav`
-    background: #3D6BAC;
-    height: 125px;
+    background: ${({scrollNav}) => (scrollNav ? 'blue' : 'transparent')};
+    height: 80px;
+    /* margin-top: -80px; */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
+    position: sticky;
     top: 0;
     z-index: 10; 
 
@@ -27,25 +30,13 @@ export const NavbarContainer = styled.div`
     margin: 0 50px;
     max-width: 1100px;
     /* position: fixed; */
-
-
 `
-
-export const NavLogo = styled(LinkR)`
-    color: red;
+export const NavLogo = styled.img`
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    margin: 20px 0 0 24px;
-    font-weight: bold;
-    text-decoration: none;
-    background: #FFFAFA;
-    width: 100px;
-    height: 100px;
-`;
-
+    margin: 5px;
+    height: 60px;
+`
 export const MobileIcon = styled.div`
     display: none;
 
@@ -57,29 +48,17 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #FFFAFA;
+        color: #000;
         /* background: #3D6BAC; */
     }
 `
 
 export const NavMenu = styled.ul`
     display: flex;
-    width: 100%;
-    margin: 0 50px;
-    /* border: solid black 1px; */
-    justify-content: space-around;
     align-items: center;
     list-style: none;
     text-align: center;
-    background: #FFFAFA;
-    border-radius: 5px;
-    margin-top:25px;
-    height: 50px;
-    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
-
-    position: sticky;
-    top: 0;
-
+    /* margin-right: -22px; */
 
     @media screen and (max-width: 768px){
         display: none;
@@ -87,52 +66,71 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    color: black;
-    text-decoration: none;
-    height: 30px;
-    font-family: 'Happy Monkey', cursive;
+    height: 80px;
     padding-bottom:2px;
     text-shadow: 0px 2px 3px grey;
-    
-    &:hover {
-        
-        text-decoration: underline;
-    }
-    
 `;
 
-export const NavLinks = styled(LinkS)`
-    color: black;
+export const NavLink1 = styled(LinkS)`
+    color: blue;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
     height: 100%;
+    padding: 0 1rem;
     cursor: pointer;
-
-    &.active {
-        border-bottom: 3px solid #01bf71
+    font-size: 1rem;
+    &.active{
+        border-bottom: 3px solid rgb(14, 214, 14);
+        color: yellow;
+    }
+    &:hover{
+        color: yellow;
+        transition: 0.3s all ease;
+        transform: scale(1.2)
     }
 `;
 export const NavLink2 = styled(LinkR)`
-    color: black;
+    color: blue;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-
+    &:hover{
+        color: yellow;
+        transition: 0.3s all ease;
+        transform: scale(1.2)
+    }
     &.active {
-        border-bottom: 3px solid #01bf71
+        border-bottom: 3px solid #01bf71;
+        color: yellow;
     }
 `;
 
-export const SiteLogo = styled.img`
-    /* width: 100%; */
-    height: 100px;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    position: absolute;
+export const DonateBtn = styled.button`
+    border-radius: 50px;
+    background-color: yellow;
+    color: blue;
+    //	Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered
+    white-space: nowrap;
+    padding: 10px 22px;
+    font-size: 1rem;
+    /* outline: none; */
+    border: solid black 1px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    height: 40px;
+
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #010606;
+    }
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `
