@@ -5,7 +5,7 @@ import {
     Nav, NavbarContainer, NavLogo, MobileIcon, 
     NavMenu, NavItem, NavLink1, NavLink2, DonateBtn
 } from './NavbarElements';
-import logo from '../../assets/logo-1.jpg'
+import logo from '../../assets/images/logo-1.jpg'
 
 
 const Navbar = (props) => {

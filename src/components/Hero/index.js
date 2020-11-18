@@ -3,7 +3,7 @@ import {
     HeroContainer, HeroBackground, PageTitle,
     HeroContent, HeroImg, PageTitleSubtext
     } from './HeroElements';
-import HeroImage from '../../assets/hero.jpg';
+import HeroImage from '../../assets/images/hero.jpg';
 
 const Hero = () => {
     return (

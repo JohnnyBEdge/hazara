@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ContactImg from '../../assets/contact.jpeg'
+// import ContactImg from '../../assets/images/contact.jpeg'
 
 
 export const PageContainer = styled.div`
@@ -160,5 +160,6 @@ export const SubmitBtn = styled.button`
         background-color: #3D6BAC;
         color: #FFFAFA;
         margin-bottom: 0;
+    }
 `
 

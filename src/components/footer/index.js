@@ -12,7 +12,7 @@ import {
     ListItem,
     Signature
 } from './FooterElements';
-import logo from '../../assets/logo-1.jpg'
+import logo from '../../assets/images/logo-1.jpg'
 
 const Footer = () => {
     return (
