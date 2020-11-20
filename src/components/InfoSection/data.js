@@ -4,6 +4,7 @@ export const WhoWeAre = {
     headline: 'Who We Are',
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, itaque. Eveniet magnam quidem nobis possimus, id nisi adipisci quae dolor aspernatur est maxime facilis eligendi suscipit placeat voluptatem, ea ex.",
     imgStart: true,
+    lightBg: false,
     // img: require('../../assets/images/hanoi_buds.png'),
     alt: 'alternate text here',
     dark: true,

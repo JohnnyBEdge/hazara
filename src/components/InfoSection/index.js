@@ -6,10 +6,10 @@ import {
 } from './InfoElements';
 import temp1 from '../../assets/images/temp1.jpg'
 
-const InfoSection = ({id, imgStart, topLine, headline, desc, img, alt, displayBtn, toggleModal}) => {
+const InfoSection = ({id, imgStart, topLine, headline, desc, lightBg, img, alt, displayBtn, toggleModal}) => {
     return (
         <>
-            <InfoContainer id={id}>
+            <InfoContainer id={id} lightBg={lightBg}>
                 <InfoWrapper>
                     <InfoRow imgStart={imgStart}>
                         <Col1>
