@@ -55,7 +55,7 @@ export const PageTitleSubtext = styled.p`
 `
 export const HeroImg = styled.img`
     object-fit: contain;
-    width:100%;
+    height:100%;
     opacity: .3;
     position: absolute;
     top: 0;

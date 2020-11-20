@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     WhoWeAreContainer,InfoContainer,LeftSide,RightSide,
-    SectionHeader,Title,Info,GroupPhoto, LearnMoreModal
+    SectionHeader,Title,Info,GroupPhoto, LearnMoreBtn
 } from './WhoWeAreElements';
 import WhoWeAreImg from '../../assets/images/whoweare.jpg'
 
@@ -19,7 +19,7 @@ const WhoWeAre = () => {
                             confront the issues of cultural awareness in youth, religious 
                             programs and ripening of language. 
                         </Info>
-                        <LearnMoreModal>Learn More!</LearnMoreModal>
+                        <LearnMoreBtn>Learn More!</LearnMoreBtn>
                     </InfoContainer> 
                 </LeftSide>
                     

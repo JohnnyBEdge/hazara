@@ -31,7 +31,7 @@ export const RightSide = styled.div`
     
     @media screen and (max-width: 768px){
         width: 100%;
-        /* height: 400px; */
+        height: 600px;
     }
 `
 export const InfoContainer = styled.div`
@@ -73,7 +73,7 @@ export const GroupPhoto = styled.img`
         margin-left: 0;
     }
 `
-export const LearnMoreModal = styled.button`
+export const LearnMoreBtn = styled.button`
     width: 150px;
     height: 50px;
     background-color: transparent;
@@ -87,6 +87,6 @@ export const LearnMoreModal = styled.button`
     @media screen and (max-width:768px){
         width: 90%;
         height: 70px;
-        font-size: 23px;
+        font-size: 25px;
     }
 `
