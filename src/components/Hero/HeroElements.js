@@ -7,6 +7,7 @@ export const HeroContainer = styled.div`
     align-items: center;
     padding: 0 30px;
     height: 800px;
+    width: 100%;
     position: relative;
     z-index: 1;
 `
@@ -22,7 +23,7 @@ export const HeroBackground = styled.div`
 `
 export const HeroContent = styled.div`
     z-index: 3;
-    max-width: 1200px;
+    /* max-width: 1920px; */
     position: absolute;
     padding: 8px 24px;
     display: flex;
@@ -53,13 +54,17 @@ export const PageTitleSubtext = styled.p`
     }
 `
 export const HeroImg = styled.img`
-    object-fit: cover;
-    max-height: 800px;
-    height: 100%;
+    object-fit: contain;
+    width:100%;
     opacity: .3;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+    @media screen and (max-width: 768px){
+        height: 100%;
+        width: auto;
+    }
 `
