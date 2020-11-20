@@ -3,9 +3,10 @@ import {
     WhoWeAreContainer,InfoContainer,LeftSide,RightSide,
     SectionHeader,Title,Info,GroupPhoto, LearnMoreBtn
 } from './WhoWeAreElements';
-import WhoWeAreImg from '../../assets/images/whoweare.jpg'
+import WhoWeAreImg from '../../assets/images/whoweare.jpg';
+import { whoWeAreData } from '../Modal/data';
 
-const WhoWeAre = () => {
+const WhoWeAre = ({setModalData, toggleModal}) => {
     return (
         <>
             <WhoWeAreContainer id="who">
@@ -19,7 +20,12 @@ const WhoWeAre = () => {
                             confront the issues of cultural awareness in youth, religious 
                             programs and ripening of language. 
                         </Info>
-                        <LearnMoreBtn>Learn More!</LearnMoreBtn>
+                        <LearnMoreBtn 
+                            onClick={()=>{
+                                setModalData(whoWeAreData);
+                                toggleModal();
+                                }}>
+                                Learn More!</LearnMoreBtn>
                     </InfoContainer> 
                 </LeftSide>
                     

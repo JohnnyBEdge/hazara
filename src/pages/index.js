@@ -8,11 +8,14 @@ import Footer from '../components/footer';
 import EventsTable from '../components/EventsTable';
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
+import Modal from '../components/Modal';
+// import { whatWeDoData, whoWeAreData, howToHelpData } from '../components/Modal/data';
 // import {WhoWeAre, WhatWeDo, HowToHelp} from '../components/InfoSection/data';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+    const [modalData, setModalData] = useState();
 
 
     const toggleMenu = () => {
@@ -20,6 +23,8 @@ const Home = () => {
     };
     const toggleModal = () => {
         setOpenModal(!openModal)
+        // console.log("MODAL: ",openModal)
+        // console.log(modalData)
     };
 
     return (
@@ -27,8 +32,15 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggleMenu={toggleMenu}/>
             <Navbar toggleMenu={toggleMenu}/>
             <Hero/>
-            <WhoWeAre openModal={openModal} toggleModal={toggleModal}/>
-            <WhatWeDo openModal={openModal} toggleModal={toggleModal}/>
+            <WhoWeAre 
+                openModal={openModal} 
+                toggleModal={toggleModal}
+                setModalData={setModalData} />
+            <WhatWeDo 
+                openModal={openModal} 
+                toggleModal={toggleModal} 
+                setModalData={setModalData} />
+            <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
             {/* <InfoSection {...WhoWeAre}/>
             <InfoSection {...WhatWeDo}/>
             <InfoSection {...HowToHelp}/> */}

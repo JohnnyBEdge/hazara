@@ -1,18 +1,17 @@
 import React from 'react';
 import sectionPhoto from '../../assets/images/Girls_in_Ghazni.jpg';
+import { whatWeDoData } from '../Modal/data';
 import {
     WhatWeDoContainer, InfoContainer, SectionHeader, SectionPhoto,
     ListHeader, MissionList, MissionItem, LearnMoreBtn
 } from './WhatWeDoElements';
 
-const WhatWeDo = () => {
+const WhatWeDo = ({toggleModal, setModalData}) => {
     return (
         <>
             <WhatWeDoContainer id="what">
                 <InfoContainer>
-                    <SectionHeader>
-                        What We Do
-                    </SectionHeader>
+                    <SectionHeader> What We Do </SectionHeader>
                     
                     <ListHeader>
                     We work tirelessly to fulfill our mission of helping the refugees and immigrants by:
@@ -37,7 +36,9 @@ const WhatWeDo = () => {
                             teaching of basic English language to the elderly of the community
                         </MissionItem>
                     </MissionList>
-                    <LearnMoreBtn> Learn More! </LearnMoreBtn>
+                    <LearnMoreBtn onClick={ () => { 
+                         setModalData(whatWeDoData);
+                         toggleModal();}}> Learn More! </LearnMoreBtn>
                 </InfoContainer>
                 {/* 
                 <SectionPhoto src={sectionPhoto}/>

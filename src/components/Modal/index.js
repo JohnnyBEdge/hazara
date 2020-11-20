@@ -1,15 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {
+    ModalOverlay, ModalContainer, ModalContent,
+    ModalTitle, ModalSubTitle, ModalImg, ModalText
+} from './ModalElements';
 
-const Modal = () => {
+const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img }) => {
     return (
-        <ModalOverlay>
-            <ModalContent>
-                <ModalTitle>Modal Title</ModalTitle>
-                <ModalSubTitle>Sub title text goes here</ModalSubTitle>
-                <ModalImg />
-                <ModalText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur praesentium odit, repudiandae quam nesciunt accusamus provident voluptate in ab. Ad quibusdam minima soluta corrupti, molestias doloribus modi totam animi sequi tempore vel beatae, laudantium minus ab in dolorum alias quasi. Placeat deserunt beatae fugit sed vitae ipsum, maiores voluptates repellat.</ModalText>
+        <ModalContainer>
+            <ModalOverlay id="modal" openModal={openModal} onClick={toggleModal}></ModalOverlay>
+            <ModalContent openModal={openModal}>
+                <ModalTitle>{titleText}</ModalTitle>
+                <ModalSubTitle>{subTitleText}</ModalSubTitle>
+                <ModalImg src={img} alt={alt}/>
+                <ModalText>{text}</ModalText>
             </ModalContent>
-        </ModalOverlay>
+        </ModalContainer>
+
     )
 }
 
