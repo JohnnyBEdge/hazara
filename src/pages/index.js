@@ -3,14 +3,13 @@ import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';
 import WhatWeDo from '../components/what-we-do';
-// import HowToHelp from '../components/how-to-help';
+import HowToHelp from '../components/how-to-help';
 import Footer from '../components/footer';
 import EventsTable from '../components/EventsTable';
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
 import Modal from '../components/Modal';
-// import { whatWeDoData, whoWeAreData, howToHelpData } from '../components/Modal/data';
-// import {WhoWeAre, WhatWeDo, HowToHelp} from '../components/InfoSection/data';
+
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,12 +40,8 @@ const Home = () => {
                 toggleModal={toggleModal} 
                 setModalData={setModalData} />
             <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
-            {/* <InfoSection {...WhoWeAre}/>
-            <InfoSection {...WhatWeDo}/>
-            <InfoSection {...HowToHelp}/> */}
-            {/* <WhoWeAre />
             <HowToHelp/>
-            <Footer/> */}
+            {/* <Footer/>  */}
         </>
     )
 }

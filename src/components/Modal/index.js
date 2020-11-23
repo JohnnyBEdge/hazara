@@ -9,9 +9,10 @@ const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img })
         <ModalContainer>
             <ModalOverlay id="modal" openModal={openModal} onClick={toggleModal}></ModalOverlay>
             <ModalContent openModal={openModal}>
+                <ModalImg src={img} alt={alt}/>
                 <ModalTitle>{titleText}</ModalTitle>
                 <ModalSubTitle>{subTitleText}</ModalSubTitle>
-                <ModalImg src={img} alt={alt}/>
+                
                 <ModalText>{text}</ModalText>
             </ModalContent>
         </ModalContainer>

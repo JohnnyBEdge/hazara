@@ -25,9 +25,10 @@ export const ModalContent = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
-    width: 600px;
+    width: 70%;
     height: 700px;
     background-color: whitesmoke;
+    border-radius: 10px;
 `
 export const ModalTitle = styled.h2`
 
@@ -36,7 +37,9 @@ export const ModalSubTitle = styled.h3`
 
 `
 export const ModalImg = styled.img`
-    width: 50%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `
 export const ModalText = styled.p`
 
