@@ -41,7 +41,7 @@ const Home = () => {
                 setModalData={setModalData} />
             <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
             <HowToHelp/>
-            {/* <Footer/>  */}
+            <Footer/> 
         </>
     )
 }

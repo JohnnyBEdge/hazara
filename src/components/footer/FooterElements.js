@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
     width: 100%;
-    background-color: #3E6BAC;
+    background-color: whitesmoke;
+    border-top: solid black 1px;
     display: flex;
     flex-direction: column;
 
@@ -12,7 +13,6 @@ export const FooterWrapper = styled.div`
 
 `
 export const SectionTitle = styled.h2`
-    color: #FFFAFA;
     font-size: 2rem;
     border-bottom: solid #FFFAFA 2px;
     width: 90%;
@@ -20,7 +20,6 @@ export const SectionTitle = styled.h2`
     padding-top: 10px;
 `
 export const ListTitle = styled.h4`
-    color: #FFFAFA;
     font-size: 1.1rem;
     text-align: center;
     padding-top: 5px;
@@ -57,7 +56,6 @@ export const ResourceContainer = styled.div`
     flex-direction: column;
 `
 export const ListItem = styled.li`
-    color: #FFFAFA;
     list-style: none;
     margin-top: 10px;
     margin-left:0;
@@ -66,9 +64,8 @@ export const ListItem = styled.li`
 `
 
 export const Signature = styled.a`
-    color: #FFFAFA;
     font-size: .8rem;
     width: 100%;
     text-align: center;
-    margin: 20px;
+    padding: 20px;
 `
