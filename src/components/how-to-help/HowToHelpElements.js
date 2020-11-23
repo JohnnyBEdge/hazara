@@ -14,19 +14,15 @@ export const SectionHeader = styled.h2`
     align-self: center;
     margin: 40px 0 20px 0;
 `
-// export const SubHeaderText = styled.p`
-//     font-size: 1.3rem;
-//     color: whitesmoke;
-//     align-self: center;
-//     width: 500px;
-//     padding: 10px;
-
-// `
 export const CardContainer = styled.div`
 display: flex;
 width: 100%;
 justify-content: space-evenly;
 align-items: center;
+
+@media screen and (max-width: 768px){
+    flex-direction: column;
+}
 `
 export const Card = styled.div`
     display: flex;
@@ -40,6 +36,9 @@ export const Card = styled.div`
     &:hover {
         box-shadow: 0 0 4px 4px rgba(255,255,255,.25);
     }
+    @media screen and (max-width: 768px){
+    margin: 10px 0px;
+}
 `
 export const CardImg = styled.img`
     height: 200px;
