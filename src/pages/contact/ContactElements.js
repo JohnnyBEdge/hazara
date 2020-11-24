@@ -1,26 +1,40 @@
 import styled from 'styled-components';
-// import ContactImg from '../../assets/images/contact.jpeg'
+import contact from '../../assets/images/contact.jpeg'
 
 
 export const PageContainer = styled.div`
-    background-color: #F8F05F;
-    height: 100vh;
+    background-image: url(${contact});
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* background-color: whitesmoke; */
+    /* background-color: #1961A3; */
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+
     @media screen and (max-width: 768px){
         height: 100%;
     }
 `
-export const PageHeader = styled.h2`
+export const PageTitle = styled.h2`
     text-align: center;
+    margin-top: 100px;
 `
-export const PageSubHeader = styled.h3`
+export const TitleSubText = styled.p`
     text-align: center;
+    align-self: center;
+    width: 500px;
 `
-export const FormContainer = styled.div`
+export const ContactContainer = styled.div`
     display: flex;
     width: 95%;
     margin: 0 auto;
-    border: solid black 1px;
-    background-color: #FFFAFA;
+    background-color: whitesmoke;
+    &:hover {
+        box-shadow: 0 0 4px 4px rgba(255,255,255,.25);
+    }
 
     @media screen and (max-width: 768px){
         flex-direction: column;

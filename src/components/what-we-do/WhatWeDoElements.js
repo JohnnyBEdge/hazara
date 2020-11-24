@@ -15,6 +15,7 @@ export const InfoContainer = styled.div`
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 
     @media screen and (max-width: 768px){
         width: 90%;

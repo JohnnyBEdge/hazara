@@ -6,31 +6,38 @@ import {
 import {Card1Data, Card2Data, Card3Data} from './cardData';
 import help from '../../assets/images/help.jpeg'
 // import {Spring} from 'react-spring/renderprops'
+import Fade from 'react-reveal/Fade';
 
 const HowToHelp = () => {
     return (
         <HowToHelpContainer id="how">
             <SectionHeader>How To Help</SectionHeader>
-            <CardContainer>
-                <Card >
-                    <CardImg src={Card1Data.img}/>
-                    <CardTitle>{Card1Data.cardTitle}</CardTitle>
-                    <CardDesc>{Card1Data.cardDesc}</CardDesc>
-                    <CardBtn>Learn More</CardBtn>
-                </Card>
-                <Card >
-                    <CardImg src={Card2Data.img}/>
-                    <CardTitle>{Card2Data.cardTitle}</CardTitle>
-                    <CardDesc>{Card2Data.cardDesc}</CardDesc>
-                    <CardBtn>Learn More</CardBtn>
-                </Card>
-                <Card >
-                    <CardImg src={Card3Data.img}/>
-                    <CardTitle>{Card3Data.cardTitle}</CardTitle>
-                    <CardDesc>{Card3Data.cardDesc}</CardDesc>
-                    <CardBtn>Learn More</CardBtn>
-                </Card>
-            </CardContainer>
+            
+            <Fade bottom cascade>
+                <CardContainer>
+                    <Card >
+                        <CardImg src={Card1Data.img}/>
+                        <CardTitle>{Card1Data.cardTitle}</CardTitle>
+                        <CardDesc>{Card1Data.cardDesc}</CardDesc>
+                        <CardBtn>Learn More</CardBtn>
+                    </Card>
+
+                    <Card >
+                        <CardImg src={Card2Data.img}/>
+                        <CardTitle>{Card2Data.cardTitle}</CardTitle>
+                        <CardDesc>{Card2Data.cardDesc}</CardDesc>
+                        <CardBtn>Learn More</CardBtn>
+                    </Card>
+
+                    <Card >
+                        <CardImg src={Card3Data.img}/>
+                        <CardTitle>{Card3Data.cardTitle}</CardTitle>
+                        <CardDesc>{Card3Data.cardDesc}</CardDesc>
+                        <CardBtn>Learn More</CardBtn>
+                    </Card>
+                </CardContainer>
+            </Fade>
+            
         </HowToHelpContainer>
     )
 }
