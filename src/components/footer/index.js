@@ -10,7 +10,8 @@ import {
     ResourceContainer,
     ListContainer,
     ListItem,
-    Signature
+    Signature,
+    AdminLink
 } from './FooterElements';
 import logo from '../../assets/images/logo-1.jpg'
 
@@ -40,7 +41,11 @@ const Footer = () => {
                             <List>
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>resource.com</ListItem>
-                                <ListItem>resource.com</ListItem>
+                                <ListItem>
+                                    <AdminLink to="/admin/login">
+                                        Admin
+                                        </AdminLink>
+                                </ListItem>
                             </List>
                         </ListContainer>
                     </ResourceContainer>

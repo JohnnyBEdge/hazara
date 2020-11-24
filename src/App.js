@@ -5,6 +5,7 @@ import Home from './pages';
 import Contact from './pages/contact';
 import Events from './pages/events';
 import Admin from './pages/Admin';
+import Login from './pages/Login';
 import Donate from './pages/donate';
 // import Calendar from './pages/calendar';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/contact' component={Contact} exact />
         <Route path='/events' component={Events} exact />
+        <Route path='/admin/login' component={Login} exact />
         <Route path='/admin/events' render={(props) => (
           <Admin {...props} events={events} setEvents={setEvents} exact />
         )}/>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link as LinkR} from 'react-router-dom';
 
 export const FooterWrapper = styled.div`
     width: 100%;
@@ -60,7 +61,9 @@ export const ListItem = styled.li`
     margin-top: 10px;
     margin-left:0;
     font-size: .9rem;
-    
+`
+export const AdminLink = styled(LinkR)`
+
 `
 
 export const Signature = styled.a`
