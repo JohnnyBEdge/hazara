@@ -1,0 +1,12 @@
+
+
+{
+    "api": {
+        "invokeUrl": "uha.auth.us-west-2.amazoncognito.com"
+    },
+    "cognito": {
+        "REGION": "us-west-2",
+        "USER_POOL_ID": "us-west-2_LeZQNssbs",
+        "APP_CLIENT_ID": "55d81r47onsgcm3sb8h6f7hnel"
+    }
+}

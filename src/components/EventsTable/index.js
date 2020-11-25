@@ -2,6 +2,7 @@ import React, {useState, forwardRef, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 import Edit from '@material-ui/icons/Edit';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 const EventsTable = ({events, setEvents}) => {
 
@@ -80,7 +81,7 @@ const EventsTable = ({events, setEvents}) => {
       )
 }
 
-export default EventsTable
+export default withAuthenticator(EventsTable)
 
 
 

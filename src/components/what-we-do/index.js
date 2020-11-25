@@ -11,7 +11,7 @@ const WhatWeDo = ({toggleModal, setModalData}) => {
     return (
         <>
             <WhatWeDoContainer id="what">
-                <Slide bottom>
+                <Slide right>
                     <InfoContainer>
                         <SectionHeader> What We Do </SectionHeader>
                         

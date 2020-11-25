@@ -4,6 +4,7 @@ import Footer from '../../components/footer';
 import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/navbar';
 import CalendarList from '../../components/calendar/CalendarList'
+
 import {
     CalendarContainer,
     PageTitle,
@@ -35,4 +36,4 @@ const Events = () => {
     )
 }
 
-export default Events
+export default Events;

@@ -66,7 +66,7 @@ export const Info = styled.p`
 export const GroupPhoto = styled.img`
     width: 100%;
     /* min-width: 500px; */
-    margin-left: -150px;
+    margin-left: -90px;
     box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.75);
     @media screen and (max-width: 768px){
         /* object-fit: fill; */

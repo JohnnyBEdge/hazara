@@ -5,6 +5,7 @@ import {
 } from './WhoWeAreElements';
 import WhoWeAreImg from '../../assets/images/whoweare.jpg';
 import { whoWeAreData } from '../Modal/data';
+import HeadShake from 'react-reveal/HeadShake';
 
 const WhoWeAre = ({setModalData, toggleModal}) => {
     return (
@@ -30,7 +31,9 @@ const WhoWeAre = ({setModalData, toggleModal}) => {
                 </LeftSide>
                     
                 <RightSide>
-                    <GroupPhoto src={WhoWeAreImg}/>
+                    <HeadShake>
+                        <GroupPhoto src={WhoWeAreImg}/>
+                    </HeadShake>
                 </RightSide> 
 
             </WhoWeAreContainer>

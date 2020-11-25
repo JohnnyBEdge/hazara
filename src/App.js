@@ -7,6 +7,8 @@ import Events from './pages/events';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Donate from './pages/donate';
+
+
 // import Calendar from './pages/calendar';
 
 function App() {
@@ -38,6 +40,7 @@ function App() {
 
         {/* <Route path='/donate' component={Donate} exact /> */}
       </Switch>
+      
       {/* <Home id="home"/> */}
     </Router>
   );

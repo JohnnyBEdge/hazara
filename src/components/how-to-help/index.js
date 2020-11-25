@@ -12,9 +12,8 @@ const HowToHelp = () => {
     return (
         <HowToHelpContainer id="how">
             <SectionHeader>How To Help</SectionHeader>
-            
-            <Fade bottom cascade>
-                <CardContainer>
+            <CardContainer>
+                <Fade left cascade>
                     <Card >
                         <CardImg src={Card1Data.img}/>
                         <CardTitle>{Card1Data.cardTitle}</CardTitle>
@@ -35,8 +34,8 @@ const HowToHelp = () => {
                         <CardDesc>{Card3Data.cardDesc}</CardDesc>
                         <CardBtn>Learn More</CardBtn>
                     </Card>
-                </CardContainer>
-            </Fade>
+                </Fade>
+            </CardContainer>
             
         </HowToHelpContainer>
     )
