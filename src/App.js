@@ -7,6 +7,7 @@ import Events from './pages/events';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Donate from './pages/donate';
+import {Auth} from 'aws-amplify'
 
 
 // import Calendar from './pages/calendar';
@@ -14,6 +15,9 @@ import Donate from './pages/donate';
 function App() {
 
   const [events, setEvents] = useState([]);
+  const [isAuthenticating, setIsAuthenticating] = useState(true);
+  const [authenticated, setAutheticated] = useState(false);
+  const [user, setUser] = useState(null);
 
   async function getEvents(){
       const res = await fetch(`http://localhost:5005/api/events`);
@@ -21,24 +25,47 @@ function App() {
       .then(res => setEvents(res))
   };
 
+ const authCheck =  async ()  => {
+    try {
+      const session = await Auth.currentSession();
+      setAutheticated(true);
+      console.log("SESSION",session);
+      const authUser = await Auth.currentAuthenticatedUser();
+      console.log("USER",authUser)
+      setUser(authUser);
+    } catch(error) {
+      if (error !== 'No current user') {
+        console.log(error);
+      }
+    }
+    setIsAuthenticating(false);
+  };
+
+  const authProps = {
+    user: user,
+    authenticated: authenticated,
+    isAuthenticating: isAuthenticating
+  }
+
 
   useEffect(() => {
       getEvents();
+      authCheck();
   }, []);
 
   return (
     <Router>
       <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='/contact' component={Contact} exact />
-        <Route path='/events' component={Events} exact />
-        <Route path='/admin/login' component={Login} exact />
+        <Route path='/' component={Home} exact auth={authProps}/>
+        <Route path='/contact' component={Contact} exact auth={authProps}/>
+        <Route path='/events' component={Events} exact auth={authProps}/>
+        <Route path='/admin/login' component={Login} exact auth={authProps}/>
         <Route path='/admin/events' render={(props) => (
-          <Admin {...props} events={events} setEvents={setEvents} exact />
+          <Admin {...props} events={events} setEvents={setEvents} exact auth={authProps}/>
         )}/>
-        <Route path='/events' component={Events} exact />
+        <Route path='/events' component={Events} exact auth={authProps}/>
 
-        {/* <Route path='/donate' component={Donate} exact /> */}
+        {/* <Route path='/donate' component={Donate} exact /> auth={authProps}*/}
       </Switch>
       
       {/* <Home id="home"/> */}
