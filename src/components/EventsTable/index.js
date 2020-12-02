@@ -19,9 +19,9 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Delete } from '@material-ui/icons';
 
 
-const EventsTable = ({eventsData, setEvents, handleEvents}) => {
+const EventsTable = ({eventsData, setEvents}) => {
 
-  console.log("data from eventsTable", eventsData)
+  // console.log("data from eventsTable", eventsData)
 
 
 
@@ -63,8 +63,7 @@ const EventsTable = ({eventsData, setEvents, handleEvents}) => {
           headers: {
             "Content-type": "application/json"
           }
-        })
-        .then(res => res.json());
+        }).then(res => res.json());
       };
 
       const handleDeleteEvent = (id) => {
@@ -72,6 +71,17 @@ const EventsTable = ({eventsData, setEvents, handleEvents}) => {
           method: "DELETE"
         }).then(res => res.json());
       };
+
+      const handleEditEvent = (id, newData) => {
+        const dataWithIDRemoved = {title: newData.title, desc: newData.desc, date: newData.date}
+        fetch(`http://localhost:5005/api/events/${id}`, {
+          method: "PATCH",
+          body: JSON.stringify({...dataWithIDRemoved}),
+          headers: {
+            "Content-type": "application/json"
+          }
+        }).then(res => res.json())
+      }
 
     
     return (
@@ -96,6 +106,7 @@ const EventsTable = ({eventsData, setEvents, handleEvents}) => {
                 }),
               onRowUpdate: (newData, oldData) =>
                 new Promise((resolve, reject) => {
+                  handleEditEvent(oldData._id, newData)
                   setTimeout(() => {
                     const dataUpdate = [...eventsData];
                     const index = oldData.tableData.id;
