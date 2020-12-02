@@ -16,6 +16,7 @@ import SaveIcon from '@material-ui/icons/Save';
 // import ImportExportIcon from '@material-ui/icons/ImportExport';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { Delete } from '@material-ui/icons';
 
 
 const EventsTable = ({eventsData, setEvents, handleEvents}) => {
@@ -63,8 +64,14 @@ const EventsTable = ({eventsData, setEvents, handleEvents}) => {
             "Content-type": "application/json"
           }
         })
-        .then(res => res.json())
-      }
+        .then(res => res.json());
+      };
+
+      const handleDeleteEvent = (id) => {
+        fetch(`http://localhost:5005/api/events/${id}`, {
+          method: "DELETE"
+        }).then(res => res.json());
+      };
 
     
     return (
@@ -100,7 +107,9 @@ const EventsTable = ({eventsData, setEvents, handleEvents}) => {
                 }),
               onRowDelete: oldData =>
                 new Promise((resolve, reject) => {
+                  
                   setTimeout(() => {
+                    handleDeleteEvent(oldData._id);
                     const dataDelete = [...eventsData];
                     const index = oldData.tableData.id;
                     dataDelete.splice(index, 1);
