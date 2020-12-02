@@ -15,7 +15,12 @@ import SortIcon from '@material-ui/icons/Sort';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
-const EventsTable = ({events, setEvents}) => {
+
+const EventsTable = ({eventsData, setEvents}) => {
+
+  console.log("data from eventsTable", eventsData)
+  
+  const events = eventsData;
 
     const [columns, setColumns] = useState([
         { title: 'ID', field: '_id' },
@@ -24,6 +29,7 @@ const EventsTable = ({events, setEvents}) => {
         { title: 'Date', field: 'date', type: 'date' }
       ]);
       
+
 
       const tableIcons = {
         Add: forwardRef((props, ref) => <AddBoxIcon {...props} ref={ref} />),
@@ -44,8 +50,9 @@ const EventsTable = ({events, setEvents}) => {
         // ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
         // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
       };
-      console.log("events from EventsTable2", events)
-        
+      
+
+    
       
     
     return (
@@ -89,10 +96,12 @@ const EventsTable = ({events, setEvents}) => {
               }}
             />
           </>
+            
       )
 }
 
-export default withAuthenticator(EventsTable)
+export default EventsTable;
+// export default withAuthenticator(EventsTable)
 
 
 

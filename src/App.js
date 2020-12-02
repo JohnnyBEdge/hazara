@@ -18,12 +18,44 @@ function App() {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [authenticated, setAutheticated] = useState(false);
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true)
 
-  async function getEvents(){
-      const res = await fetch(`http://localhost:5005/api/events`);
-      res.json()
-      .then(res => setEvents(res))
-  };
+  const getEvents = async () => {
+    try{
+      const res = await fetch('http://localhost:5005/api/events');
+      const data = await res.json();
+      await setEvents(data);
+      console.log("data from app.js",data)
+    } catch(err){
+      console.log("ERROR:",err)
+    }
+  }
+
+  // async function getEvents(){
+  //   await fetch(`http://localhost:5005/api/events`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setEvents(data);
+  //       console.log("DATA", data)
+  //     })
+  // }
+
+  // async function getEvents(){
+  //   let res = await fetch(`http://localhost:5005/api/events`);
+  //   if(res.status === 200){
+  //     let data = await res.json();
+  //     setEvents(...data);
+  //     console.log("DATA",data)
+  //   } else {
+  //     throw new Error(res.status)
+  //   }
+  // }
+  // async function getEvents(){
+  //   const res = await fetch(`http://localhost:5005/api/events`);
+  //   const data = await res.json()
+  //     .then(data => setEvents(data))
+  //     console.log("RES", data)
+  // };
 
  const authCheck =  async ()  => {
     try {
@@ -45,10 +77,10 @@ function App() {
     user: user,
     authenticated: authenticated,
     isAuthenticating: isAuthenticating
-  }
+  };
 
 
-  useEffect(() => {
+   useEffect(() => {
       getEvents();
       authCheck();
   }, []);
@@ -61,9 +93,9 @@ function App() {
         <Route path='/events' component={Events} exact auth={authProps}/>
         <Route path='/admin/login' component={Login} exact auth={authProps}/>
         <Route path='/admin/events' render={(props) => (
-          <Admin {...props} events={events} setEvents={setEvents} exact auth={authProps}/>
+          <Admin eventsData={events} exact auth={authProps}{...props} />
         )}/>
-        <Route path='/events' component={Events} exact auth={authProps}/>
+        {/* <Route path='/events' component={Events} exact auth={authProps}/> */}
 
         {/* <Route path='/donate' component={Donate} exact /> auth={authProps}*/}
       </Switch>

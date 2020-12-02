@@ -42,7 +42,7 @@ const Footer = () => {
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>
-                                    <AdminLink to="/admin/login">
+                                    <AdminLink to="/admin/events">
                                         Admin
                                         </AdminLink>
                                 </ListItem>

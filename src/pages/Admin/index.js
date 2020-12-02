@@ -3,7 +3,7 @@ import EventsTable from '../../components/EventsTable';
 import { AmplifyAuthenticator, AmplifySignOut, AmplifySignIn, AmplifySignUp } from '@aws-amplify/ui-react';
 import { CreateAdminBtn} from './AdminElements'
 
-const Admin = ({events, setEvents}) => {
+const Admin = ({eventsData, setEvents}) => {
 
   const [createAdmin, setCreateAdmin] = useState(false);
   const [btnContent, setBtnContent] = useState('Create Admin')
@@ -12,11 +12,13 @@ const Admin = ({events, setEvents}) => {
     setCreateAdmin(!createAdmin);
     btnContent === 'Create Admin' ? setBtnContent('Cancel') : setBtnContent('Create Admin');
   }
-
+  
     return (
         <div>
             <AmplifyAuthenticator usernameAlias="email">
                 <AmplifySignIn slot="sign-in" hideSignUp /> 
+            </AmplifyAuthenticator>
+
                 <AmplifySignOut/>
                 {createAdmin ? 
                 <AmplifySignUp
@@ -36,11 +38,13 @@ const Admin = ({events, setEvents}) => {
                       required: true,
                     }
                   ]} 
-                /> :
+                /> 
+                :
                 
-                <EventsTable events={events} setEvents={setEvents}/>
+
+                <EventsTable eventsData={eventsData} setEvents={setEvents} />
                 }
-            </AmplifyAuthenticator>
+            {/* </AmplifyAuthenticator> */}
               <CreateAdminBtn onClick={toggleAdminBtn}>{btnContent}</CreateAdminBtn>
         </div>
     )
