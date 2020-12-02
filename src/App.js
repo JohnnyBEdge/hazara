@@ -30,6 +30,9 @@ function App() {
       console.log("ERROR:",err)
     }
   }
+  // const handleEvents = (events) => {
+  //   setEvents(events)
+  // };
 
   // async function getEvents(){
   //   await fetch(`http://localhost:5005/api/events`)
@@ -93,7 +96,7 @@ function App() {
         <Route path='/events' component={Events} exact auth={authProps}/>
         <Route path='/admin/login' component={Login} exact auth={authProps}/>
         <Route path='/admin/events' render={(props) => (
-          <Admin eventsData={events} exact auth={authProps}{...props} />
+          <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
         )}/>
         {/* <Route path='/events' component={Events} exact auth={authProps}/> */}
 

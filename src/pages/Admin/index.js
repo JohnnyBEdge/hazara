@@ -12,6 +12,7 @@ const Admin = ({eventsData, setEvents}) => {
     setCreateAdmin(!createAdmin);
     btnContent === 'Create Admin' ? setBtnContent('Cancel') : setBtnContent('Create Admin');
   }
+
   
     return (
         <div>

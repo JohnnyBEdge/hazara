@@ -11,21 +11,25 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SortIcon from '@material-ui/icons/Sort';
+import CancelIcon from '@material-ui/icons/Cancel';
+import SaveIcon from '@material-ui/icons/Save';
 // import ImportExportIcon from '@material-ui/icons/ImportExport';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 
-const EventsTable = ({eventsData, setEvents}) => {
+const EventsTable = ({eventsData, setEvents, handleEvents}) => {
 
   console.log("data from eventsTable", eventsData)
-  
-  const events = eventsData;
+
+
+
+  // const events = eventsData;
 
     const [columns, setColumns] = useState([
-        { title: 'ID', field: '_id' },
+        { title: 'ID', field: '_id', editable: 'never' },
         { title: 'Event Title', field: 'title' },
-        { title: 'Description', field: 'desc', initialEditValue: 'initial edit value' },
+        { title: 'Description', field: 'desc' },
         { title: 'Date', field: 'date', type: 'date' }
       ]);
       
@@ -33,8 +37,8 @@ const EventsTable = ({eventsData, setEvents}) => {
 
       const tableIcons = {
         Add: forwardRef((props, ref) => <AddBoxIcon {...props} ref={ref} />),
-        // Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),
-        // Clear: forwardRef((props, ref) => <ClearIcon {...props} ref={ref} />),
+        Check: forwardRef((props, ref) => <SaveIcon {...props} ref={ref} />),
+        Clear: forwardRef((props, ref) => <CancelIcon {...props} ref={ref} />),
         Delete: forwardRef((props, ref) => <DeleteOutline {...props} ref={ref} />),
         // DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
         Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
@@ -50,49 +54,61 @@ const EventsTable = ({eventsData, setEvents}) => {
         // ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
         // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
       };
-      
 
-    
-      
+      const handleAddEvent = (newData) => {
+        fetch('http://localhost:5005/api/events', {
+          method: "POST",
+          body: JSON.stringify({...newData}),
+          headers: {
+            "Content-type": "application/json"
+          }
+        })
+        .then(res => res.json())
+      }
+
     
     return (
       <>
         <MaterialTable
             icons={tableIcons}
-              title="Admin"
-              columns={columns}
-              data={events}
-              editable={{
-                onRowAdd: newData =>
-                  new Promise((resolve, reject) => {
+            title="Admin"
+            columns={columns}
+            options={{
+              sorting: true
+            }}
+            data={eventsData}
+            editable={{
+              onRowAdd: newData =>
+                new Promise((resolve, reject) => {
+                    handleAddEvent(newData);
                     setTimeout(() => {
-                      setEvents([...events, newData]);
-                      
+                      setEvents([...eventsData, newData]);
                       resolve();
                     }, 1000)
-                  }),
-                onRowUpdate: (newData, oldData) =>
-                  new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                      const dataUpdate = [...events];
-                      const index = oldData.tableData.id;
-                      dataUpdate[index] = newData;
-                      setEvents([...dataUpdate]);
-          
-                      resolve();
-                    }, 1000)
-                  }),
-                onRowDelete: oldData =>
-                  new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                      const dataDelete = [...events];
-                      const index = oldData.tableData.id;
-                      dataDelete.splice(index, 1);
-                      setEvents([...dataDelete]);
-                      
-                      resolve()
-                    }, 1000)
-                  }),
+
+                }),
+              onRowUpdate: (newData, oldData) =>
+                new Promise((resolve, reject) => {
+                  setTimeout(() => {
+                    const dataUpdate = [...eventsData];
+                    const index = oldData.tableData.id;
+                    dataUpdate[index] = newData;
+                    setEvents([...dataUpdate]);
+        
+                    resolve();
+                  }, 1000)
+                }),
+              onRowDelete: oldData =>
+                new Promise((resolve, reject) => {
+                  setTimeout(() => {
+                    const dataDelete = [...eventsData];
+                    const index = oldData.tableData.id;
+                    dataDelete.splice(index, 1);
+                    setEvents([...dataDelete]);
+                    
+                    resolve()
+                  }, 1000)
+                }),
               }}
             />
           </>
