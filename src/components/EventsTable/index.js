@@ -29,9 +29,9 @@ const EventsTable = ({eventsData, setEvents}) => {
 
     const [columns, setColumns] = useState([
         { title: 'ID', field: '_id', editable: 'never' },
-        { title: 'Event Title', field: 'title' },
-        { title: 'Description', field: 'desc' },
-        { title: 'Date', field: 'date', type: 'date' }
+        { title: 'Event Title', field: 'title', validate: rowData => !rowData.title ? { isValid: false, helperText: 'Name cannot be empty' } : true },
+        { title: 'Description', field: 'desc', validate: rowData => !rowData.desc ? { isValid: false, helperText: 'Description cannot be empty' } : true },
+        { title: 'Date', field: 'date', type: 'date', validate: rowData => !rowData.date ? { isValid: false, helperText: 'Date cannot be empty' } : true }
       ]);
       
 
