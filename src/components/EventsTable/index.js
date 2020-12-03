@@ -10,7 +10,8 @@ import LastPageIcon from '@material-ui/icons/LastPage';
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import SortIcon from '@material-ui/icons/Sort';
+import SortIcon from '@material-ui/icons/ArrowUpward';
+// import SortIcon from '@material-ui/icons/Sort';
 import CancelIcon from '@material-ui/icons/Cancel';
 import SaveIcon from '@material-ui/icons/Save';
 // import ImportExportIcon from '@material-ui/icons/ImportExport';
@@ -27,11 +28,11 @@ const EventsTable = ({eventsData, setEvents}) => {
 
   // const events = eventsData;
 
-    const [columns, setColumns] = useState([
+    const [columns] = useState([
         { title: 'ID', field: '_id', editable: 'never' },
         { title: 'Event Title', field: 'title', validate: rowData => !rowData.title ? { isValid: false, helperText: 'Name cannot be empty' } : true },
         { title: 'Description', field: 'desc', validate: rowData => !rowData.desc ? { isValid: false, helperText: 'Description cannot be empty' } : true },
-        { title: 'Date', field: 'date', type: 'date', validate: rowData => !rowData.date ? { isValid: false, helperText: 'Date cannot be empty' } : true }
+        { title: 'Date', field: 'date', type: 'date',validate: rowData => !rowData.date ? { isValid: false, helperText: 'Date cannot be empty' } : true }
       ]);
       
 
@@ -91,7 +92,8 @@ const EventsTable = ({eventsData, setEvents}) => {
             title="Admin"
             columns={columns}
             options={{
-              sorting: true
+              sorting: true,
+              thirdSortClick: false
             }}
             data={eventsData}
             editable={{
