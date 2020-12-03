@@ -6,7 +6,7 @@ import Contact from './pages/contact';
 import Events from './pages/events';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
-import Donate from './pages/donate';
+import DonatePage from './pages/donate';
 import {Auth} from 'aws-amplify'
 
 
@@ -100,7 +100,7 @@ function App() {
         )}/>
         {/* <Route path='/events' component={Events} exact auth={authProps}/> */}
 
-        {/* <Route path='/donate' component={Donate} exact /> auth={authProps}*/}
+        <Route path='/donate' component={DonatePage} exact auth={authProps} /> 
       </Switch>
       
       {/* <Home id="home"/> */}

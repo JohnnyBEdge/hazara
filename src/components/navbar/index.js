@@ -77,7 +77,7 @@ const Navbar = (props) => {
                             >Events</NavLink2>
                         </NavItem>
                     </NavMenu>
-                    <DonateBtn>Donate</DonateBtn>
+                    <DonateBtn to="/donate">Donate</DonateBtn>
                 </NavbarContainer>
             </Nav>
         </>
