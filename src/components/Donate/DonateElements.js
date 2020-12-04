@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import img from '../../assets/images/donateBackground.jpg';
-import Navbar from '../../components/navbar';
+import Navbar from '../navbar';
 
-export const PageContainer = styled.div`
+export const DonateSection = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -10,6 +10,11 @@ export const PageContainer = styled.div`
     background-image: url(${img});
     background-size: cover;
     justify-content: center;
+
+    @media screen and (max-width: 768px){
+        background-color: #1961A3;
+        background-image: none;
+    }
 `
 export const NavBar = styled(Navbar)`
     background: red;
@@ -20,9 +25,18 @@ export const DonateContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
+    max-width: 400px;
     height: 500px;
     margin-left: 75px;
+    border: solid #1961A3 2px;
+    border-radius: 5px;
+   
+
+    @media screen and (max-width: 768px){
+        margin-top: 100px;
+        margin: 0 auto;
+        width: 350px;
+    }
 `
 export const IconContainer = styled.div`
     width: 150px;

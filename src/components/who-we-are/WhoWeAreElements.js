@@ -65,11 +65,14 @@ export const Info = styled.p`
 `
 export const GroupPhoto = styled.img`
     width: 100%;
-    /* min-width: 500px; */
     margin-left: -90px;
     box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.75);
+
+    @media screen and (max-width: 900px){
+        margin-left: -40px;
+    }
     @media screen and (max-width: 768px){
-        /* object-fit: fill; */
+        width: 100%;
         margin-left: 0;
     }
 `

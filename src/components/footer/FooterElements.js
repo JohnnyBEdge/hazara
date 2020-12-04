@@ -15,10 +15,11 @@ export const FooterWrapper = styled.div`
 `
 export const SectionTitle = styled.h2`
     font-size: 2rem;
-    border-bottom: solid #FFFAFA 2px;
+    /* border-bottom: solid #FFFAFA 2px; */
     width: 90%;
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
 `
 export const ListTitle = styled.h4`
     font-size: 1.1rem;
@@ -29,6 +30,7 @@ export const ListsContainer = styled.div`
     display: flex;
     width: 90%;
     margin: 0 auto;
+    justify-content: center;
 
     @media screen and (max-width: 768px){
         flex-direction: column;

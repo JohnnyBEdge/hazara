@@ -72,12 +72,12 @@ const Navbar = (props) => {
                         </NavItem>
                         <NavItem>
                             <NavLink2 
-                                to="/events"  
+                                to="events"  
                                 scrollNav={scrollNav}
                             >Events</NavLink2>
                         </NavItem>
                     </NavMenu>
-                    <DonateBtn to="/donate">Donate</DonateBtn>
+                    <DonateBtn to="donate">Donate</DonateBtn>
                 </NavbarContainer>
             </Nav>
         </>

@@ -9,9 +9,10 @@ import EventsTable from '../components/EventsTable';
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
 import Modal from '../components/Modal';
+import Donate from '../components/Donate'
 
 
-const Home = () => {
+const Home = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [modalData, setModalData] = useState();
@@ -41,6 +42,7 @@ const Home = () => {
                 setModalData={setModalData} />
             <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
             <HowToHelp/>
+            <Donate/>
             <Footer/> 
         </>
     )

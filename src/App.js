@@ -6,7 +6,7 @@ import Contact from './pages/contact';
 import Events from './pages/events';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
-import DonatePage from './pages/donate';
+import Donate from './components/Donate';
 import {Auth} from 'aws-amplify'
 
 
@@ -20,6 +20,28 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true)
 
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
+  // const [modalData, setModalData] = useState();
+
+
+  // const toggleMenu = () => {
+  //     setIsOpen(!isOpen)
+  // };
+  // const toggleModal = () => {
+  //     setOpenModal(!openModal)
+  // };
+
+  // const sideBarProps = {
+  //   isOpen: isOpen,
+  //   setIsOpen: setIsOpen,
+  //   openModal: openModal,
+  //   setOpenModal: setOpenModal,
+  //   modalData: modalData,
+  //   toggleMenu: toggleMenu,
+  //   toggleModal: toggleModal
+  // }
+
   const getEvents = async () => {
     try{
       const res = await fetch('http://localhost:5005/api/events');
@@ -30,35 +52,7 @@ function App() {
       console.log("ERROR:",err)
     }
   }
-  // const handleEvents = (events) => {
-  //   setEvents(events)
-  // };
 
-  // async function getEvents(){
-  //   await fetch(`http://localhost:5005/api/events`)
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setEvents(data);
-  //       console.log("DATA", data)
-  //     })
-  // }
-
-  // async function getEvents(){
-  //   let res = await fetch(`http://localhost:5005/api/events`);
-  //   if(res.status === 200){
-  //     let data = await res.json();
-  //     setEvents(...data);
-  //     console.log("DATA",data)
-  //   } else {
-  //     throw new Error(res.status)
-  //   }
-  // }
-  // async function getEvents(){
-  //   const res = await fetch(`http://localhost:5005/api/events`);
-  //   const data = await res.json()
-  //     .then(data => setEvents(data))
-  //     console.log("RES", data)
-  // };
 
  const authCheck =  async ()  => {
     try {
@@ -100,7 +94,7 @@ function App() {
         )}/>
         {/* <Route path='/events' component={Events} exact auth={authProps}/> */}
 
-        <Route path='/donate' component={DonatePage} exact auth={authProps} /> 
+        {/* <Route path='/donate' component={Donate} exact auth={authProps} />  */}
       </Switch>
       
       {/* <Home id="home"/> */}

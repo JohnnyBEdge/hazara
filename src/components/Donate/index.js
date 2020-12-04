@@ -1,18 +1,19 @@
 import React from 'react';
 import {
-    PageContainer, NavBar, DonateContainer,
+    DonateSection, DonateContainer,
     IconContainer, Icon, HeaderText, SubHeaderText,
     DonateButton
 } from './DonateElements';
-import Footer from '../../components/footer';
+import Footer from '../footer';
+import Sidebar from '../Sidebar';
 import icon from '../../assets/images/donate-icon.png';
 
 
-const DonatePage = () => {
+const Donate = () => {
+
     return (
         <>
-            <NavBar />
-            <PageContainer>
+            <DonateSection id="donate">
                 <DonateContainer>
                     <IconContainer>
                         <Icon src={icon}/>
@@ -21,10 +22,9 @@ const DonatePage = () => {
                     <SubHeaderText>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ex eaque rerum! Nam dolor, enim quis, iste corrupti voluptatem, deleniti saepe praesentium reprehenderit at quia sint eveniet fuga temporibus ducimus.</SubHeaderText>
                     <DonateButton>Donate Now</DonateButton>
                 </DonateContainer>
-            </PageContainer>
-            <Footer/>
+            </DonateSection>
         </>
     )
 }
 
-export default DonatePage;
+export default Donate;
