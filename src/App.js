@@ -87,7 +87,13 @@ function App() {
       <Switch>
         <Route path='/' component={Home} exact auth={authProps}/>
         <Route path='/contact' component={Contact} exact auth={authProps}/>
-        <Route path='/events' component={Events} exact auth={authProps}/>
+
+        <Route path='/events' render={(props) => (
+          // <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
+          <Events eventsData={events} exact auth={authProps} {...props} />
+        )}/>
+
+        {/* <Route path='/events' eventsData={events} component={Events} exact auth={authProps}/> */}
         <Route path='/admin/login' component={Login} exact auth={authProps}/>
         <Route path='/admin/events' render={(props) => (
           <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />

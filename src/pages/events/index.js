@@ -12,7 +12,7 @@ import {
     Event
 } from './EventElements';
 
-const Events = () => {
+const Events = (eventsData) => {
     return (
         <>  
             <Sidebar 
@@ -23,7 +23,7 @@ const Events = () => {
             />
             <CalendarContainer>
             <PageTitle>Events</PageTitle>
-                <Calendar/>
+                <Calendar eventsData={eventsData}/>
             </CalendarContainer>
             {/* <EventsList>
                     <Event>Event</Event>
