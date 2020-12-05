@@ -9,7 +9,7 @@ import logo from '../../assets/images/logo-1.jpg'
 
 
 const Navbar = (props) => {
-    const [scrollNav, setScrollNav] = useState(false);
+    const [scrollnav, setScrollNav] = useState(false);
 
     const changeNavbar = () => window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
     const scrollHome = () => scroll.scrollToTop();
@@ -20,13 +20,13 @@ const Navbar = (props) => {
 
     return (
         <>
-            <Nav scrollNav={scrollNav}>
+            <Nav scrollnav={scrollnav}>
 
                 <NavbarContainer>
 
                     <NavLogo src={logo} onClick={scrollHome}/>
 
-                    <MobileIcon onClick={props.toggleMenu} scrollNav={scrollNav}>
+                    <MobileIcon onClick={props.toggleMenu} scrollnav={scrollnav}>
                         <FaBars/>
                     </MobileIcon>
 
@@ -39,7 +39,7 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}
-                                scrollNav={scrollNav}
+                                scrollnav={scrollnav ? 1 : 0}
                             >Who We Are</NavLink1>
                         </NavItem>
                         <NavItem>
@@ -50,7 +50,7 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}
-                                scrollNav={scrollNav}
+                                scrollnav={scrollnav ? 1 : 0}
                             >What We Do</NavLink1>
                         </NavItem>
                         <NavItem>
@@ -61,19 +61,19 @@ const Navbar = (props) => {
                                 spy={true}
                                 exact='true'
                                 offset={-80}    
-                                scrollNav={scrollNav}
+                                scrollnav={scrollnav ? 1 : 0}
                             >How To Help</NavLink1>
                         </NavItem>
                         <NavItem>
                             <NavLink2 
                                 to="/contact"
-                                scrollNav={scrollNav}
+                                scrollnav={scrollnav ? 1 : 0}
                             >Contact Us</NavLink2>
                         </NavItem>
                         <NavItem>
                             <NavLink2 
                                 to="events"  
-                                scrollNav={scrollNav}
+                                scrollnav={scrollnav ? 1 : 0}
                             >Events</NavLink2>
                         </NavItem>
                     </NavMenu>

@@ -4,7 +4,7 @@ import {Link as LinkS} from 'react-scroll';
 
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? 'whitesmoke' : 'transparent')};
+    background: ${({scrollnav}) => (scrollnav ? 'whitesmoke' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -44,7 +44,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
+        color: ${({scrollnav}) => (scrollnav ? '#00539F' : 'whitesmoke')};
         /* background: #3D6BAC; */
     }
 `
@@ -67,7 +67,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink1 = styled(LinkS)`
-    color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
+    color: ${({scrollnav}) => (scrollnav ? '#00539F' : 'whitesmoke')};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -87,7 +87,7 @@ export const NavLink1 = styled(LinkS)`
     }
 `;
 export const NavLink2 = styled(LinkR)`
-    color: ${({scrollNav}) => (scrollNav ? '#00539F' : 'whitesmoke')};
+    color: ${({scrollnav}) => (scrollnav ? '#00539F' : 'whitesmoke')};
     display: flex;
     align-items: center;
     text-decoration: none;
