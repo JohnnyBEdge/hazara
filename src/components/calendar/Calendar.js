@@ -1,7 +1,7 @@
 import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import './calendar.css';
+import {CalContainer} from './CalendarElements';
 
 export default function Calendar({eventsData}) {
 console.log("CALENDAR", eventsData.eventsData)
@@ -11,10 +11,12 @@ console.log("CALENDAR", eventsData.eventsData)
         alert(`Event: ${info.event.desc}`)
     }
     return (
-        <div id="cal_container">
+        <CalContainer>
             <FullCalendar
-                id="cal_style"
+                // id="cal_style"
+                height="auto"
                 plugins={[ dayGridPlugin ]}
+                // initialView="listView"
                 initialView="dayGridMonth"
                 events={eventsData.eventsData}
                 
@@ -22,6 +24,6 @@ console.log("CALENDAR", eventsData.eventsData)
                 backgroundColor="white"
                 
             />
-        </div>
+        </CalContainer>
     )
 }

@@ -65,17 +65,18 @@ const Navbar = (props) => {
                             >How To Help</NavLink1>
                         </NavItem>
                         <NavItem>
+                            <NavLink1 
+                                to="events"  
+                                scrollnav={scrollnav ? 1 : 0}
+                            >Events</NavLink1>
+                        </NavItem>
+                        <NavItem>
                             <NavLink2 
                                 to="/contact"
                                 scrollnav={scrollnav ? 1 : 0}
                             >Contact Us</NavLink2>
                         </NavItem>
-                        <NavItem>
-                            <NavLink2 
-                                to="events"  
-                                scrollnav={scrollnav ? 1 : 0}
-                            >Events</NavLink2>
-                        </NavItem>
+
                     </NavMenu>
                     <DonateBtn to="donate">Donate</DonateBtn>
                 </NavbarContainer>

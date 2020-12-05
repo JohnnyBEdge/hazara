@@ -3,11 +3,11 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './pages';
 import Contact from './pages/contact';
-import Events from './pages/events';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Donate from './components/Donate';
-import {Auth} from 'aws-amplify'
+import {Auth} from 'aws-amplify';
+import Events from './components/Events';
 
 
 // import Calendar from './pages/calendar';
