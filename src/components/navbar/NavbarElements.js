@@ -76,8 +76,9 @@ export const NavLink1 = styled(LinkS)`
     cursor: pointer;
     font-size: 1rem;
     &.active{
-        border-bottom: 3px solid rgb(14, 214, 14);
-        color: yellow;
+        color: #F9C910;
+        transition: 0.3s all ease;
+        transform: scale(1.2)
     }
     &:hover{
         color: #F9C910;

@@ -33,7 +33,7 @@ const Navbar = (props) => {
                     <NavMenu>
                         <NavItem>
                             <NavLink1 
-                                to='who'
+                                to="who"
                                 smooth={true}
                                 duration={500}
                                 spy={true}

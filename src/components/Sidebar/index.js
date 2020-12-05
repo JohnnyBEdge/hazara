@@ -15,13 +15,13 @@ const Sidebar = (props) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="#whoWeAre" onClick={props.toggleMenu}>
+                    <SidebarLink to="who" onClick={props.toggleMenu}>
                         Who We Are
                     </SidebarLink>
-                    <SidebarLink to="#whatWeDo" onClick={props.toggleMenu}>
+                    <SidebarLink to="what" onClick={props.toggleMenu}>
                         What We Do
                     </SidebarLink>
-                    <SidebarLink to="#howToHelp" onClick={props.toggleMenu}>
+                    <SidebarLink to="how" onClick={props.toggleMenu}>
                         How To Help
                     </SidebarLink>
                     <SidebarLink to="contact" onClick={props.toggleMenu}>

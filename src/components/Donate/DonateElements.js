@@ -21,7 +21,7 @@ export const NavBar = styled(Navbar)`
 `
 export const DonateContainer = styled.div`
     display: flex;
-    background-color: #F9C910;
+    background-color: #FFC659;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +49,6 @@ export const IconContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F9C910;
     
 `
 export const Icon = styled.img`
