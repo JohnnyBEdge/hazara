@@ -10,12 +10,14 @@ import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
 import Modal from '../components/Modal';
 import Donate from '../components/Donate';
-import Events from '../components/Events'
+import Events from '../components/Events';
+import DonateModal from '../components/DonateModal'
 
 
 const Home = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+    const [openDonate, setOpenDonate] = useState(false);
     const [modalData, setModalData] = useState();
 
 
@@ -25,11 +27,15 @@ const Home = (props) => {
     const toggleModal = () => {
         setOpenModal(!openModal)
     };
+    const toggleDonate = () => {
+        setOpenDonate(!openDonate)
+        console.log("DONATE MODAL", openDonate)
+    };
 
     return (
         <>
             <Sidebar isOpen={isOpen} toggleMenu={toggleMenu}/>
-            <Navbar toggleMenu={toggleMenu}/>
+            <Navbar toggleMenu={toggleMenu} toggleDonate={toggleDonate} />
             <Hero/>
             <WhoWeAre 
                 openModal={openModal} 
@@ -43,6 +49,7 @@ const Home = (props) => {
             <HowToHelp/>
             <Events/>
             <Donate/>
+            <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} />
             <Footer/> 
         </>
     )
