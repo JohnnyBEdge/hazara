@@ -1,10 +1,11 @@
 import React from 'react'
-import { ModalContainer, Modal } from './DonateModalElements';
+import { ModalContainer, Modal, CloseModalIcon } from './DonateModalElements';
 
 const DonateModal = ({toggleDonate, openDonate}) => {
     return (
-        <ModalContainer >
-            <Modal openDonate={openDonate}>
+        <ModalContainer openDonate={openDonate} onClick={toggleDonate}>
+            <Modal >
+                <CloseModalIcon onClick={toggleDonate} fontSize="large" />
                 INSERT PAYPAL HERE
             </Modal>
 
