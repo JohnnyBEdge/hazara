@@ -78,7 +78,6 @@ const Navbar = (props) => {
                         </NavItem>
 
                     </NavMenu>
-                    {/* <DonateBtn to="donate">Donate</DonateBtn> */}
                     <DonateBtn onClick={props.toggleDonate}>Donate</DonateBtn>
                 </NavbarContainer>
             </Nav>

@@ -20,7 +20,8 @@ const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, l
                 <ModalText>{text}</ModalText>
                 <ModalText>{listDesc}</ModalText>
                 <ul>
-                    return {listItems}.map((item) => {<li>item</li>})
+                    insert list here
+                    {/* return {listItems}.map((item) => {<li>item</li>}) */}
                 </ul>
 
             </ModalContent>

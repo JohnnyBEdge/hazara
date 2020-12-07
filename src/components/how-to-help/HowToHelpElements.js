@@ -78,4 +78,16 @@ export const CardBtn = styled.button`
         transform: scale(1.1);
     }
 `
+export const HelpSidebar = styled.aside`
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 80%;
+    background: blue;
+    top: 0;
+    right: 0;
+    transition: 0.3s ease-in-out;
+    opacity: ${({helpOpen}) => (helpOpen ? '100%' : '0')};
+    right: ${({helpOpen}) => (helpOpen ? '0' : '-100%')};
+`
 

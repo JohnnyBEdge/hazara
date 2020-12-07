@@ -11,7 +11,8 @@ import InfoSection from '../components/InfoSection';
 import Modal from '../components/Modal';
 import Donate from '../components/Donate';
 import Events from '../components/Events';
-import DonateModal from '../components/DonateModal'
+import DonateModal from '../components/DonateModal';
+import HelpSidebar from '../components/how-to-help/HelpSidebar'
 
 
 const Home = (props) => {
@@ -19,6 +20,7 @@ const Home = (props) => {
     const [openModal, setOpenModal] = useState(false);
     const [openDonate, setOpenDonate] = useState(false);
     const [modalData, setModalData] = useState();
+    const [helpOpen, setHelpOpen] = useState(false);
 
 
     const toggleMenu = () => {
@@ -29,7 +31,10 @@ const Home = (props) => {
     };
     const toggleDonate = () => {
         setOpenDonate(!openDonate)
-        console.log("DONATE MODAL", openDonate)
+    };
+    const toggleHelpModal = () => {
+        setHelpOpen(!helpOpen)
+        console.log("HELP MODAL", helpOpen)
     };
 
     return (
@@ -46,7 +51,7 @@ const Home = (props) => {
                 toggleModal={toggleModal} 
                 setModalData={setModalData} />
             <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
-            <HowToHelp/>
+            <HowToHelp helpOpen={helpOpen} toggleHelpModal={toggleHelpModal} />
             <Events/>
             <Donate/>
             <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} />
