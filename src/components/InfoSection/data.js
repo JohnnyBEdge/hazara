@@ -9,6 +9,7 @@ export const WhoWeAre = {
     primary: true,
     displayBtn: true
 }
+
 export const WhatWeDo = {
     id: 'what',
     headline: 'What We Do',

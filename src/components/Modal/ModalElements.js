@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const ModalOverlay = styled.div`
     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
@@ -37,10 +37,27 @@ export const ModalSubTitle = styled.h3`
 
 `
 export const ModalImg = styled.img`
-    width: 100%;
+    width: ${({openModal}) => (openModal ? '100%' : '50%')};
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
 export const ModalText = styled.p`
 
 `
+// const grow = keyframes`
+// from {
+//   /* transform: rotate(0deg); */
+//   transform: scale(0);
+// }
+
+// to {
+//   transform: scale(1);
+//   /* transform: rotate(360deg); */
+// }
+// `;
+// export const Grow = styled.div`
+// display: inline-block;
+// animation: ${grow} 2s linear ;
+// padding: 2rem 1rem;
+// font-size: 1.2rem;
+// `;

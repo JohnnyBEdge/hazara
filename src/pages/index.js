@@ -12,15 +12,15 @@ import Modal from '../components/Modal';
 import Donate from '../components/Donate';
 import Events from '../components/Events';
 import DonateModal from '../components/DonateModal';
-import HelpSidebar from '../components/how-to-help/HelpSidebar'
+// import HelpSidebar from '../components/how-to-help/HelpSidebar'
 
 
 const Home = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
-    const [openDonate, setOpenDonate] = useState(false);
     const [modalData, setModalData] = useState();
-    const [helpOpen, setHelpOpen] = useState(false);
+    const [modalTypeCard, setModalTypeCard] = useState(false)
+
 
 
     const toggleMenu = () => {
@@ -29,18 +29,15 @@ const Home = (props) => {
     const toggleModal = () => {
         setOpenModal(!openModal)
     };
-    const toggleDonate = () => {
-        setOpenDonate(!openDonate)
+    const toggleModalType = () => {
+        setModalTypeCard(!modalTypeCard)
     };
-    const toggleHelpModal = () => {
-        setHelpOpen(!helpOpen)
-        console.log("HELP MODAL", helpOpen)
-    };
+
 
     return (
         <>
             <Sidebar isOpen={isOpen} toggleMenu={toggleMenu}/>
-            <Navbar toggleMenu={toggleMenu} toggleDonate={toggleDonate} />
+            <Navbar toggleMenu={toggleMenu} />
             <Hero/>
             <WhoWeAre 
                 openModal={openModal} 
@@ -51,10 +48,14 @@ const Home = (props) => {
                 toggleModal={toggleModal} 
                 setModalData={setModalData} />
             <Modal openModal={openModal} toggleModal={toggleModal} {...modalData} />
-            <HowToHelp helpOpen={helpOpen} toggleHelpModal={toggleHelpModal} />
+            <HowToHelp  
+                setModalData={setModalData}
+                toggleModal={toggleModal}
+                toggleModalType={toggleModalType}
+                modalTypeCard={modalTypeCard}/>
             <Events/>
             <Donate/>
-            <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} />
+            {/* <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} /> */}
             <Footer/> 
         </>
     )

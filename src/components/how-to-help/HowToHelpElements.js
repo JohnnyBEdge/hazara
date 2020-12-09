@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
 
 export const HowToHelpContainer = styled.div`
     display: flex;
@@ -15,7 +16,7 @@ export const SectionHeader = styled.h2`
     margin: 40px 0 20px 0;
 `
 export const CardContainer = styled.div`
-display: flex;
+display: ${({openCardModal}) => (openCardModal ? 'none' : 'flex')};
 width: 100%;
 justify-content: space-evenly;
 align-items: center;
@@ -90,4 +91,7 @@ export const HelpSidebar = styled.aside`
     opacity: ${({helpOpen}) => (helpOpen ? '100%' : '0')};
     right: ${({helpOpen}) => (helpOpen ? '0' : '-100%')};
 `
+
+
+
 

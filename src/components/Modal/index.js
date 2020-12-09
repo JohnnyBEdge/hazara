@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     ModalOverlay, ModalContainer, ModalContent,
-    ModalTitle, ModalSubTitle, ModalImg, ModalText
+    ModalTitle, ModalSubTitle, ModalImg, ModalText,
+
 } from './ModalElements'; 
 
 const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, listDesc, listItems }) => {

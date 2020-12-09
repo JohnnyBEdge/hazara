@@ -25,3 +25,12 @@ export const howToHelpData = {
     img: require('../../assets/images/card-placeholder.jpeg'),
     alt: 'Two friends riding bikes, side by side, on the streets of Hanoi.',
 }
+// export const card1 = {
+//     titleText: "Card1"
+// }
+// export const card2 = {
+//     titleText: "Card1"
+// }
+// export const card3 = {
+//     titleText: "Card1"
+// }
