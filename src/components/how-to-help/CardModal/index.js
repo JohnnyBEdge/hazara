@@ -7,7 +7,7 @@ const CardModal = ({openCardModal, toggleCardModal}) => {
             <CardModalOverlay openCardModal={openCardModal} onClick={toggleCardModal}></CardModalOverlay>
           
             <CardModalContainer openCardModal={openCardModal}>
-        
+                <p>{openCardModal}</p>
             </CardModalContainer>
         </>
     )

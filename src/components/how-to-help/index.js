@@ -32,9 +32,9 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalTypeCard, togg
                         <CardTitle>{Card1Data.titleText}</CardTitle>
                         <CardDesc>{Card1Data.shortDesc}</CardDesc>
                         <CardBtn onClick={() => {
+                            setModalData(Card1Data)
                             toggleCardModal()
                             // toggleModal()
-                            // setModalData(Card1Data)
                         }}>Learn More</CardBtn>
                     </Card>
 
@@ -43,8 +43,9 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalTypeCard, togg
                         <CardTitle>{Card2Data.titleText}</CardTitle>
                         <CardDesc>{Card2Data.shortDesc}</CardDesc>
                         <CardBtn onClick={() => {
-                            toggleModal();
                             setModalData(Card2Data);
+                            toggleCardModal();
+                            
                         }}>Learn More</CardBtn>
                     </Card>
 
@@ -54,8 +55,8 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalTypeCard, togg
                         <CardTitle>{Card3Data.titleText}</CardTitle>
                         <CardDesc>{Card3Data.shortDesc}</CardDesc>
                         <CardBtn onClick={() => {
-                            toggleModal()
-                            setModalData(Card3Data)
+                            setModalData(Card3Data);
+                            toggleCardModal();
                         }}> Learn More</CardBtn>
                     </Card>
 

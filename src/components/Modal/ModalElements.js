@@ -25,24 +25,53 @@ export const ModalContent = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
+    justify-content: flex-end;
     width: 70%;
     height: 700px;
-    background-color: whitesmoke;
+    color: #1A61A3;
+    background-image: url(${({img}) => (img)});
+    background-size: cover;
     border-radius: 10px;
 `
+export const ModalInfo = styled.div`
+    width: 65%;
+    height: 500px;
+    background-color: whitesmoke;
+    align-self: flex-end;   
+    margin: 0 20px 30px 0; 
+`
+// export const ModalContent = styled.div`
+//     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
+//     position: fixed;
+//     z-index: 99;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     flex-direction: column;
+//     width: 70%;
+//     height: 700px;
+//     color: #1A61A3;
+//     background-color: whitesmoke;
+//     border-radius: 10px;
+// `
 export const ModalTitle = styled.h2`
-
+    font-size: 25px;
+    padding: 10px;
 `
 export const ModalSubTitle = styled.h3`
-
+    font-size: 20px;
+    padding: 10px;
 `
 export const ModalImg = styled.img`
     width: ${({openModal}) => (openModal ? '100%' : '50%')};
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 100%;
 `
 export const ModalText = styled.p`
-
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 15px;
 `
 // const grow = keyframes`
 // from {
