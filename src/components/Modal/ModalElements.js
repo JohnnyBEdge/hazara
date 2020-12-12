@@ -1,4 +1,5 @@
-import styled, {keyframes} from 'styled-components'
+import styled, {keyframes} from 'styled-components';
+import CloseIcon from '@material-ui/icons/Close';
 
 export const ModalOverlay = styled.div`
     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
@@ -10,12 +11,16 @@ export const ModalOverlay = styled.div`
     left:0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 `
 export const ModalContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+
+    }
 `
 export const ModalContent = styled.div`
     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
@@ -32,6 +37,16 @@ export const ModalContent = styled.div`
     background-image: url(${({img}) => (img)});
     background-size: cover;
     border-radius: 10px;
+
+    @media screen and (max-width: 768px){
+        position: fixed;
+        display: ${({openModal}) => (openModal ? 'block' : 'none')};
+        margin: 0 auto;
+        width: 95%;
+        height: 99%;
+        padding-top: 30px;
+        background-image: none;
+    }
 `
 export const ModalInfo = styled.div`
     width: 65%;
@@ -39,6 +54,40 @@ export const ModalInfo = styled.div`
     background-color: whitesmoke;
     align-self: flex-end;   
     margin: 0 20px 30px 0; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    overflow: scroll;
+
+    @media screen and (max-width: 768px){
+        width: 98%;
+        height: 95%;
+        margin: 0;
+    }
+`
+export const CloseModalIcon1 = styled(CloseIcon)`
+    color: white;
+    position: relative;
+    top: -120px;
+    right: 10px;
+    align-self: flex-end;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`
+export const CloseModalIcon2 = styled(CloseIcon)`
+    display: none;
+
+    @media screen and (max-width: 768px){
+        color: black;
+        padding: 7px;
+        align-self: flex-end;
+        cursor: pointer;
+        color: #1A61A3;
+    }
 `
 // export const ModalContent = styled.div`
 //     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
@@ -57,6 +106,7 @@ export const ModalInfo = styled.div`
 export const ModalTitle = styled.h2`
     font-size: 25px;
     padding: 10px;
+    margin: 10px;
 `
 export const ModalSubTitle = styled.h3`
     font-size: 20px;
@@ -71,7 +121,8 @@ export const ModalImg = styled.img`
 export const ModalText = styled.p`
     font-size: 18px;
     line-height: 1.5;
-    margin: 0 15px;
+    margin: 20px 15px;
+
 `
 // const grow = keyframes`
 // from {
