@@ -58,35 +58,36 @@ export const ModalInfo = styled.div`
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: hidden visible;
 
     @media screen and (max-width: 768px){
-        width: 98%;
+        width: 100%;
         height: 95%;
         margin: 0;
     }
 `
-export const CloseModalIcon1 = styled(CloseIcon)`
-    color: white;
-    position: relative;
-    top: -120px;
-    right: 10px;
+// export const CloseModalIcon1 = styled(CloseIcon)`
+//     color: white;
+//     position: relative;
+//     top: -120px;
+//     right: 10px;
+//     align-self: flex-end;
+//     cursor: pointer;
+
+//     @media screen and (max-width: 768px){
+//         display: none;
+//     }
+// `
+export const CloseModalIcon = styled(CloseIcon)`
+    display: none;
+    color: black;
+    padding: 7px;
     align-self: flex-end;
     cursor: pointer;
+    color: #1A61A3;
 
     @media screen and (max-width: 768px){
-        display: none;
-    }
-`
-export const CloseModalIcon2 = styled(CloseIcon)`
-    display: none;
-
-    @media screen and (max-width: 768px){
-        color: black;
-        padding: 7px;
-        align-self: flex-end;
-        cursor: pointer;
-        color: #1A61A3;
+        display: flex;
     }
 `
 // export const ModalContent = styled.div`
