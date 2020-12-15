@@ -19,9 +19,7 @@ const Home = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [modalData, setModalData] = useState();
-    const [modalTypeCard, setModalTypeCard] = useState(false)
-
-    console.log("MODAL DATA:",modalData)
+    const [modalTypeCard, setModalTypeCard] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)

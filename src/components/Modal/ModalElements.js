@@ -66,18 +66,6 @@ export const ModalInfo = styled.div`
         margin: 0;
     }
 `
-// export const CloseModalIcon1 = styled(CloseIcon)`
-//     color: white;
-//     position: relative;
-//     top: -120px;
-//     right: 10px;
-//     align-self: flex-end;
-//     cursor: pointer;
-
-//     @media screen and (max-width: 768px){
-//         display: none;
-//     }
-// `
 export const CloseModalIcon = styled(CloseIcon)`
     display: none;
     color: black;
