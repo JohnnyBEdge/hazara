@@ -11,7 +11,7 @@ import help from '../../assets/images/help.jpeg'
 import Fade from 'react-reveal/Fade';
 import CardModal from './CardModal';
 
-const HowToHelp = ({toggleModal, setModalType, setModalData, modalTypeCard, toggleModalType}) => {
+const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTypeCard, toggleModalType}) => {
 
     const [openCardModal, setOpenCardModal] = useState(false);
 
@@ -22,7 +22,11 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalTypeCard, togg
 
     return (
         <HowToHelpContainer id="how">
-            <CardModal openCardModal={openCardModal} toggleCardModal={toggleCardModal} />
+            <CardModal 
+                openCardModal={openCardModal} 
+                toggleCardModal={toggleCardModal} 
+                {...modalData}
+                 />
             {/* <HelpSidebar helpOpen={helpOpen}>HELP SIDEBAR</HelpSidebar> */}
             <SectionHeader>How To Help</SectionHeader>
             <CardContainer openCardModal={openCardModal}>

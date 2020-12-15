@@ -6,10 +6,6 @@ import {
 } from './ModalElements'; 
 
 const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, listDesc, listItems }) => {
-    // let arr = listItems
-    // const items = listItems.map((item) => {
-    //     return <li>{item}</li>
-    // })
 
     return (
         <ModalContainer>
@@ -23,13 +19,6 @@ const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, l
                     <ModalText>{listDesc}</ModalText>
                 </ModalInfo>
             </ModalContent>
-            {/* <ModalContent openModal={openModal}>
-                <ModalImg src={img} alt={alt}/>
-                <ModalTitle>{titleText}</ModalTitle>
-                <ModalSubTitle>{subTitleText}</ModalSubTitle>
-                <ModalText>{text}</ModalText>
-                <ModalText>{listDesc}</ModalText>
-            </ModalContent> */}
         </ModalContainer>
 
     )

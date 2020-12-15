@@ -22,9 +22,11 @@ export const CardModalContainer = styled.div`
     transform: translate(-50%, -50%);
     flex-direction: column;
     width: 600px;
-    height: 750px;
+    height: 650px;
+    margin-top: 40px;
     background-color: whitesmoke;
     border-radius: 10px;
+    border: solid black 2px;
 `
 const grow = keyframes`
   from {
@@ -43,3 +45,19 @@ export const Grow = styled.div`
   padding: 2rem 1rem;
   font-size: 1.2rem;
 `;
+
+export const CardModalTitle = styled.h3`
+  
+`
+export const CardModalDesc = styled.p`
+
+`
+export const CardModalListTitle = styled.h4`
+
+`
+export const CardModalList = styled.ul`
+
+`
+export const CardModalListItem = styled.li`
+
+`

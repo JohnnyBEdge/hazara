@@ -21,7 +21,7 @@ const Home = (props) => {
     const [modalData, setModalData] = useState();
     const [modalTypeCard, setModalTypeCard] = useState(false)
 
-
+    console.log("MODAL DATA:",modalData)
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -52,7 +52,9 @@ const Home = (props) => {
                 setModalData={setModalData}
                 toggleModal={toggleModal}
                 toggleModalType={toggleModalType}
-                modalTypeCard={modalTypeCard}/>
+                modalTypeCard={modalTypeCard}
+                modalData={modalData} />
+                
             <Events/>
             <Donate/>
             {/* <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} /> */}
