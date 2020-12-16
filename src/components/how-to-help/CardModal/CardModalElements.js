@@ -22,8 +22,10 @@ export const CardModalContainer = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
+    justify-content: space-evenly;
     width: 600px;
-    height: 650px;
+    min-height: 650px;
+    height: auto;
     margin-top: 40px;
     background-color: whitesmoke;
     border-radius: 10px;
@@ -98,6 +100,7 @@ export const CardBtn = styled.button`
     padding: 10px 22px;
     cursor: pointer;
     margin: 20px 0px;
+    margin-bottom: 10px;
     justify-self: flex-end;
 
     &:hover{

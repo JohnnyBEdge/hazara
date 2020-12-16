@@ -1,179 +1,79 @@
 import styled from 'styled-components';
-import contact from '../../assets/images/contact.jpeg'
-
+import contact from '../../assets/images/contact3.jpg';
+import { Link } from 'react-router-dom';
 
 export const PageContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
+`
+export const ImageContainer = styled.div`
     background-image: url(${contact});
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: center;
+    filter: grayscale(100%);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`
+export const ImageText = styled.p`
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px #000000;
+`
+export const FormContainer = styled.div`
+    width: 50%;
+`
+export const RtnBtnContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    /* background-color: whitesmoke; */
-    /* background-color: #1961A3; */
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (max-width: 768px){
-        height: 100%;
-    }
 `
-export const PageTitle = styled.h2`
-    text-align: center;
-    margin-top: 100px;
-`
-export const TitleSubText = styled.p`
-    text-align: center;
-    align-self: center;
-    width: 500px;
-`
-export const ContactContainer = styled.div`
-    display: flex;
-    width: 95%;
-    margin: 0 auto;
-    background-color: whitesmoke;
-    &:hover {
-        box-shadow: 0 0 4px 4px rgba(255,255,255,.25);
-    }
-
-    @media screen and (max-width: 768px){
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-`
-export const InfoSection = styled.div`
-    border: solid black 1px;
-    border-radius: 10px;
-    margin: 5px;
-    width: 40%;
-    max-width: 450px;
-    height: 500px;
-    background-color: #3D6BAC;
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (max-width: 768px){
-        width: 95%;
-        height: auto;
-        align-items: center;
-    }
-
-`
-export const FormHolder = styled.form`
-width: 70%;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 30px;
-`
-export const InfoHeader = styled.h4`
-    color: white;
-    margin-left: 20px;
-    margin-top: 30px;
-    font-size: 1.3rem;
-    text-align: center;
-`
-export const InfoSubHeader = styled.h5`
-    margin-left: 20px;
-    color: white;
-    padding: 5px;
-    font-size: .9rem;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    max-width: 400px;
-    text-align: center;
-`
-export const ContactList = styled.ul`
-    margin: 0 auto;
-`
-export const ListItem = styled.li`
-    list-style: none;
-    color: white;
-`
-export const MobileIcon = styled.div`
+export const ReturnHomeBtn = styled(Link)`
+    border-radius: 4px;
     height: 50px;
-    cursor: pointer;
-`
-export const SocialList = styled.ul`
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-`
-export const Logo = styled.img`
-    max-width: 275px;
-    margin: 0 auto;
-    @media screen and (max-width: 768px){
-        width: 300px;
-    }
-`
-export const FormSection = styled.div`
-    display: flex;
-    margin: 20px;
-    justify-content: space-evenly;
-    width: 100%;
-`
+    width: 85px;
+    background-color: transparent;
+    border: solid black 1px;
+    margin: 10px 20px 0 0;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 13px;
+    color: black;
 
-export const FormInput = styled.input`
-    padding: 3px;
-    border: none;
-    border-bottom: 2px solid lightgray;
-    border-radius: 10px;
-    height: 40px;
-    background-color: #FFFAFA;
-    display: block;
-
-    &:focus {
-        background-color: lightgray;
-        outline: none;
+    &:hover {
+        background-color: #FFC559;
+        color: #1A61A3;
+        transition: 0.3s all ease;
+        transform: scale(1.2);
     }
+    
+`
+export const FormTitle = styled.h1`
+    margin-left: 15%;
+    margin-top: 7%;
+`
+export const Form = styled.form`
+
 `
 export const FormLabel = styled.label`
-    font-size: .7rem;
-    display: block;
 
 `
-export const TextAreaInput = styled.textarea`
-    display: block;
-  min-height: 32px;
-  max-height: 320px;
-  line-height: 21px;
-  background-color: #FFFAFA;
-  min-width: 400px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  border: 1px solid rgb(217, 217, 217);
-  padding: 4px 11px;
-  text-size-adjust: 100%;
-  border: none;
-  border-bottom: 2px solid lightgray; 
-  margin-top: 30px;
-  &:focus {
-        background-color: lightgray;
-        outline: none;
-    }
-@media screen and (max-width: 768px){
-    width: 300px;
-    min-width: 200px;
-}
-`;
-export const SubmitBtn = styled.button`
-    width: 100px;
-    background-color: #3D6BAC;
-    color: #FFFAFA;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-shadow: 2px 2px black;
-    margin-bottom: 10px;
+export const FormInput = styled.input`
 
-    @media screen and (max-width: 768px){
-        height: 60px;
-        width: 100%;
-        font-size: 1.2rem;
-        background-color: #3D6BAC;
-        color: #FFFAFA;
-        margin-bottom: 0;
-    }
 `
 
