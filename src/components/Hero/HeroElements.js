@@ -40,7 +40,7 @@ export const PageTitle = styled.h1`
     @media screen and (max-width: 768px){
         font-size: 4rem;
         margin-top: 100px;
-        text-align: justify;
+        /* text-align: justify; */
     }
 `
 export const PageTitleSubtext = styled.p`
@@ -54,8 +54,8 @@ export const PageTitleSubtext = styled.p`
     }
 `
 export const HeroImg = styled.img`
-    object-fit: contain;
-    /* height:100%; */
+    object-fit: cover;
+    min-height: 800px;
     width: 100%;
     opacity: .3;
     position: absolute;

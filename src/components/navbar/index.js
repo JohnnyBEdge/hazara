@@ -67,6 +67,11 @@ const Navbar = (props) => {
                         <NavItem>
                             <NavLink1 
                                 to="events"  
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact='true'
+                                offset={-80}    
                                 scrollnav={scrollnav ? 1 : 0}
                             >Events</NavLink1>
                         </NavItem>

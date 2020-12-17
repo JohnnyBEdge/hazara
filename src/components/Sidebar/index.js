@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    SidebarContainer,
-    Icon,
+    SidebarContainer, SidebarLinkR, Icon,
     CloseIcon,
     SidebarWrapper,
     SidebarMenu,
@@ -24,9 +23,9 @@ const Sidebar = (props) => {
                     <SidebarLink to="how" onClick={props.toggleMenu}>
                         How To Help
                     </SidebarLink>
-                    <SidebarLink to="contact" onClick={props.toggleMenu}>
+                    <SidebarLinkR to="/contact" onClick={props.toggleMenu}>
                         Contact Us
-                    </SidebarLink>
+                    </SidebarLinkR>
                     <SidebarLink to="events" onClick={props.toggleMenu}>
                         Events
                     </SidebarLink>
