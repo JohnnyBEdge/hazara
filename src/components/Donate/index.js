@@ -2,7 +2,7 @@ import React from 'react';
 import {
     DonateSection, DonateContainer,
     IconContainer, Icon, HeaderText, SubHeaderText,
-    DonateButton, PaypalContainer
+    DonateButton, PaypalContainer, ClosePaypal
 } from './DonateElements';
 import Footer from '../footer';
 import Sidebar from '../Sidebar';
@@ -14,7 +14,7 @@ const Donate = ({togglePaypal, paypalOpen}) => {
     return (
         <>
             <DonateSection id="donate">
-                <DonateContainer>
+                <DonateContainer paypalOpen={paypalOpen}>
                     <IconContainer>
                         <Icon src={icon}/>
                     </IconContainer>
@@ -24,7 +24,7 @@ const Donate = ({togglePaypal, paypalOpen}) => {
                         Donate Now</DonateButton>
                 </DonateContainer>
                 <PaypalContainer paypalOpen={paypalOpen}>
-
+                    <ClosePaypal onClick={togglePaypal}>X</ClosePaypal>
                 </PaypalContainer>
             </DonateSection>
         </>

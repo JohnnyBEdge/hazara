@@ -20,9 +20,11 @@ display: ${({openCardModal}) => (openCardModal ? 'none' : 'flex')};
 width: 100%;
 justify-content: space-evenly;
 align-items: center;
+margin-top: 75px;
 
 @media screen and (max-width: 768px){
     flex-direction: column;
+    margin-top: 0;
 }
 `
 export const Card = styled.div`

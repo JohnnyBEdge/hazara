@@ -4,7 +4,6 @@ import Navbar from '../navbar';
 
 export const DonateSection = styled.div`
     display: flex;
-    /* flex-direction: column; */
     width: 100%;
     height: 800px;
     background-image: url(${img});
@@ -15,11 +14,15 @@ export const DonateSection = styled.div`
     @media screen and (max-width: 768px){
         background-color: #1961A3;
         background-image: none;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 `
-export const NavBar = styled(Navbar)`
-    background: red;
-`
+// export const NavBar = styled(Navbar)`
+//     background: red;
+// `
 export const DonateContainer = styled.div`
     display: flex;
     background-color: #FFC659;
@@ -35,9 +38,13 @@ export const DonateContainer = styled.div`
    
 
     @media screen and (max-width: 768px){
-        margin-top: 100px;
-        margin: 0 auto;
-        width: 350px;
+        /* justify-content: center; */
+        height: 100%;
+        width: 98%;
+        margin-left: 0;
+        min-height: 500px;
+        display: ${({paypalOpen}) => (paypalOpen ? 'none' : 'flex')};
+        margin-bottom: 40px;
     }
 `
 export const IconContainer = styled.div`
@@ -51,7 +58,6 @@ export const IconContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
 `
 export const Icon = styled.img`
     width: 120px;
@@ -103,4 +109,17 @@ export const PaypalContainer = styled.div`
     background-color: whitesmoke;
     border: solid black 1px;
     margin: 75px 100px 0 0;
+
+    @media screen and (max-width: 768px){
+        /* justify-content: center; */
+        height: 100%;
+        width: 98%;
+        margin: 30px 0;
+        min-height: 500px;
+        opacity: 1;
+        display: ${({paypalOpen}) => (paypalOpen ? 'flex' : 'none')};
+    }
+`
+export const ClosePaypal = styled.div`
+    cursor: pointer;
 `
