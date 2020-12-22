@@ -14,22 +14,60 @@ const Sidebar = (props) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="who" onClick={props.toggleMenu}>
+                    <SidebarLink 
+                        to="who" 
+                        onClick={props.toggleMenu} 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
                         Who We Are
                     </SidebarLink>
-                    <SidebarLink to="what" onClick={props.toggleMenu}>
+                    <SidebarLink 
+                        to="what" 
+                        onClick={props.toggleMenu} 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
                         What We Do
                     </SidebarLink>
-                    <SidebarLink to="how" onClick={props.toggleMenu}>
+                    <SidebarLink 
+                        to="how" 
+                        onClick={props.toggleMenu} 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                    >
                         How To Help
                     </SidebarLink>
-                    <SidebarLinkR to="/contact" onClick={props.toggleMenu}>
+                    <SidebarLinkR 
+                        to="/contact" 
+                        onClick={props.toggleMenu}>
                         Contact Us
                     </SidebarLinkR>
-                    <SidebarLink to="events" onClick={props.toggleMenu}>
+                    <SidebarLink 
+                        to="events" 
+                        onClick={props.toggleMenu} 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
                         Events
                     </SidebarLink>
-                    <SidebarLink to="donate" onClick={props.toggleMenu}>
+                    <SidebarLink 
+                        to="donate" 
+                        onClick={props.toggleMenu} 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
                         Donate
                     </SidebarLink>
                 </SidebarMenu>
