@@ -4,12 +4,13 @@ import Navbar from '../navbar';
 
 export const DonateSection = styled.div`
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100%;
     height: 800px;
     background-image: url(${img});
     background-size: cover;
-    justify-content: center;
+    justify-content: space-between;
+
 
     @media screen and (max-width: 768px){
         background-color: #1961A3;
@@ -30,6 +31,7 @@ export const DonateContainer = styled.div`
     margin-left: 75px;
     border: solid #1961A3 2px;
     border-radius: 5px;
+    margin-top: 100px;
    
 
     @media screen and (max-width: 768px){
@@ -91,4 +93,14 @@ export const DonateButton = styled.button`
         color: #010606;
         transform: scale(1.2);
     }
+`
+
+export const PaypalContainer = styled.div`
+    opacity: ${({paypalOpen}) => (paypalOpen ? 1 : 0)};
+    transition: all .3s ease-in-out;
+    width: 500px;
+    height: 600px;
+    background-color: whitesmoke;
+    border: solid black 1px;
+    margin: 75px 100px 0 0;
 `

@@ -18,6 +18,7 @@ import DonateModal from '../components/DonateModal';
 const Home = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+    const [paypalOpen, setPaypalOpen] = useState(false);
     const [modalData, setModalData] = useState();
     const [modalTypeCard, setModalTypeCard] = useState(false);
 
@@ -26,6 +27,9 @@ const Home = (props) => {
     };
     const toggleModal = () => {
         setOpenModal(!openModal)
+    };
+    const togglePaypal = () => {
+        setPaypalOpen(!paypalOpen)
     };
     const toggleModalType = () => {
         setModalTypeCard(!modalTypeCard)
@@ -54,7 +58,8 @@ const Home = (props) => {
                 modalData={modalData} />
                 
             <Events/>
-            <Donate/>
+            {/* <Donate openDonate={openDonate} toggleDonate={toggleDonate}/> */}
+            <Donate togglePaypal={togglePaypal} paypalOpen={paypalOpen} />
             {/* <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} /> */}
             <Footer/> 
         </>
