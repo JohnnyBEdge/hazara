@@ -2,16 +2,22 @@ import React from 'react';
 import {CardModalOverlay, CardModalContainer, Grow,
     CardModalTitle, CardModalDesc, CardModalListTitle,
     CardModalList, CardModalListItem, CardBtn, CardImg,
-    CloseCardIcon
+    CloseCardIcon, CardRouteBtn
 } from './CardModalElements';
 
-const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle, listItems, btnText, img }) => {
+const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle, listItems, btnText, img, btnLink, togglePaypal }) => {
 
     let listItem;
     if(listItems){
         listItem = listItems.map(item => {
         return <CardModalListItem>{item}</CardModalListItem>
         })
+    }
+    const checkDonate = () => {
+        if(btnLink === "donate"){
+            setTimeout(
+                () => togglePaypal(), 1100)
+        }
     }
     return (
         <>
@@ -26,7 +32,23 @@ const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle
                 <CardModalList>
                     {listItem}
                 </CardModalList>
-                <CardBtn>{btnText}</CardBtn>
+                <CardBtn 
+                    titleText={titleText}
+                    to={btnLink} 
+                    onClick={() => {
+                        toggleCardModal();
+                        checkDonate();
+                    }}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>
+                        {btnText}</CardBtn>
+                <CardRouteBtn 
+                    to="/contact"
+                    titleText={titleText}>
+                        Contact Us</CardRouteBtn>
             </CardModalContainer>
         </>
     )

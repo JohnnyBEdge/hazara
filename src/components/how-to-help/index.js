@@ -11,7 +11,7 @@ import help from '../../assets/images/help.jpeg'
 import Fade from 'react-reveal/Fade';
 import CardModal from './CardModal';
 
-const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTypeCard, toggleModalType}) => {
+const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTypeCard, toggleModalType, togglePaypal}) => {
 
     const [openCardModal, setOpenCardModal] = useState(false);
 
@@ -25,6 +25,7 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTyp
             <CardModal 
                 openCardModal={openCardModal} 
                 toggleCardModal={toggleCardModal} 
+                togglePaypal={togglePaypal}
                 {...modalData}
                  />
             {/* <HelpSidebar helpOpen={helpOpen}>HELP SIDEBAR</HelpSidebar> */}

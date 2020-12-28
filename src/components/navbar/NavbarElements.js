@@ -105,7 +105,7 @@ export const NavLink2 = styled(LinkR)`
     }
 `;
 
-export const DonateBtn = styled.button`
+export const DonateBtn = styled(LinkS)`
     border-radius: 50px;
     background-color: #F9C910;
     color: #00539F;

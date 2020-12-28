@@ -83,7 +83,14 @@ const Navbar = (props) => {
                         </NavItem>
 
                     </NavMenu>
-                    <DonateBtn onClick={props.toggleDonate}>Donate</DonateBtn>
+                    <DonateBtn 
+                        to="donate"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
+                            Donate</DonateBtn>
                 </NavbarContainer>
             </Nav>
         </>

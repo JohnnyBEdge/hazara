@@ -55,7 +55,9 @@ const Home = (props) => {
                 toggleModal={toggleModal}
                 toggleModalType={toggleModalType}
                 modalTypeCard={modalTypeCard}
-                modalData={modalData} />
+                modalData={modalData} 
+                togglePaypal={togglePaypal}/>
+                
                 
             <Events/>
             {/* <Donate openDonate={openDonate} toggleDonate={toggleDonate}/> */}

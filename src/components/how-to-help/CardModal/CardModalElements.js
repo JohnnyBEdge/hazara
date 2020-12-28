@@ -1,5 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 import CloseIcon from '@material-ui/icons/Close';
+import {Link as LinkS} from 'react-scroll'
+import {Link as LinkR} from 'react-router-dom'
 
 export const CardModalOverlay = styled.div`
     display: ${({openCardModal}) => (openCardModal ? 'flex' : 'none')};
@@ -89,11 +91,13 @@ export const CardModalListItem = styled.li`
   list-style: none;
   line-height: 2;
 `
-export const CardBtn = styled.button`
+export const CardBtn = styled(LinkS)`
+    display: ${({titleText}) => (titleText === 'Volunteer' ? 'none' : 'flex')};
     background-color: #F9C910;
     align-self: center;
     border-radius: 50px;
-    text-align: center;
+    justify-content: center;
+    color: black;
     font-size: 1.2rem;
     height: 45px;
     width: 55%;
@@ -123,4 +127,35 @@ export const CloseCardIcon = styled(CloseIcon)`
     padding: 7px;
     align-self: flex-end;
     cursor: pointer;
+`
+export const CardRouteBtn = styled(LinkR)`
+    display: ${({titleText}) => (titleText === 'Volunteer' ? 'flex' : 'none')};
+    background-color: #F9C910;
+    align-self: center;
+    justify-content: center;
+    color: black;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    height: 45px;
+    width: 55%;
+    padding: 10px 22px;
+    cursor: pointer;
+    margin: 20px 0px;
+    margin-bottom: 10px;
+    justify-self: flex-end;
+    text-decoration: none;
+
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        font-weight: bold;
+        transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+      border-radius: 3px;
+      margin-bottom: 0;
+      align-self: flex-end;
+      height: 55px;
+    }
 `
