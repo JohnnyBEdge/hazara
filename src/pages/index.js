@@ -35,7 +35,6 @@ const Home = (props) => {
         setModalTypeCard(!modalTypeCard)
     };
 
-
     return (
         <>
             <Sidebar isOpen={isOpen} toggleMenu={toggleMenu}/>
@@ -59,7 +58,7 @@ const Home = (props) => {
                 togglePaypal={togglePaypal}/>
                 
                 
-            <Events/>
+            <Events eventsData={props.eventsData}/>
             {/* <Donate openDonate={openDonate} toggleDonate={toggleDonate}/> */}
             <Donate togglePaypal={togglePaypal} paypalOpen={paypalOpen} />
             {/* <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} /> */}

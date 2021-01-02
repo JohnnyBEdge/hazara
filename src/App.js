@@ -46,7 +46,7 @@ function App() {
       const res = await fetch('http://localhost:5005/api/events');
       const data = await res.json();
       await setEvents(data);
-      console.log("data from app.js",data)
+      // console.log("data from app.js",data)
     } catch(err){
       console.log("ERROR:",err)
     }
@@ -84,7 +84,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/' component={Home} exact auth={authProps}/>
+        {/* <Route path='/' component={Home} exact auth={authProps}/> */}
+        <Route path='/' render={(props) => (
+          <Home eventsData={events} exact auth={authProps}{...props} />
+        )}/>
         <Route path='/contact' component={Contact} exact auth={authProps}/>
 
         <Route path='/events' render={(props) => (

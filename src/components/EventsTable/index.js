@@ -21,11 +21,6 @@ import { Delete } from '@material-ui/icons';
 
 
 const EventsTable = ({eventsData, setEvents}) => {
-
-  // console.log("data from eventsTable", eventsData)
-
-
-
   // const events = eventsData;
 
     const [columns] = useState([
