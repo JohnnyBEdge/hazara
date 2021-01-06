@@ -59,9 +59,8 @@ const Home = (props) => {
                 
                 
             <Events eventsData={props.eventsData}/>
-            {/* <Donate openDonate={openDonate} toggleDonate={toggleDonate}/> */}
             <Donate togglePaypal={togglePaypal} paypalOpen={paypalOpen} />
-            {/* <DonateModal openDonate={openDonate} toggleDonate={toggleDonate} /> */}
+
             <Footer/> 
         </>
     )

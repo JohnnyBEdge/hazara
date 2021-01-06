@@ -19,39 +19,15 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true)
 
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [openModal, setOpenModal] = useState(false);
-  // const [modalData, setModalData] = useState();
-
-
-  // const toggleMenu = () => {
-  //     setIsOpen(!isOpen)
-  // };
-  // const toggleModal = () => {
-  //     setOpenModal(!openModal)
-  // };
-
-  // const sideBarProps = {
-  //   isOpen: isOpen,
-  //   setIsOpen: setIsOpen,
-  //   openModal: openModal,
-  //   setOpenModal: setOpenModal,
-  //   modalData: modalData,
-  //   toggleMenu: toggleMenu,
-  //   toggleModal: toggleModal
-  // }
-
   const getEvents = async () => {
     try{
       const res = await fetch('http://localhost:5005/api/events');
       const data = await res.json();
       await setEvents(data);
-      // console.log("data from app.js",data)
     } catch(err){
       console.log("ERROR:",err)
     }
   }
-
 
  const authCheck =  async ()  => {
     try {
@@ -84,30 +60,21 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <Route path='/' component={Home} exact auth={authProps}/> */}
-        <Route path='/' render={(props) => (
-          <Home eventsData={events} exact auth={authProps}{...props} />
-        )}/>
         <Route path='/contact' component={Contact} exact auth={authProps}/>
-
-        <Route path='/events' render={(props) => (
-          // <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
-          <Events eventsData={events} exact auth={authProps} {...props} />
-        )}/>
-
-        {/* <Route path='/events' eventsData={events} component={Events} exact auth={authProps}/> */}
+        <Route path='/' render={(props) => 
+          <Home eventsData={events} exact auth={authProps}{...props} />
+        }/>
         <Route path='/admin/login' component={Login} exact auth={authProps}/>
-        <Route path='/admin/events' render={(props) => (
+        <Route path='/admin/events' render={(props) => 
           <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
-        )}/>
-        {/* <Route path='/events' component={Events} exact auth={authProps}/> */}
+        }/>
 
-        {/* <Route path='/donate' component={DonatePage} exact auth={authProps} />  */}
       </Switch>
-      
-      {/* <Home id="home"/> */}
     </Router>
   );
 }
 
 export default App;
+
+
+          

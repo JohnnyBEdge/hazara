@@ -46,7 +46,7 @@ const Sidebar = (props) => {
                         How To Help
                     </SidebarLink>
                     <SidebarLinkR 
-                        to="/contact" 
+                        to="contact" 
                         onClick={props.toggleMenu}>
                         Contact Us
                     </SidebarLinkR>

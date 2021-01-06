@@ -13,6 +13,8 @@ import {
 } from './EventElements';
 
 const Events = (eventsData) => {
+
+    console.log("FROM EVENTS", eventsData)
     return (
         <>  
             <CalendarContainer id="events">

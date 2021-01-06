@@ -18,7 +18,7 @@ const Admin = ({eventsData, setEvents}) => {
         <div>
             <AmplifyAuthenticator usernameAlias="email">
                 <AmplifySignIn slot="sign-in" hideSignUp /> 
-            </AmplifyAuthenticator>
+            {/* </AmplifyAuthenticator> */}
 
                 <AmplifySignOut/>
                 {createAdmin ? 
@@ -37,18 +37,19 @@ const Admin = ({eventsData, setEvents}) => {
                       label: "Password",
                       placeholder: "Password",
                       required: true,
-                    }
+                    },
                   ]} 
                 /> 
                 :
-                
-
                 <EventsTable eventsData={eventsData} setEvents={setEvents} />
                 }
-            {/* </AmplifyAuthenticator> */}
+
             <BtnContainer>
               <CreateAdminBtn onClick={toggleAdminBtn}>{btnContent}</CreateAdminBtn>
             </BtnContainer>
+
+            </AmplifyAuthenticator>
+
         </div>
     )
 }
