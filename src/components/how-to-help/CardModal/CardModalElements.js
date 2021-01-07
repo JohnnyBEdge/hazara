@@ -92,7 +92,7 @@ export const CardModalListItem = styled.li`
   line-height: 2;
 `
 export const CardBtn = styled(LinkS)`
-    display: ${({titleText}) => (titleText === 'Volunteer' ? 'none' : 'flex')};
+    display: ${({titletext}) => (titletext === 'Volunteer' ? 'none' : 'flex')};
     background-color: #F9C910;
     align-self: center;
     border-radius: 50px;
@@ -129,7 +129,7 @@ export const CloseCardIcon = styled(CloseIcon)`
     cursor: pointer;
 `
 export const CardRouteBtn = styled(LinkR)`
-    display: ${({titleText}) => (titleText === 'Volunteer' ? 'flex' : 'none')};
+    display: ${({titletext}) => (titletext === 'Volunteer' ? 'flex' : 'none')};
     background-color: #F9C910;
     align-self: center;
     justify-content: center;

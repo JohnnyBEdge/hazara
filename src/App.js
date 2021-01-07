@@ -64,7 +64,7 @@ function App() {
         <Route path='/' render={(props) => 
           <Home eventsData={events} exact auth={authProps}{...props} />
         }/>
-        <Route path='/admin/login' component={Login} exact auth={authProps}/>
+        {/* <Route path='/admin/login' component={Login} exact auth={authProps}/> */}
         <Route path='/admin/events' render={(props) => 
           <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
         }/>

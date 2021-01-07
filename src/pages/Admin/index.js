@@ -24,6 +24,7 @@ const Admin = ({eventsData, setEvents}) => {
                 {createAdmin ? 
                 <SignUp
                   // slot="sign-up"
+                  hideSignIn
                   usernameAlias="email"
                   formFields={[
                     {

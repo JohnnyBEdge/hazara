@@ -10,6 +10,7 @@ import {
     ResourceContainer,
     ListContainer,
     ListItem,
+    PageLink,
     Signature,
     AdminLink
 } from './FooterElements';
@@ -20,6 +21,9 @@ const Footer = () => {
         <>
             <FooterWrapper>
                 <SectionTitle>Utah Hazara Association</SectionTitle>
+                <AdminLink to="/admin/events">
+                                        Admin
+                                    </AdminLink>
                 <ListsContainer>
                     <Logo src={logo}/>
                     
@@ -41,20 +45,19 @@ const Footer = () => {
                             <List>
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>resource.com</ListItem>
-                                <ListItem>
-                                    <AdminLink to="/admin/events">
+                                    {/* <AdminLink to="/admin/events">
                                         Admin
-                                        </AdminLink>
-                                </ListItem>
+                                    </AdminLink> */}
                             </List>
+
                         </ListContainer>
                     </ResourceContainer>
                     
                     <List>
                         <ListTitle>Sections</ListTitle>
-                            <ListItem>Home</ListItem>
-                            <ListItem>Events</ListItem>
-                            <ListItem>Donate</ListItem>
+                            <PageLink to="/">Home</PageLink>
+                            <PageLink to="events">Events</PageLink>
+                            <PageLink to="donate">Donate</PageLink>
                     </List>
                 </ListsContainer>
 

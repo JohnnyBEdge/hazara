@@ -5,7 +5,7 @@ import {CardModalOverlay, CardModalContainer, Grow,
     CloseCardIcon, CardRouteBtn
 } from './CardModalElements';
 
-const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle, listItems, btnText, img, btnLink, togglePaypal }) => {
+const CardModal = ({openCardModal,toggleCardModal, titletext, fullDesc,listTitle, listItems, btnText, img, btnLink, togglePaypal }) => {
 
     let listItem;
     if(listItems){
@@ -25,7 +25,7 @@ const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle
           
             <CardModalContainer openCardModal={openCardModal}>
                 <CloseCardIcon fontSize='large' onClick={toggleCardModal} />
-                <CardModalTitle>{titleText}</CardModalTitle>
+                <CardModalTitle>{titletext}</CardModalTitle>
                 <CardImg src={img}/>
                 <CardModalDesc>{fullDesc}</CardModalDesc>
                 <CardModalListTitle>{listTitle}</CardModalListTitle>
@@ -33,8 +33,8 @@ const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle
                     {listItem}
                 </CardModalList>
                 <CardBtn 
-                    titleText={titleText}
-                    to={btnLink} 
+                    titletext={titletext}
+                    to={btnLink}
                     onClick={() => {
                         toggleCardModal();
                         checkDonate();
@@ -47,7 +47,7 @@ const CardModal = ({openCardModal,toggleCardModal, titleText, fullDesc,listTitle
                         {btnText}</CardBtn>
                 <CardRouteBtn 
                     to="/contact"
-                    titleText={titleText}>
+                    titletext={titletext}>
                         Contact Us</CardRouteBtn>
             </CardModalContainer>
         </>

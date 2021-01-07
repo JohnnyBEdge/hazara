@@ -13,16 +13,11 @@ console.log("CALENDAR", eventsData.eventsData)
     return (
         <CalContainer>
             <FullCalendar
-                // id="cal_style"
                 height="auto"
                 plugins={[ dayGridPlugin ]}
-                // initialView="listView"
                 initialView="dayGridMonth"
                 events={eventsData.eventsData}
-                
-                eventClick={(e)=> handleEventClick(e)}
-                backgroundColor="white"
-                
+                eventClick={(e)=> handleEventClick(e)}                
             />
         </CalContainer>
     )

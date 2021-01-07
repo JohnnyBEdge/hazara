@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
+import {Link as LinkS} from 'react-scroll';
 
 export const FooterWrapper = styled.div`
     width: 100%;
@@ -45,6 +46,8 @@ export const Logo = styled.img`
 `
 export const List = styled.ul`
     margin-right: 50px;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (max-width: 768px){
         margin: 20px;
@@ -58,14 +61,21 @@ export const ResourceContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
+export const PageLink = styled(LinkS)`
+    list-style: none;
+    margin-top: 10px;
+    margin-left:0;
+    font-size: .9rem;
+    cursor: pointer;
+`
+export const AdminLink = styled(LinkR)`
+`
+
 export const ListItem = styled.li`
     list-style: none;
     margin-top: 10px;
     margin-left:0;
     font-size: .9rem;
-`
-export const AdminLink = styled(LinkR)`
-
 `
 
 export const Signature = styled.a`
