@@ -19,7 +19,8 @@ const Events = (eventsData) => {
         <>  
             <CalendarContainer id="events">
                 <PageTitle>Events</PageTitle>
-                <Calendar eventsData={eventsData}/>
+                <Calendar />
+                {/* <Calendar eventsData={eventsData}/> */}
             </CalendarContainer>
         </>
     )

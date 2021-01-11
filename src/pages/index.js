@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {EventsContext} from '../Context/EventsContext'
 import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';
@@ -21,6 +22,8 @@ const Home = (props) => {
     const [paypalOpen, setPaypalOpen] = useState(false);
     const [modalData, setModalData] = useState();
     const [modalTypeCard, setModalTypeCard] = useState(false);
+
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -58,7 +61,8 @@ const Home = (props) => {
                 togglePaypal={togglePaypal}/>
                 
                 
-            <Events eventsData={props.eventsData}/>
+            <Events/>
+            {/* <Events eventsData={props.eventsData}/> */}
             <Donate togglePaypal={togglePaypal} paypalOpen={paypalOpen} />
 
             <Footer/> 

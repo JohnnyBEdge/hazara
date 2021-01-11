@@ -7,6 +7,7 @@ import Admin from './pages/Admin';
 import Login from './pages/Login';
 import {Auth} from 'aws-amplify';
 import Events from './components/Events';
+import { EventsContext } from './Context/EventsContext';
 
 
 // import Calendar from './pages/calendar';
@@ -18,6 +19,7 @@ function App() {
   const [authenticated, setAutheticated] = useState(false);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true)
+  // const [value, setValue] = useState('HELLO FROM CONTEXT')
 
   const getEvents = async () => {
     try{
@@ -60,15 +62,21 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/contact' component={Contact} exact auth={authProps}/>
-        <Route path='/' render={(props) => 
-          <Home eventsData={events} exact auth={authProps}{...props} />
+        <EventsContext.Provider value={{events, setEvents}}>
+          <Route path='/contact' component={Contact} exact auth={authProps}/>
+          <Route path='/' render={(props) => 
+            <Home 
+              // eventsData={events} 
+              exact auth={authProps}{...props} />
+          }/>
+          {/* <Route path='/admin/login' component={Login} exact auth={authProps}/> */}
+          <Route path='/admin/events' render={(props) => 
+            <Admin 
+              eventsData={events} 
+              setEvents={setEvents} 
+              exact auth={authProps}{...props} />
         }/>
-        {/* <Route path='/admin/login' component={Login} exact auth={authProps}/> */}
-        <Route path='/admin/events' render={(props) => 
-          <Admin eventsData={events} setEvents={setEvents} exact auth={authProps}{...props} />
-        }/>
-
+      </EventsContext.Provider>
       </Switch>
     </Router>
   );
