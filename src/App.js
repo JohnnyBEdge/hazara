@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './pages';
@@ -18,13 +18,15 @@ import {authCheck} from './api/amplifyAuth';
 function App() {
 
   const [events, setEvents] = useState([]);
+  const [authProps, setAuthProps] = useState(null);
   // const [isAuthenticating, setIsAuthenticating] = useState(true);
   // const [authenticated, setAutheticated] = useState(false);
   // const [user, setUser] = useState(null);
   // const [loading, setLoading] = useState(true);
-  const [authProps, setAuthProps] = useState(null);
+  
+  const providerValue = useMemo(() => ({events, setEvents}), [events, setEvents])
 
-   useEffect(() => {
+  useEffect(() => {
       getEvents().then((eventsData) => {
         setEvents(eventsData.data);
       });
@@ -38,7 +40,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <EventsContext.Provider value={{events, setEvents}}>
+        <EventsContext.Provider value={providerValue}>
           <Route path='/contact' component={Contact} exact auth={authProps}/>
           <Route path='/' render={(props) => 
             <Home 
