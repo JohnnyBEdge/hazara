@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {EventsContext} from '../../Context/EventsContext'
 import Calendar from '../calendar/Calendar';
 import Footer from '../footer';
 import Sidebar from '../Sidebar';
@@ -12,9 +13,11 @@ import {
     Event
 } from './EventElements';
 
-const Events = (eventsData) => {
+const Events = () => {
 
-    console.log("FROM EVENTS", eventsData)
+    // const eventsData = useContext(EventsContext);
+    // console.log("FROM EVENTS", eventsData)
+
     return (
         <>  
             <CalendarContainer id="events">

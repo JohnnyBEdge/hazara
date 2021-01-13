@@ -1,4 +1,5 @@
-import React, {useState, forwardRef, useEffect} from 'react';
+import React, {useState, forwardRef, useContext} from 'react';
+import {EventsContext} from '../../Context/EventsContext'
 import MaterialTable from 'material-table';
 //icons
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
@@ -18,10 +19,12 @@ import SaveIcon from '@material-ui/icons/Save';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Delete } from '@material-ui/icons';
+import {handleAddEvent, handleDeleteEvent, handleEditEvent} from '../../api/EventsAPI'
 
 
-const EventsTable = ({eventsData, setEvents}) => {
-  // const events = eventsData;
+const EventsTable = () => {
+
+  const eventsData = useContext(EventsContext);
 
     const [columns] = useState([
         { title: 'ID', field: '_id', editable: 'never' },
@@ -52,33 +55,6 @@ const EventsTable = ({eventsData, setEvents}) => {
         // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
       };
 
-      const handleAddEvent = (newData) => {
-        fetch('http://localhost:5005/api/events', {
-          method: "POST",
-          body: JSON.stringify({...newData}),
-          headers: {
-            "Content-type": "application/json"
-          }
-        }).then(res => res.json());
-      };
-
-      const handleDeleteEvent = (id) => {
-        fetch(`http://localhost:5005/api/events/${id}`, {
-          method: "DELETE"
-        }).then(res => res.json());
-      };
-
-      const handleEditEvent = (id, newData) => {
-        const dataWithIDRemoved = {title: newData.title, desc: newData.desc, date: newData.date}
-        fetch(`http://localhost:5005/api/events/${id}`, {
-          method: "PATCH",
-          body: JSON.stringify({...dataWithIDRemoved}),
-          headers: {
-            "Content-type": "application/json"
-          }
-        }).then(res => res.json())
-      }
-
     
     return (
       <>
@@ -90,13 +66,13 @@ const EventsTable = ({eventsData, setEvents}) => {
               sorting: true,
               thirdSortClick: false
             }}
-            data={eventsData}
+            data={eventsData.events}
             editable={{
               onRowAdd: newData =>
                 new Promise((resolve, reject) => {
                     handleAddEvent(newData);
                     setTimeout(() => {
-                      setEvents([...eventsData, newData]);
+                      eventsData.setEvents([...eventsData.events, newData]);
                       resolve();
                     }, 1000)
 
@@ -105,10 +81,10 @@ const EventsTable = ({eventsData, setEvents}) => {
                 new Promise((resolve, reject) => {
                   handleEditEvent(oldData._id, newData)
                   setTimeout(() => {
-                    const dataUpdate = [...eventsData];
+                    const dataUpdate = [...eventsData.events];
                     const index = oldData.tableData.id;
                     dataUpdate[index] = newData;
-                    setEvents([...dataUpdate]);
+                    eventsData.setEvents([...dataUpdate]);
         
                     resolve();
                   }, 1000)
@@ -118,10 +94,10 @@ const EventsTable = ({eventsData, setEvents}) => {
                   
                   setTimeout(() => {
                     handleDeleteEvent(oldData._id);
-                    const dataDelete = [...eventsData];
+                    const dataDelete = [...eventsData.events];
                     const index = oldData.tableData.id;
                     dataDelete.splice(index, 1);
-                    setEvents([...dataDelete]);
+                    eventsData.setEvents([...dataDelete]);
                     
                     resolve()
                   }, 1000)
