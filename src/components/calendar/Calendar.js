@@ -4,36 +4,35 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import {
     CalContainer, EventModal, Title, 
-    Date, Desc
+    Date, Desc, Close
 } from './CalendarElements';
 
 export default function Calendar() {
-// export default function Calendar({eventsData}) {
 
     const eventsData = useContext(EventsContext);
 
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState('');
-    const [date, setDate] = useState('');
+    const [eventDate, setEventDate] = useState('');
     const [desc, setDesc] = useState('');
-    const [clicked, setClicked] = useState('')
 
     const toggleModal = () => {
         setOpen(!open);
     }
     
-    const handleEventClick = async (info) => {
-        // console.log("TITLE",eventsData.events.filter(id => id._id === info.event._def.extendedProps._id) )
-        const clicked = eventsData.events.filter(id => id._id === info.event._def.extendedProps._id);
-        console.log("CLICKED", clicked)    
-        await setTitle({clicked})
-        // await console.log("TITLE", title)  
-        // await setDesc(clicked.desc)
-        // await console.log("DESC", desc)  
-        // await setDate(clicked.date)
-        // await console.log("DATE", date)  
-        // await toggleModal();
+    const handleEventClick = (e) => {
+        setTitle(e.event._def.title)
+        setDesc(e.event._def.extendedProps.desc)
+        setEventDate(e.event._instance.range.start.toLocaleString("en-US"))
+        toggleModal();
     }
+    // const handleEventClick = (e) => {
+    //     const clicked = eventsData.events.filter(id => id._id === e.event._def.extendedProps._id)[0];
+    //     setTitle(clicked.title)
+    //     setDesc(clicked.desc)
+    //     setEventDate(clicked.date)
+    //     toggleModal();
+    // }
 
     return (
         <CalContainer >
@@ -42,12 +41,12 @@ export default function Calendar() {
                 plugins={[ dayGridPlugin ]}
                 initialView="dayGridMonth"
                 events={eventsData.events}
-                // events={eventsData.eventsData}
                 eventClick={(e)=> handleEventClick(e)}                
             />
             <EventModal open={open}>
+                <Close onClick={toggleModal}>X</Close>
                 <Title>{title}</Title>
-                <Date>{date}</Date>
+                <Date>{eventDate}</Date>
                 <Desc>{desc}</Desc>
             </EventModal>
         </CalContainer>
