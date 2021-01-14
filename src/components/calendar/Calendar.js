@@ -23,7 +23,7 @@ export default function Calendar() {
     const handleEventClick = (e) => {
         setTitle(e.event._def.title)
         setDesc(e.event._def.extendedProps.desc)
-        setEventDate(e.event._instance.range.start.toLocaleString("en-US"))
+        setEventDate(e.event._instance.range.start.toLocaleString('en-US', {timeZone: 'UTC'}))
         toggleModal();
     }
 
@@ -34,7 +34,8 @@ export default function Calendar() {
                 plugins={[ dayGridPlugin ]}
                 initialView="dayGridMonth"
                 events={eventsData.events}
-                eventClick={(e)=> handleEventClick(e)}                
+                eventClick={(e)=> handleEventClick(e)}
+                // timeZone='UTC'                
             />
             <EventModal open={open}>
                 <Close onClick={toggleModal}>X</Close>
