@@ -23,8 +23,6 @@ const Admin = ({eventsData, setEvents}) => {
                 <AmplifySignOut/>
                 {createAdmin ? 
                 <SignUp
-                  // slot="sign-up"
-                  hideSignIn
                   usernameAlias="email"
                   formFields={[
                     {

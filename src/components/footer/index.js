@@ -21,16 +21,13 @@ const Footer = () => {
         <>
             <FooterWrapper>
                 <SectionTitle>Utah Hazara Association</SectionTitle>
-                <AdminLink to="/admin/events">
-                                        Admin
-                                    </AdminLink>
                 <ListsContainer>
                     <Logo src={logo}/>
                     
                     <List>
                         <ListTitle>Contact</ListTitle>
                             <ListItem>123-456-7890</ListItem>
-                            <ListItem>email@email.com</ListItem>
+                            <ListItem>utahhazaraassociation@yahoo.com</ListItem>
                             <ListItem>Social Media Links</ListItem>
                     </List>
 
@@ -45,9 +42,9 @@ const Footer = () => {
                             <List>
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>resource.com</ListItem>
-                                    {/* <AdminLink to="/admin/events">
+                                    <AdminLink to="/admin/events">
                                         Admin
-                                    </AdminLink> */}
+                                    </AdminLink>
                             </List>
 
                         </ListContainer>

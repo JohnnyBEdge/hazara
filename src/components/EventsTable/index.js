@@ -17,7 +17,6 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import SaveIcon from '@material-ui/icons/Save';
 // import ImportExportIcon from '@material-ui/icons/ImportExport';
 
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Delete } from '@material-ui/icons';
 import {handleAddEvent, handleDeleteEvent, handleEditEvent} from '../../api/EventsAPI'
 
@@ -30,7 +29,7 @@ const EventsTable = () => {
         { title: 'ID', field: '_id', editable: 'never' },
         { title: 'Event Title', field: 'title', validate: rowData => !rowData.title ? { isValid: false, helperText: 'Name cannot be empty' } : true },
         { title: 'Description', field: 'desc', validate: rowData => !rowData.desc ? { isValid: false, helperText: 'Description cannot be empty' } : true },
-        { title: 'Date', field: 'date', type: 'date',validate: rowData => !rowData.date ? { isValid: false, helperText: 'Date cannot be empty' } : true }
+        { title: 'Date', field: 'date', type: 'datetime',validate: rowData => !rowData.date ? { isValid: false, helperText: 'Date cannot be empty' } : true }
       ]);
       
 

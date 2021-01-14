@@ -26,13 +26,6 @@ export default function Calendar() {
         setEventDate(e.event._instance.range.start.toLocaleString("en-US"))
         toggleModal();
     }
-    // const handleEventClick = (e) => {
-    //     const clicked = eventsData.events.filter(id => id._id === e.event._def.extendedProps._id)[0];
-    //     setTitle(clicked.title)
-    //     setDesc(clicked.desc)
-    //     setEventDate(clicked.date)
-    //     toggleModal();
-    // }
 
     return (
         <CalContainer >
