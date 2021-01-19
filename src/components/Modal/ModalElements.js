@@ -18,6 +18,7 @@ export const ModalContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+
     @media screen and (max-width: 768px){
 
     }
@@ -49,7 +50,7 @@ export const ModalContent = styled.div`
     }
 `
 export const ModalInfo = styled.div`
-    width: 65%;
+    width: 50%;
     height: 500px;
     background-color: whitesmoke;
     align-self: flex-end;   
@@ -78,20 +79,6 @@ export const CloseModalIcon = styled(CloseIcon)`
         display: flex;
     }
 `
-// export const ModalContent = styled.div`
-//     display: ${({openModal}) => (openModal ? 'flex' : 'none')};
-//     position: fixed;
-//     z-index: 99;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//     flex-direction: column;
-//     width: 70%;
-//     height: 700px;
-//     color: #1A61A3;
-//     background-color: whitesmoke;
-//     border-radius: 10px;
-// `
 export const ModalTitle = styled.h2`
     font-size: 25px;
     padding: 10px;
@@ -111,22 +98,14 @@ export const ModalText = styled.p`
     font-size: 18px;
     line-height: 1.5;
     margin: 20px 15px;
-
 `
-// const grow = keyframes`
-// from {
-//   /* transform: rotate(0deg); */
-//   transform: scale(0);
-// }
-
-// to {
-//   transform: scale(1);
-//   /* transform: rotate(360deg); */
-// }
-// `;
-// export const Grow = styled.div`
-// display: inline-block;
-// animation: ${grow} 2s linear ;
-// padding: 2rem 1rem;
-// font-size: 1.2rem;
-// `;
+export const ModalList = styled.ul`
+    /* list-style: none; */
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+`
+export const ModalListItem = styled.li`
+    line-height: 1.5;
+    margin: 10px 0;
+`

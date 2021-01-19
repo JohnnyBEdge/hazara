@@ -1,10 +1,10 @@
 export const whoWeAreData = {
-    titleText: 'Who We Do',
-    subTitleText: 'Sub title text should go here',
-    text: "Our non-profit organization ‘Utah Hazara Association (UHA)’ was established under 501© (3)  almost 2 years ago to directly confront the issues of cultural awareness in youth, religious programs and ripening of language. ",
+    titleText: 'Who We Are',
+    subTitleText: 'The Utah Hazara Association',
+    text: "Our non-profit organization ‘Utah Hazara Association (UHA)’ was established under 501© (3) in 2019 to directly confront the issues of cultural awareness in youth, religious programs and ripening of language. ",
     listDesc: "Our proposed non-profit organization programming project will directly contribute to our mission of addressing our community’s needs. Its objective includes:",
     listItems: ["Helping the new immigrants and refugees settle in the united states as culturally and linguistically its very challenging", "Work on children and youth’s linguistic capabilities to help them remember their mother tongue", "Bridging the cultural gap between refugees/immigrants and the residents of our beautiful valley and developing the diversity"],
-    img: require('../../assets/images/whoweare.jpg'),
+    img: require('../../assets/images/who_we_are.JPG'),
     alt: 'Two friends riding bikes, side by side, on the streets of Hanoi.',
 }
 export const  whatWeDoData = {

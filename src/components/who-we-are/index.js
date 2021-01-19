@@ -3,7 +3,7 @@ import {
     WhoWeAreContainer,InfoContainer,LeftSide,RightSide,
     SectionHeader,Title,Info,GroupPhoto, LearnMoreBtn
 } from './WhoWeAreElements';
-import WhoWeAreImg from '../../assets/images/whoweare.jpg';
+import WhoWeAreImg from '../../assets/images/who_we_are.JPG';
 import { whoWeAreData } from '../Modal/data';
 import HeadShake from 'react-reveal/HeadShake';
 
@@ -17,7 +17,7 @@ const WhoWeAre = ({setModalData, toggleModal}) => {
                         <Title>Utah Hazara Association</Title>
                         <Info>
                             Our non-profit organization ‘Utah Hazara Association (UHA)’ 
-                            was established under 501© (3)  almost 2 years ago to directly 
+                            was established under 501© (3)  in 2019 to directly 
                             confront the issues of cultural awareness in youth, religious 
                             programs and ripening of language. 
                         </Info>
