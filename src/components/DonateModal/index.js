@@ -1,16 +1,26 @@
-import React from 'react'
-import { ModalContainer, Modal, CloseModalIcon } from './DonateModalElements';
+// import React from 'react'
+// import PPBtn from '../Paypal';
+// import { ModalContainer, Modal, CloseModalIcon } from './DonateModalElements';
 
-const DonateModal = ({toggleDonate, openDonate}) => {
-    return (
-        <ModalContainer openDonate={openDonate} onClick={toggleDonate}>
-            <Modal >
-                <CloseModalIcon onClick={toggleDonate} fontSize="large" />
-                INSERT PAYPAL HERE
-            </Modal>
 
-        </ModalContainer>
-    )
-}
+// const DonateModal = ({toggleDonate, openDonate}) => {
 
-export default DonateModal;
+
+
+//     return (
+//         <ModalContainer openDonate={openDonate} onClick={toggleDonate}>
+//             <Modal >
+//                 testing
+//                 <CloseModalIcon onClick={toggleDonate} fontSize="large" />
+//                 {checkout ? (
+//                     <PPBtn/>
+//                 ) : (
+//                     ''
+//                 )}
+//             </Modal>
+
+//         </ModalContainer>
+//     )
+// }
+
+// export default DonateModal;

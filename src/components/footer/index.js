@@ -42,9 +42,12 @@ const Footer = () => {
                             <List>
                                 <ListItem>resource.com</ListItem>
                                 <ListItem>resource.com</ListItem>
+                                <ListItem>
                                     <AdminLink to="/admin/events">
                                         Admin
                                     </AdminLink>
+                                </ListItem>
+
                             </List>
 
                         </ListContainer>
