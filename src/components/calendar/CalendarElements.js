@@ -9,9 +9,8 @@ export const CalContainer = styled.div`
   background: whitesmoke;
 `
 export const EventModal = styled.div`
-  display: flex;
+  display: ${({open}) => (open ? 'flex' : 'none')};
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   position: fixed;
   left: 50%;
@@ -20,9 +19,8 @@ export const EventModal = styled.div`
   transition: 0.3s ease-in-out;
   background-color: whitesmoke;
   border: solid black 2px;
-  opacity: ${({open}) => (open ? '100%' : '0')};
-  /* left: ${({open}) => (open ? '50%' : '-100%')}; */
-  /* top: ${({open}) => (open ? '50%' : '-100%')}; */
+  /* opacity: ${({open}) => (open ? '100%' : '0')}; */
+
   transform: translate(-50%, -50%);
   width: auto;
   max-width: 300px;

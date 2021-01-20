@@ -17,8 +17,8 @@ export const  whatWeDoData = {
     listSection2: ["Helping the new immigrants and refugees settle in the united states as culturally and linguistically its very challenging", "Work on children and youth’s linguistic capabilities to help them remember their mother tongue", "Bridging the cultural gap between refugees/immigrants and the residents of our beautiful valley and developing the diversity"],
     listDesc: null,
     listItems: null,
-    img: require('../../assets/images/whatwedo.jpg'),
-    alt: 'UHA members having a picnic.',
+    img: require('../../assets/images/what_we_do_modal.jpg'),
+    alt: 'UHA community event.',
 }
 export const howToHelpData = {
     titleText: 'How to Help',
