@@ -26,7 +26,7 @@ const Donate = ({togglePaypal, paypalOpen}) => {
                         <Icon src={icon}/>
                     </IconContainer>
                     <HeaderText>Thank you for helping us achieve our goals!</HeaderText>
-                    <SubHeaderText>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ex eaque rerum! Nam dolor, enim quis, iste corrupti voluptatem, deleniti saepe praesentium reprehenderit at quia sint eveniet fuga temporibus ducimus.</SubHeaderText>
+                    <SubHeaderText>Whether you give once or make muliple donations, every dollar brings us closer to our goals. A physical center would not only help achieve the missions of the community but would also help in development of the community to inculcate more refugees/immigrants into their programs and be a helping help for the sake of humanity.  </SubHeaderText>
                     <DonateButton onClick={()=>{
                         togglePaypal();
                         toggleCheckout();

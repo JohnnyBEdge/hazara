@@ -74,7 +74,7 @@ export const SubHeaderText = styled.p`
     line-height: 1.5;
     font-size: 18px;
     text-align: center;
-    padding: 5px;
+    padding: 50px 5px;
     margin-top: -100px;
 `
 export const DonateButton = styled.button`
