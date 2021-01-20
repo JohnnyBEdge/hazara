@@ -10,7 +10,7 @@ const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, l
     return (
         <ModalContainer>
             <ModalOverlay id="modal" openModal={openModal} onClick={toggleModal}></ModalOverlay>
-            <ModalContent openModal={openModal} img={img}>
+            <ModalContent openModal={openModal} img={img} alt={alt}>
                 <ModalInfo>
                     <CloseModalIcon fontSize='large' onClick={toggleModal} />
                     <ModalTitle>{titleText}</ModalTitle>
