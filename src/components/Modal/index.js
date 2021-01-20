@@ -5,7 +5,10 @@ import {
     CloseModalIcon, ModalListItem
 } from './ModalElements'; 
 
-const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, listDesc, listItems }) => {
+const Modal = ({
+    openModal, toggleModal,titleText,subTitleText, text, alt, img, listDesc, 
+    listItems,listSectionText1, listSectionText2, listSection1, listSection2
+ }) => {
 
     return (
         <ModalContainer>
@@ -14,13 +17,29 @@ const Modal = ({openModal, toggleModal,titleText,subTitleText, text, alt, img, l
                 <ModalInfo>
                     <CloseModalIcon fontSize='large' onClick={toggleModal} />
                     <ModalTitle>{titleText}</ModalTitle>
-                    <ModalSubTitle>{subTitleText}</ModalSubTitle>
-                    <ModalText>{text}</ModalText>
-                    <ModalText>{listDesc}</ModalText>
+                    {subTitleText ? <ModalSubTitle>{subTitleText}</ModalSubTitle> : ''}
+                    {text ? <ModalText>{text}</ModalText> : '' }
+                    {listDesc ? <ModalText>{listDesc}</ModalText> : ''}
+                    {listSectionText1 ? <ModalText>{listSectionText1}</ModalText> : ''}
+                    {listSection1 ? 
+                        <ModalList>
+                            {listSection1.map(item => (<ModalListItem>{item}</ModalListItem>))}
+                        </ModalList> : ''}
+
+                    {listSectionText2 ? <ModalText>{listSectionText2}</ModalText> : ''}
+                    {listSection1 ? 
+                        <ModalList>
+                            {listSection2.map(item => (<ModalListItem>{item}</ModalListItem>))}
+                        </ModalList> : ''}
+
+                    {listItems ? 
+                        <ModalList>
+                            {listItems.map(item => (<ModalListItem>{item}</ModalListItem>))}
+                        </ModalList> : ''}
+                        
+
                     <ModalList>
-                    {listItems ? listItems.map((item) => { return (
-                        <ModalListItem>{item}</ModalListItem>
-                    )}) : ''}
+                    
                     </ModalList>
                 </ModalInfo>
             </ModalContent>
