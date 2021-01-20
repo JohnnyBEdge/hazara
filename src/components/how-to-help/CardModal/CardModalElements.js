@@ -112,15 +112,8 @@ export const CardBtn = styled(LinkS)`
         font-weight: bold;
         transform: scale(1.1);
     }
-
-    @media screen and (max-width: 768px){
-      width: 100%;
-      border-radius: 3px;
-      margin-bottom: 0;
-      align-self: flex-end;
-      height: 55px;
-    }
 `
+
 export const CloseCardIcon = styled(CloseIcon)`
     display: flex;
     color: black;
@@ -129,7 +122,7 @@ export const CloseCardIcon = styled(CloseIcon)`
     cursor: pointer;
 `
 export const CardRouteBtn = styled(LinkR)`
-    display: ${({titletext}) => (titletext === 'Volunteer' ? 'flex' : 'none')};
+    display: 'flex';
     background-color: #F9C910;
     align-self: center;
     justify-content: center;
@@ -144,6 +137,7 @@ export const CardRouteBtn = styled(LinkR)`
     margin-bottom: 10px;
     justify-self: flex-end;
     text-decoration: none;
+    text-align: center;
 
     &:hover{
         transition: all 0.2s ease-in-out;

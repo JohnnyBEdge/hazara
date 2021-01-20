@@ -5,7 +5,9 @@ import {CardModalOverlay, CardModalContainer, Grow,
     CloseCardIcon, CardRouteBtn
 } from './CardModalElements';
 
-const CardModal = ({openCardModal,toggleCardModal, titletext, fullDesc,listTitle, listItems, btnText, img, btnLink, togglePaypal }) => {
+const CardModal = ({
+    openCardModal,toggleCardModal, titletext, fullDesc,listTitle, listItems, 
+    btnText, img, btnLink, togglePaypal, routeBtn, p2, p3 }) => {
 
     let listItem;
     if(listItems){
@@ -28,27 +30,34 @@ const CardModal = ({openCardModal,toggleCardModal, titletext, fullDesc,listTitle
                 <CardModalTitle>{titletext}</CardModalTitle>
                 <CardImg src={img}/>
                 <CardModalDesc>{fullDesc}</CardModalDesc>
+                {p2 ? <CardModalDesc>{p2}</CardModalDesc> : ''}
+                {p3 ? <CardModalDesc>{p3}</CardModalDesc> : ''}
                 <CardModalListTitle>{listTitle}</CardModalListTitle>
                 <CardModalList>
                     {listItem}
                 </CardModalList>
-                <CardBtn 
-                    titletext={titletext}
-                    to={btnLink}
-                    onClick={() => {
-                        toggleCardModal();
-                        checkDonate();
-                    }}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact='true'
-                    offset={-80}>
-                        {btnText}</CardBtn>
-                <CardRouteBtn 
+
+                {routeBtn ? 
+                    <CardRouteBtn 
                     to="/contact"
                     titletext={titletext}>
                         Contact Us</CardRouteBtn>
+                    : 
+
+                    <CardBtn 
+                        titletext={titletext}
+                        to={btnLink}
+                        onClick={() => {
+                            toggleCardModal();
+                            checkDonate();
+                        }}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>
+                            {btnText}</CardBtn>}
+
             </CardModalContainer>
         </>
     )
