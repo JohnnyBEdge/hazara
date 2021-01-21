@@ -100,7 +100,7 @@ export const FormSection = styled.div`
         flex-direction: column;
     }
 `
-export const FormGroup = styled.form`
+export const FormGroup = styled.div`
     display: flex;
     flex-direction: column;
     

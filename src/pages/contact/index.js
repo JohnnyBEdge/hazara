@@ -49,14 +49,15 @@ const Contact = () => {
                     <FormTitle>Contact Us!</FormTitle>
                     <Form
                         onSubmit={(e) => handleForm(e)}
-                        action="INSERT FORMSPREE LINK HERE"
+                        action="https://formspree.io/f/xeqpnzjj"
                         method="POST">
                         <Message>This is the validation message</Message>
                         <FormSection>
                             <FormGroup>
                                 <FormLabel for="fname">First Name</FormLabel>
                                 <FormInput 
-                                    id="fname" 
+                                    id="fname"
+                                    name="First name" 
                                     placeholder="Enter your first name"
                                     type="text"
                                     required />
@@ -65,6 +66,7 @@ const Contact = () => {
                                 <FormLabel for="lname">Last Name</FormLabel>
                                 <FormInput 
                                     id="lname" 
+                                    name="Last name"
                                     placeholder="Enter your last name"
                                     type="text" 
                                     required />
@@ -75,6 +77,7 @@ const Contact = () => {
                                 <FormLabel for="email">Email</FormLabel>
                                 <FormInput 
                                     id="email" 
+                                    name="Email"
                                     type="email" 
                                     placeholder="Enter your email"
                                     required />
@@ -83,6 +86,7 @@ const Contact = () => {
                                 <FormLabel for="phone">Phone Number</FormLabel>
                                 <FormInput 
                                     id="phone" 
+                                    name="Phone number"
                                     placeholder="Enter your phone number"
                                     type="tel"
                                     required />
@@ -93,6 +97,7 @@ const Contact = () => {
                             <FormLabel for="message">Message</FormLabel>
                                 <TextAreaInput 
                                     type="text" 
+                                    name= "Message"
                                     placeholder="Leave your message here!" 
                                     name="message"
                                     required />
