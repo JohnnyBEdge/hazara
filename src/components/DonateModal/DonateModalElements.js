@@ -16,11 +16,12 @@ export const ModalContainer = styled.div`
     left: ${({openDonate}) => (openDonate ? '0' : '-100%')};
     width: 100%;
     height: 100%;
+    
 `
 export const Modal = styled.div`
     width: 90%;
     height: 80%;
-    background-color: whitesmoke;
+    background-color: red;
     display: flex;
     flex-direction: column;
 `

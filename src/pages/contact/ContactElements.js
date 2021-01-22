@@ -181,20 +181,7 @@ export const SendMessageBtn = styled.button`
         width: 300px;
     }
 `
-export const SocialContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-`
-export const Icon = styled.div`
-    margin: 5px 10px;
-    cursor: pointer;
 
-    &:hover {
-        transform: scale(1.1)
-    }
-`
 
 
 

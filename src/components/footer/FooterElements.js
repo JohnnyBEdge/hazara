@@ -68,7 +68,9 @@ export const PageLink = styled(LinkS)`
     font-size: .9rem;
     cursor: pointer;
 `
-export const AdminLink = styled(LinkR)`
+export const RouteLink = styled(LinkR)`
+    text-decoration: none;
+    color: black;
 `
 
 export const ListItem = styled.li`
@@ -77,8 +79,15 @@ export const ListItem = styled.li`
     margin-left:0;
     font-size: .9rem;
 `
+export const ItemLink = styled.a`
+    text-decoration: none;
+    color: black;
+    &:hover {
+        font-weight: bolder;
+    }
+`
 
-export const Signature = styled.a`
+export const Signature = styled.p`
     font-size: .8rem;
     width: 100%;
     text-align: center;

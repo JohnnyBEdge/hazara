@@ -7,14 +7,9 @@ import {
     TextAreaInput,SendMessageBtn, Icon, BtnContainer,
     SocialContainer
 } from './ContactElements';
-import {
-    FaPhone, 
-    FaMapPin, 
-    FaEnvelope, 
-    FaFacebook, 
-    FaTwitter, 
-    FaInstagram} from 'react-icons/fa';
+
 import { preventDefault } from '@fullcalendar/react';
+import SocialMediaLinks from '../../components/SocialMediaLinks';
 
 
 
@@ -107,17 +102,7 @@ const Contact = () => {
                         <SendMessageBtn >Send Message</SendMessageBtn>
                     </Form>
                     
-                    <SocialContainer>
-                        <Icon>
-                            <FaEnvelope />
-                        </Icon>
-                        <Icon>
-                            <FaFacebook />
-                        </Icon>
-                        <Icon>
-                            <FaTwitter />
-                        </Icon>   
-                    </SocialContainer>
+                    <SocialMediaLinks/>
 
                 </FormContainer>
 

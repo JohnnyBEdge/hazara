@@ -1,18 +1,9 @@
 import React from 'react';
+import SocialMediaLinks from '../../components/SocialMediaLinks'
 import {
-    FooterWrapper,
-    SectionTitle,
-    Logo,
-    ListsContainer,
-    ListTitle,
-    List,
-    List2,
-    ResourceContainer,
-    ListContainer,
-    ListItem,
-    PageLink,
-    Signature,
-    AdminLink
+    FooterWrapper, SectionTitle, Logo, ListsContainer,
+    ListTitle, List, List2, ResourceContainer, ListContainer,
+    ListItem,PageLink, Signature, RouteLink, ItemLink
 } from './FooterElements';
 import logo from '../../assets/images/logo-1.jpg'
 
@@ -26,27 +17,37 @@ const Footer = () => {
                     
                     <List>
                         <ListTitle>Contact</ListTitle>
-                            <ListItem>123-456-7890</ListItem>
-                            <ListItem>utahhazaraassociation@yahoo.com</ListItem>
-                            <ListItem>Social Media Links</ListItem>
+                            <ListItem>UtahHazaraAssociation@gmail.com</ListItem>
+                            <ListItem>
+                                <RouteLink to="/contact">Contact Form</RouteLink>
+                            </ListItem>
+                            <ListItem>
+                                <SocialMediaLinks/>
+                            </ListItem>
                     </List>
 
                     <ResourceContainer>
                         <ListTitle>Additional Resources</ListTitle>
                         <ListContainer>
                             <List>
-                                <ListItem>resource.com</ListItem>
-                                <ListItem>resource.com</ListItem>
-                                <ListItem>resource.com</ListItem>
+                                <ListItem>
+                                    <ItemLink href="https://www.immigrationadvocates.org/nonprofit/legaldirectory/search?state=UT">National Immigration Legal Services Directory</ItemLink>
+                                </ListItem>
+                                <ListItem>
+                                    <ItemLink href="http://www.immigrantlegalservices.org/">Immigrant Legal Services</ItemLink>
+                                </ListItem>
+                                <ListItem>
+                                    <ItemLink href="https://www.informedimmigrant.com/">Informed Immigrant</ItemLink>
+                                </ListItem>
                             </List>
                             <List>
-                                <ListItem>resource.com</ListItem>
-                                <ListItem>resource.com</ListItem>
                                 <ListItem>
-                                    <AdminLink to="/admin/events">
-                                        Admin
-                                    </AdminLink>
+                                    <ItemLink href="https://jobs.utah.gov/refugee/">Utah Workforce Services</ItemLink>
                                 </ListItem>
+                                <ListItem>
+                                    <ItemLink href="https://minorityrights.org/minorities/hazaras/">Minority Rights Group International</ItemLink>
+                                </ListItem>
+
 
                             </List>
 
@@ -55,13 +56,18 @@ const Footer = () => {
                     
                     <List>
                         <ListTitle>Sections</ListTitle>
-                            <PageLink to="/">Home</PageLink>
+                            <PageLink to="home">Home</PageLink>
                             <PageLink to="events">Events</PageLink>
                             <PageLink to="donate">Donate</PageLink>
+                            <ListItem>
+                                    <RouteLink to="/admin/events">
+                                        Admin
+                                    </RouteLink>
+                            </ListItem>
                     </List>
                 </ListsContainer>
 
-                <Signature href="https://martin-jr.com">c 2020 John Martin</Signature>
+                <Signature>c 2020 John Martin</Signature>
             </FooterWrapper>
         </>
     )

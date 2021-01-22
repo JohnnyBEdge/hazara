@@ -109,6 +109,13 @@ export const PaypalContainer = styled.div`
     background-color: whitesmoke;
     border: solid black 1px;
     margin: 75px 100px 0 0;
+    overflow: scroll;
+    ::-webkit-scrollbar {
+     width: 0px;
+}
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 
     @media screen and (max-width: 768px){
         /* justify-content: center; */

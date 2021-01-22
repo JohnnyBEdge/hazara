@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react'
+import { ButtonContainer } from './PayPalElements';
 
 const PPBtn = () => {
 
@@ -6,6 +7,11 @@ const PPBtn = () => {
 
     useEffect(() => {
         window.paypal.Buttons({
+            style: {
+                layout:  'vertical',
+                shape:   'rect',
+                label:   'paypal'
+              },
             createOrder: (data, actions, err) => {
                 return actions.order.create({
                     intent: "CAPTURE",
@@ -31,8 +37,8 @@ const PPBtn = () => {
     }, [])
     return (
         <>
-            <div ref={paypal}>
-            </div>
+            <ButtonContainer ref={paypal}>
+            </ButtonContainer>
         </>
     )
 }
