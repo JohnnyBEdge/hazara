@@ -1,44 +1,33 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import { ButtonContainer } from './PayPalElements';
 
 const PPBtn = () => {
 
-    const paypal = useRef();
 
-    useEffect(() => {
-        window.paypal.Buttons({
-            style: {
-                layout:  'vertical',
-                shape:   'rect',
-                label:   'paypal'
-              },
-            createOrder: (data, actions, err) => {
-                return actions.order.create({
-                    intent: "CAPTURE",
-                    purchase_units: [
-                        {
-                            description: "CUSTOM TABLE",
-                            amount: {
-                                value: 650.00,
-                                currency_code: "USD"
-                            }
-                        }
-                    ]
-                })
-            },
-            onApprove: async (data, actions) => {
-                const order = await (actions.order.capture());
-                console.log(order)
-            },
-            onError: (err) => {
-                console.log(err);
-            }
-        }).render(paypal.current)
-    }, [])
     return (
         <>
-            <ButtonContainer ref={paypal}>
-            </ButtonContainer>
+            <form 
+                action="https://www.paypal.com/donate" 
+                method="post" 
+                target="_top">
+            <input 
+                type="hidden" 
+                name="hosted_button_id" 
+                value="CPK64THCFS74J" />
+            <input 
+                type="image" 
+                src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" 
+                border="0" 
+                name="submit" 
+                title="PayPal - The safer, easier way to pay online!" 
+                alt="Donate with PayPal button" />
+            <img 
+                alt="" 
+                border="0" 
+                src="https://www.paypal.com/en_US/i/scr/pixel.gif" 
+                width="1" 
+                height="1" />
+            </form>
         </>
     )
 }

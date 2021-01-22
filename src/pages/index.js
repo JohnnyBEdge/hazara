@@ -1,25 +1,20 @@
 import React, {useState, useContext} from 'react';
-import {EventsContext} from '../Context/EventsContext'
+// import {EventsContext} from '../Context/EventsContext'
 import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';
 import WhatWeDo from '../components/what-we-do';
 import HowToHelp from '../components/how-to-help';
 import Footer from '../components/footer';
-// import EventsTable from '../components/EventsTable';
 import Hero from '../components/Hero';
-// import InfoSection from '../components/InfoSection';
 import Modal from '../components/Modal';
 import Donate from '../components/Donate';
 import Events from '../components/Events';
-// import DonateModal from '../components/DonateModal';
-// import HelpSidebar from '../components/how-to-help/HelpSidebar'
 
 
-const Home = (props) => {
+const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
-    const [paypalOpen, setPaypalOpen] = useState(false);
     const [modalData, setModalData] = useState();
     const [modalTypeCard, setModalTypeCard] = useState(false);
 
@@ -30,9 +25,6 @@ const Home = (props) => {
     };
     const toggleModal = () => {
         setOpenModal(!openModal)
-    };
-    const togglePaypal = () => {
-        setPaypalOpen(!paypalOpen)
     };
     const toggleModalType = () => {
         setModalTypeCard(!modalTypeCard)
@@ -57,14 +49,9 @@ const Home = (props) => {
                 toggleModal={toggleModal}
                 toggleModalType={toggleModalType}
                 modalTypeCard={modalTypeCard}
-                modalData={modalData} 
-                togglePaypal={togglePaypal}/>
-                
-                
+                modalData={modalData} />
             <Events/>
-            {/* <Events eventsData={props.eventsData}/> */}
-            <Donate togglePaypal={togglePaypal} paypalOpen={paypalOpen} />
-
+            <Donate/>
             <Footer/> 
         </>
     )
