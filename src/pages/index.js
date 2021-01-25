@@ -1,5 +1,4 @@
-import React, {useState, useContext} from 'react';
-// import {EventsContext} from '../Context/EventsContext'
+import React, {useState} from 'react';
 import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import WhoWeAre from '../components/who-we-are';

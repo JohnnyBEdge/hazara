@@ -1,7 +1,6 @@
 import React, {useState, forwardRef, useContext} from 'react';
 import {EventsContext} from '../../Context/EventsContext'
 import MaterialTable from 'material-table';
-//icons
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 import Edit from '@material-ui/icons/Edit';
 import AddBoxIcon from '@material-ui/icons/AddBox';
@@ -12,12 +11,8 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SortIcon from '@material-ui/icons/ArrowUpward';
-// import SortIcon from '@material-ui/icons/Sort';
 import CancelIcon from '@material-ui/icons/Cancel';
 import SaveIcon from '@material-ui/icons/Save';
-// import ImportExportIcon from '@material-ui/icons/ImportExport';
-
-import { Delete } from '@material-ui/icons';
 import {handleAddEvent, handleDeleteEvent, handleEditEvent} from '../../api/EventsAPI'
 
 
@@ -39,19 +34,14 @@ const EventsTable = () => {
         Check: forwardRef((props, ref) => <SaveIcon {...props} ref={ref} />),
         Clear: forwardRef((props, ref) => <CancelIcon {...props} ref={ref} />),
         Delete: forwardRef((props, ref) => <DeleteOutline {...props} ref={ref} />),
-        // DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
         Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
-        // Export: forwardRef((props, ref) => <ImportExportIcon {...props} ref={ref} />),
-        // Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
         FirstPage: forwardRef((props, ref) => <FirstPageIcon {...props} ref={ref} />),
         LastPage: forwardRef((props, ref) => <LastPageIcon {...props} ref={ref} />),
         NextPage: forwardRef((props, ref) => <SkipNextIcon {...props} ref={ref} />),
         PreviousPage: forwardRef((props, ref) => <SkipPreviousIcon {...props} ref={ref} />),
         ResetSearch: forwardRef((props, ref) => <ClearIcon {...props} ref={ref} />),
         Search: forwardRef((props, ref) => <SearchIcon {...props} ref={ref} />),
-        SortArrow: forwardRef((props, ref) => <SortIcon {...props} ref={ref} />),
-        // ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
-        // ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
+        SortArrow: forwardRef((props, ref) => <SortIcon {...props} ref={ref} />)
       };
 
     
@@ -109,7 +99,6 @@ const EventsTable = () => {
 }
 
 export default EventsTable;
-// export default withAuthenticator(EventsTable)
 
 
 

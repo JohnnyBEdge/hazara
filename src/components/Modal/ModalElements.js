@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import CloseIcon from '@material-ui/icons/Close';
 
 export const ModalOverlay = styled.div`
@@ -100,7 +100,6 @@ export const ModalText = styled.p`
     margin: 20px 15px;
 `
 export const ModalList = styled.ul`
-    /* list-style: none; */
     width: 70%;
     margin: 0 auto;
     text-align: justify;

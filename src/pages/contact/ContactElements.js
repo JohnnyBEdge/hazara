@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import contact from '../../assets/images/contact3.jpg';
 import { Link } from 'react-router-dom';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 export const PageContainer = styled.div`
     display: flex;
@@ -87,9 +86,6 @@ export const Form = styled.form`
     align-items: center;
     width: 100%;
     margin-top: 30px;
-    /* @media screen and (max-width: 768px){
-        width: 90%;
-    } */
 `
 export const FormSection = styled.div`
     display: flex;

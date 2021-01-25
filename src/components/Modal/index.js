@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     ModalOverlay, ModalContainer, ModalContent, ModalInfo,
-    ModalTitle, ModalSubTitle, ModalImg, ModalText, ModalList,
+    ModalTitle, ModalSubTitle, ModalText, ModalList,
     CloseModalIcon, ModalListItem
 } from './ModalElements'; 
 

@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import {
     HowToHelpContainer, SectionHeader, CardContainer,
-    Card, CardImg, CardTitle, CardDesc, CardBtn,
-    HelpSidebar, Rotate
+    Card, CardImg, CardTitle, CardDesc, CardBtn
 } from './HowToHelpElements';
-import {card1, card2, card3} from '../Modal/data'
+// import {card1, card2, card3} from '../Modal/data'
 import {Card1Data, Card2Data, Card3Data} from './cardData';
-import help from '../../assets/images/help.jpeg'
-// import {Spring} from 'react-spring/renderprops'
 import Fade from 'react-reveal/Fade';
 import CardModal from './CardModal';
 
@@ -28,7 +25,6 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTyp
                 togglePaypal={togglePaypal}
                 {...modalData}
                  />
-            {/* <HelpSidebar helpOpen={helpOpen}>HELP SIDEBAR</HelpSidebar> */}
             <SectionHeader>How To Help</SectionHeader>
             <CardContainer openCardModal={openCardModal}>
                 <Fade left cascade>
@@ -39,7 +35,6 @@ const HowToHelp = ({toggleModal, setModalType, setModalData, modalData, modalTyp
                         <CardBtn onClick={() => {
                             setModalData(Card1Data)
                             toggleCardModal()
-                            // toggleModal()
                         }}>Learn More</CardBtn>
                     </Card>
 

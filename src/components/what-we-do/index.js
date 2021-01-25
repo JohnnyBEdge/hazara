@@ -1,8 +1,7 @@
 import React from 'react';
-import sectionPhoto from '../../assets/images/Girls_in_Ghazni.jpg';
 import { whatWeDoData } from '../Modal/data';
 import {
-    WhatWeDoContainer, InfoContainer, SectionHeader, SectionPhoto,
+    WhatWeDoContainer, InfoContainer, SectionHeader,
     ListHeader, MissionList, MissionItem, LearnMoreBtn
 } from './WhatWeDoElements';
 import Slide from 'react-reveal/Slide';

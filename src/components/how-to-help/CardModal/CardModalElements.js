@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import CloseIcon from '@material-ui/icons/Close';
 import {Link as LinkS} from 'react-scroll'
 import {Link as LinkR} from 'react-router-dom'
@@ -13,7 +13,6 @@ export const CardModalOverlay = styled.div`
     left:0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
 `
 
 export const CardModalContainer = styled.div`
@@ -34,29 +33,13 @@ export const CardModalContainer = styled.div`
     border: solid black 2px;
 
     @media screen and (max-width: 768px){
-      width: 100%;
-      height: 100%;
+      width: 98vw;
+      height: 98vh;
       margin-top: 0;
-      overflow: hidden visible;
+      overflow: scroll;
+      justify-content: space-between;
     }
 `
-const grow = keyframes`
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-`;
-
-// Here we create a component that will rotate everything we pass in over two seconds
-export const Grow = styled.div`
-  display: inline-block;
-  animation: ${grow} 2s linear;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
-`;
 
 export const CardModalTitle = styled.h3`
   text-align: center;

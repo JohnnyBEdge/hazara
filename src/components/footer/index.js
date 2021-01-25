@@ -2,7 +2,7 @@ import React from 'react';
 import SocialMediaLinks from '../../components/SocialMediaLinks'
 import {
     FooterWrapper, SectionTitle, Logo, ListsContainer,
-    ListTitle, List, List2, ResourceContainer, ListContainer,
+    ListTitle, List, ResourceContainer, ListContainer,
     ListItem,PageLink, Signature, RouteLink, ItemLink
 } from './FooterElements';
 import logo from '../../assets/images/logo-1.jpg'

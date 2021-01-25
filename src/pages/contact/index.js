@@ -1,14 +1,11 @@
 import React from 'react';
-import logo from '../../assets/images/logo-1.jpg'
 import {
     PageContainer, ImageContainer, ImageText, FormContainer,
     FormTitle, Form, ReturnHomeBtn,RtnBtnContainer,
     FormGroup, FormLabel, FormInput, Message, FormSection,
-    TextAreaInput,SendMessageBtn, Icon, BtnContainer,
-    SocialContainer
+    TextAreaInput,SendMessageBtn
 } from './ContactElements';
 
-import { preventDefault } from '@fullcalendar/react';
 import SocialMediaLinks from '../../components/SocialMediaLinks';
 
 
@@ -94,7 +91,6 @@ const Contact = () => {
                                     type="text" 
                                     name= "Message"
                                     placeholder="Leave your message here!" 
-                                    name="message"
                                     required />
                             </FormGroup>
                         </FormSection>

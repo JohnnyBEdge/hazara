@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardModalOverlay, CardModalContainer, Grow,
+import {CardModalOverlay, CardModalContainer,
     CardModalTitle, CardModalDesc, CardModalListTitle,
     CardModalList, CardModalListItem, CardBtn, CardImg,
     CloseCardIcon, CardRouteBtn
@@ -14,12 +14,6 @@ const CardModal = ({
         listItem = listItems.map(item => {
         return <CardModalListItem>{item}</CardModalListItem>
         })
-    }
-    const checkDonate = () => {
-        if(btnLink === "donate"){
-            setTimeout(
-                () => togglePaypal(), 1100)
-        }
     }
     return (
         <>
@@ -46,10 +40,10 @@ const CardModal = ({
 
                     <CardBtn 
                         titletext={titletext}
-                        to={btnLink}
+                        to="donate"
                         onClick={() => {
                             toggleCardModal();
-                            checkDonate();
+
                         }}
                         smooth={true}
                         duration={500}

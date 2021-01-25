@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import EventsTable from '../../components/EventsTable';
-import { AmplifyAuthenticator, AmplifySignOut, AmplifySignIn, AmplifySignUp } from '@aws-amplify/ui-react';
+import { AmplifyAuthenticator, AmplifySignOut, AmplifySignIn } from '@aws-amplify/ui-react';
 import { CreateAdminBtn, SignUp, BtnContainer} from './AdminElements'
 
 const Admin = ({eventsData, setEvents}) => {
@@ -18,7 +18,6 @@ const Admin = ({eventsData, setEvents}) => {
         <div>
             <AmplifyAuthenticator usernameAlias="email">
                 <AmplifySignIn slot="sign-in" hideSignUp /> 
-            {/* </AmplifyAuthenticator> */}
 
                 <AmplifySignOut/>
                 {createAdmin ? 

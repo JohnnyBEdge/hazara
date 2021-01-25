@@ -13,9 +13,9 @@ export const Card2Data = {
     titleText: 'Volunteer',
     img: require('../../assets/images/volunteer.svg'),
     shortDesc: 'Have a skill to share or want to lend a hand? Volunteer with us!',
-    fullDesc: "There are many ways for you, your family, or your company to get involved with the Utah Hazara Association. To get the latest news on how you can help, please email us at utahhazaraassociation@gmail.com or give us a ring: PHONE",
+    fullDesc: "There are many ways for you, your family, or your company to get involved with the Utah Hazara Association. To get the latest news on how you can help, please email us at utahhazaraassociation@gmail.com or use our contact form.",
     listTitle: "Volunteer opportunities:",
-    listItems: ["volunteer opportunity","volunteer opportunity","volunteer opportunity","volunteer opportunity","volunteer opportunity"],
+    listItems: null,
     btnText: "Contact Us",
     btnLink: "/contact",
     routeBtn: true

@@ -1,8 +1,6 @@
 import React from 'react'
-import { ButtonContainer } from './PayPalElements';
 
 const PPBtn = () => {
-
 
     return (
         <>
