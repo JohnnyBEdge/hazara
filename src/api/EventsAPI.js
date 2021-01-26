@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const baseURL = 'http://localhost:5005/api/events'
+const baseURL = 'https://www.uha-backend.netlify.app'
 
 export const getEvents = async () => {
     try{
