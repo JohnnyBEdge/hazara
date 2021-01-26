@@ -13,7 +13,7 @@ const Hero = () => {
             </HeroBackground>
             <HeroContent>
                 <PageTitle>Utah Hazara Association</PageTitle>
-                <PageTitleSubtext>Some type of slogan goes in here.</PageTitleSubtext>
+                <PageTitleSubtext>Serving the local community while bringing awareness to global Hazara issues</PageTitleSubtext>
             </HeroContent>
         </HeroContainer>
     )
