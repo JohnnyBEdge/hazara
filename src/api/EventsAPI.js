@@ -1,11 +1,11 @@
 const axios = require('axios');
 
-// const baseURL = 'http://localhost:5005/api/events'
-const baseURL = 'https://uha-backend.netlify.app/api/events'
+const baseURL = 'https://uha-back.herokuapp.com/api/events'
+// const baseURL = 'https://uha-backend.netlify.app/api/events'
 
 export const getEvents = async () => {
     try{
-        const res = await axios.get(`https://uha-backend.netlify.app/api/events`);
+        const res = await axios.get(`${baseURL}`);
         return res;
     } catch(err){
         console.log("Error:",err)
