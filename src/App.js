@@ -14,8 +14,8 @@ function App() {
   
   const providerValue = useMemo(() => ({events, setEvents}), [events, setEvents])
 
-  useEffect(async () => {
-      await getEvents().then((eventsData) => {
+  useEffect(() => {
+      getEvents().then((eventsData) => {
        setEvents(eventsData.data);
       });
   }, []);
