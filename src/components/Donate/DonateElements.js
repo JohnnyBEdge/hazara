@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img from '../../assets/images/donateBackground.jpg';
+import img from '../../assets/images/donate-background.webp';
 
 export const DonateSection = styled.div`
     display: flex;

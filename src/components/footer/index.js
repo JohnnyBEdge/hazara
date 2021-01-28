@@ -5,7 +5,7 @@ import {
     ListTitle, List, ResourceContainer, ListContainer,
     ListItem,PageLink, Signature, RouteLink, ItemLink
 } from './FooterElements';
-import logo from '../../assets/images/logo-1.jpg'
+import logo from '../../assets/images/transparent-logo.webp'
 
 const Footer = () => {
     return (

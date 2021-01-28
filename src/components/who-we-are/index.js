@@ -3,7 +3,7 @@ import {
     WhoWeAreContainer,InfoContainer,LeftSide,RightSide,
     SectionHeader,Title,Info,GroupPhoto, LearnMoreBtn
 } from './WhoWeAreElements';
-import WhoWeAreImg from '../../assets/images/who_we_are.JPG';
+import WhoWeAreImg from '../../assets/images/who_we_are.webp';
 import { whoWeAreData } from '../Modal/data';
 import HeadShake from 'react-reveal/HeadShake';
 

@@ -3,7 +3,7 @@ import {
     HeroContainer, HeroBackground, PageTitle,
     HeroContent, HeroImg, PageTitleSubtext
     } from './HeroElements';
-import HeroImage from '../../assets/images/hero2.JPG';
+import HeroImage from '../../assets/images/hero.webp';
 
 const Hero = () => {
     return (

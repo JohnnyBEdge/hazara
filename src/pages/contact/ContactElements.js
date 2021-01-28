@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import contact from '../../assets/images/contact3.jpg';
+import contact from '../../assets/images/contact3.webp';
 import { Link } from 'react-router-dom';
 
 export const PageContainer = styled.div`
